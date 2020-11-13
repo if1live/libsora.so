@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> 사람 낚는 strcmp()의 리턴타입 재설계하기 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="사람 낚는 strcmp()의 리턴타입 재설계하기" />
+  
+
+  
+  <meta name="keywords" content="strcmp" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/my-strcmp/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="사람 낚는 strcmp()의 리턴타입 재설계하기">
+<meta name="twitter:description" content="strcmp()로 낚시하기 &amp;ldquo;좋은 함수 함수의 예를 쓰시오.&amp;rdquo; 이것은 어려운 질문이다. 사람마다 좋다고 생각하는 기준이 다르기 때문에 좋은 함수의 기준이 달라진다. 반대로 후진 함수를 쓰라는건 어떨까? 모든 사람이 공감할수 있는 후진 함수가 존재하지 않을까? 이런 생각을 하다 strcmp()로 간단한 코드를 작성했다.
+#include ">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/my-strcmp/" rel="bookmark" title="Permalink to 사람 낚는 strcmp()의 리턴타입 재설계하기">
+          <h1>사람 낚는 strcmp()의 리턴타입 재설계하기</h1>
+          
+          <h2>연산자 오버로딩의 입문</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2015-04-21T00:00:00Z'>
+        2015/04/21
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/strcmp">#strcmp</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="strcmp로-낚시하기">strcmp()로 낚시하기</h2>
+<p>&ldquo;좋은 함수 함수의 예를 쓰시오.&rdquo;
+이것은 어려운 질문이다.
+사람마다 좋다고 생각하는 기준이 다르기 때문에 좋은 함수의 기준이 달라진다.
+반대로 후진 함수를 쓰라는건 어떨까?
+모든 사람이 공감할수 있는 후진 함수가 존재하지 않을까?
+이런 생각을 하다 <a href="https://twitter.com/if1live/status/589972518246617089">strcmp()로 간단한 코드</a>를 작성했다.</p>
+<pre><code class="language-cpp">#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+
+int main() {
+  if(strcmp(&quot;foo&quot;, &quot;foo&quot;) == true) {
+    printf(&quot;same\n&quot;);
+  } else {
+    printf(&quot;different\n&quot;);
+  }
+  return 0;
+}
+</code></pre>
+<p>출력 결과가 무엇일까? <code>different</code>이다.
+strcmp 함수는 두 문자열이 같을때 0을 반환한다.
+0과 true를 비교하면 false이므로 different가 출력된다.
+하나씩 해석하면 쉬운 코드다. 하지만 이런 코드에는 원래 개발하던 사람도 낚인다.
+원래 개발하던 사람도 낚이는 코드를 작성할 수 있다면 이 함수는 나쁜 함수 아닐까?</p>
+<ul>
+<li><a href="https://twitter.com/kindtis/status/589974383583571968">@kindtis님의 반응</a></li>
+<li><a href="https://twitter.com/Le_Ig_18/status/589972814704214016">@Le_Ig_18님의 반응</a></li>
+</ul>
+<h2 id="strcmp">strcmp()</h2>
+<p>strcmp()를 <a href="http://www.cplusplus.com/reference/cstring/strcmp/">자세히</a> 보자.</p>
+<p><code>int strcmp ( const char * str1, const char * str2 );</code></p>
+<ul>
+<li>&lt;0 : the first character that does not match has a lower value in ptr1 than in ptr2</li>
+<li>0 : the contents of both strings are equal</li>
+<li>&gt;0 : the first character that does not match has a greater value in ptr1 than in ptr2</li>
+</ul>
+<p>두 문자열이 같으면 0을 반환하고 다르면 0보다 작거나 큰 값을 반환한다.
+두 문자열의 대소를 비교할수 있기 때문에 정렬에 사용할수 있다.</p>
+<h2 id="개선하기">개선하기</h2>
+<p>두 문자열이 같을때 함수의 리턴이 0이다. 두 문자열이 같을때 진입하는 if문은 다음과 같이 작성해야 한다.</p>
+<pre><code class="language-c">if(strcmp(foo, bar) == 0) { ... }
+</code></pre>
+<p>실수로 다음과 같이 작성하면 의도와는 다르게 동작한다.</p>
+<pre><code class="language-c">if(strcmp(foo, bar) == true) { ... }
+if(strcmp(foo, bar)) { ... }
+</code></pre>
+<p>만약 3가지 if문이 동일한 동작을 하도록 my_strcmp() 라는 함수를 만들수 있으면 실수를 줄일수 있지 않을까?</p>
+<pre><code class="language-c">// 기존 strcmp와의 호환성 유지
+if(my_strcmp(foo, bar) == 0) { ... }
+
+// 바꿔치기 해야되는 동작
+if(my_strcmp(foo, bar) == true) { ... }
+if(my_strcmp(foo, bar)) { ... }
+</code></pre>
+<ul>
+<li>두 문자열이 같은 경우
+<ul>
+<li>retval == 0 : true</li>
+<li>retval == true : true</li>
+<li>retval : true</li>
+</ul>
+</li>
+<li>리턴타입은 기존의 strcmp()와의 호환성을 유지해야한다.</li>
+</ul>
+<p>이런 동작을 하는 my_strcmp()와 리턴타입을 만들어보자.</p>
+<h2 id="obj-c">obj-c</h2>
+<p>obj-c에서 strcmp()에 대응되는 함수의 리턴값은 enum이다.
+각각의 enum은 -1, 0, 1에 대응하기 때문에 strcmp()와의 호환성을 유지한다.
+strcmp의 리턴값을 단순한 int가 아니라 enum으로 바꾸면 개선할수 있지 않을까?</p>
+<pre><code class="language-c">typedef enum {
+  NSOrderedAscending = -1,
+  NSOrderSame,
+  NSOrderedDescending
+} NSComparisonResult;
+</code></pre>
+<h2 id="my_strcmp--enum-version">my_strcmp : enum version</h2>
+<p>enum과 연산자 오버로딩을 이용해서 my_strcmp()의 대안 함수인 my_strcmp_enum()을 구현하면 다음과 같다.</p>
+<pre><code class="language-cpp">#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cassert&gt;
+
+typedef enum {
+  MyOrderedAscending = -1,
+  MyOrderSame,
+  MyOrderedDescending
+} MyComparisonResult;
+
+MyComparisonResult my_strcmp_enum(const char * str1, const char * str2) {
+  int val = strcmp(str1, str2);
+  if(val &lt; 0) {
+    return MyOrderedAscending;
+  } else if(val &gt; 0) {
+    return MyOrderedDescending;
+  } else {
+    return MyOrderSame;
+  }
+}
+
+bool operator==(MyComparisonResult a, int b) {
+  return ((int)a == b);
+}
+
+bool operator==(MyComparisonResult a, bool b) {
+  return !((bool)a == b);
+}
+
+bool operator!=(MyComparisonResult a, int b) { return !(a == b); }
+bool operator!=(MyComparisonResult a, bool b) { return !(a == b); }
+
+// compile error
+// error: conversion function must be a non-static member function
+// operator bool(MyComparisonResult a) { return true; }
+
+int main()
+{
+  assert(my_strcmp_enum(&quot;foo&quot;, &quot;foo&quot;) == 0);
+  assert(my_strcmp_enum(&quot;foo&quot;, &quot;foo&quot;) == true);
+
+  assert(my_strcmp_enum(&quot;foo&quot;, &quot;bar&quot;) != 0);
+  assert(my_strcmp_enum(&quot;foo&quot;, &quot;bar&quot;) != true);
+
+  // compatible with strcmp
+  assert(my_strcmp_enum(&quot;1&quot;, &quot;1&quot;) == strcmp(&quot;1&quot;, &quot;1&quot;));
+  assert(my_strcmp_enum(&quot;1&quot;, &quot;2&quot;) == strcmp(&quot;1&quot;, &quot;2&quot;));
+  assert(my_strcmp_enum(&quot;2&quot;, &quot;1&quot;) == strcmp(&quot;2&quot;, &quot;1&quot;));
+
+  // if(my_strcmp...)
+  printf(&quot;same : %d\n&quot;, my_strcmp_enum(&quot;foo&quot;, &quot;foo&quot;));
+  printf(&quot;different : %d\n&quot;, !my_strcmp_enum(&quot;foo&quot;, &quot;foo&quot;));
+  return 0;
+}
+</code></pre>
+<pre><code class="language-bash">$ make enum_version.exe &amp;&amp; ./enum_version.exe
+make: `enum_version.exe' is up to date.
+same : 0
+different : 1
+</code></pre>
+<p>my_strcmp()의 조건을 대부분 만족한다.</p>
+<p>하지만 if문 안에서 my_strcmp를 바로 사용할 경우 의도한 것과 반대로 동작한다.
+MyComparisonResult 를 bool 또는 int로 캐스팅하는 연산자를 오버로딩할 수 있으면 가능할거 같지만
+전역함수로 conversion function (캐스팅 연산자)를 오버로딩할 수 없다.
+아무래도 다른 방법을 찾아야겠다.</p>
+<blockquote>
+<p>operator bool(MyComparisonResult a)</p>
+<p>error: conversion function must be a non-static member function</p>
+</blockquote>
+<h2 id="my_strcmp--class-version">my_strcmp : class version</h2>
+<p>C++에서는 class를 이용해서 새로운 타입을 만들 수 있다.
+enum 대신 클래스를 이용해서 구현하자.
+클래스의 멤버함수로 conversion function을 만들면 enum 버전에서 구현하지 못한 것도 할 수 있다.</p>
+<pre><code class="language-cpp">#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cassert&gt;
+
+class ComparisonResult {
+public:
+  enum {
+    ASC = -1,
+    EQUAL,
+    DESC
+  };
+
+  ComparisonResult(int val) : val(val) {}
+
+  bool operator==(int x) {
+    return ((int)val == x);
+  }
+
+  bool operator==(bool x) {
+    return !((bool)val == x);
+  }
+
+  bool operator!=(int x) { return !(*this == x); }
+  bool operator!=(bool x) { return !(*this == x); }
+
+  operator bool() {
+    return (val == EQUAL);
+  }
+
+  static ComparisonResult strcmp(const char *str1, const char *str2) {
+    int raw = ::strcmp(str1, str2);
+    if(raw &lt; 0) {
+      return ComparisonResult(ASC);
+    } else if(raw &gt; 0) {
+      return ComparisonResult(DESC);
+    } else {
+      return ComparisonResult(EQUAL);
+    }
+  }
+private:
+  int val;
+};
+
+ComparisonResult my_strcmp(const char *str1, const char *str2)
+{
+  return ComparisonResult::strcmp(str1, str2);
+}
+
+int main()
+{
+  assert(my_strcmp(&quot;foo&quot;, &quot;foo&quot;) == 0);
+  assert(my_strcmp(&quot;foo&quot;, &quot;foo&quot;) == true);
+  assert(my_strcmp(&quot;foo&quot;, &quot;foo&quot;));
+
+  assert(my_strcmp(&quot;foo&quot;, &quot;bar&quot;) != 0);
+  assert(my_strcmp(&quot;foo&quot;, &quot;bar&quot;) != true);
+  assert(!my_strcmp(&quot;foo&quot;, &quot;bar&quot;));
+
+  // compatible with strcmp
+  assert(my_strcmp(&quot;1&quot;, &quot;1&quot;) == strcmp(&quot;1&quot;, &quot;1&quot;));
+  assert(my_strcmp(&quot;1&quot;, &quot;2&quot;) == strcmp(&quot;1&quot;, &quot;2&quot;));
+  assert(my_strcmp(&quot;2&quot;, &quot;1&quot;) == strcmp(&quot;2&quot;, &quot;1&quot;));
+  return 0;
+}
+</code></pre>
+<h2 id="정리">정리</h2>
+<ul>
+<li>strcmp() 쓸때 조심하자.</li>
+<li>C++ 연산자 오버로딩을 사용하면 strcmp()와의 호환성을 유지하면서 strcmp()보다 사고 덜치게 생긴 my_strcmp()를 구현할 수 있다.</li>
+<li>연산자 오버로딩을 이용하면 x와 bool을 비교할때, x와 int를 비교할때 다른 방식으로 처리하는게 가능하다.</li>
+<li>캐스팅 연산자는 전역함수로 오버로딩 불가능하다.</li>
+<li>새로운 타입을 만들때는 enum보다 class를 사용하는게 자유롭다.</li>
+<li>코드는 <a href="https://gist.github.com/if1live/3e8f24a4b8bdcc15a3e9">Gist</a>에 올렸다.</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B">Operators in C and C++</a></li>
+<li><a href="http://www.cplusplus.com/reference/cstring/strcmp/">strcmp</a></li>
+</ul>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/string-literal-concatenation-technique/" title="Next: &#34;foo&#34; &#34;bar&#34; == &#34;foobar&#34;">
+          &#34;foo&#34; &#34;bar&#34; == &#34;foobar&#34;
+          
+          <br/><small>String literal concatenation을 이용한 기법</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/deceiving-code-fullwidth-halfwidth/" title="Previous: 코드에 반각/전각문자 넣어서 낚시하기">
+          코드에 반각/전각문자 넣어서 낚시하기
+          
+          <br/><small>반각/전각 문자로 알아보는 고난도 낚시</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/my-strcmp\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

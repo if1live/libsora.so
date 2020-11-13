@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>union on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/tags/union/</link>
+    <description>Recent content in union on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/union/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>최상위 비트의 위치 찾는 방법</title>
+      <link>https://libsora.so/posts/find-the-highest-order-bit/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/find-the-highest-order-bit/</guid>
+      <description>개요 이전에 나머지 연산자 없이 x % 256 계산하기과 나머지 연산자 없이 x % (2의 거듭제곱) 계산하기라는 글을 썻다. 색다른 기법을 다루는 글인척 하지만 컴파일러가 이미 그렇게 동작하기때문에 니가 하는 최적화는 뻘짓이라는걸 보여주는 목적의 글이었다. 여기에서 글이 끝나면 재미없다. 위의 글을 통해 배운 기법을 이용해서 조금 더 쓸모있어 보이는 (하지만 실제로는 쓸모없는) 코드를 짜보자.
+최상위 비트의 위치 찾기 1 -&amp;gt; 0001 -&amp;gt; 0 2 -&amp;gt; 0010 -&amp;gt; 1 3 -&amp;gt; 0011 -&amp;gt; 1 4 -&amp;gt; 0100 -&amp;gt; 2 .</description>
+    </item>
+    
+  </channel>
+</rss>

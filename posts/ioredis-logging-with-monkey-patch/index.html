@@ -1,0 +1,488 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> ioredis에 로깅 끼워넣기 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="ioredis에 로깅 끼워넣기" />
+  
+
+  
+  <meta name="keywords" content="ioredis, monkey patch" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/ioredis-logging-with-monkey-patch/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="ioredis에 로깅 끼워넣기">
+<meta name="twitter:description" content="로깅의 필요성 요새 작업하고 있는 프로젝트에서 typeorm과 ioredis를 쓰고 있다. 기능이 검증된 코드를 짜기 위해서 유닛 테스트를 도배하고 있다. 하지만 유닛 테스트로는 성능을 확인할 순 없다. redis MSET 한번으로 될 일을 SET 100번 호출하고 있더라도 유닛테스트는 통과할 것이다.
+최적화라는 빅-픽쳐를 위해 서버가 redis, rdbm">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/ioredis-logging-with-monkey-patch/" rel="bookmark" title="Permalink to ioredis에 로깅 끼워넣기">
+          <h1>ioredis에 로깅 끼워넣기</h1>
+          
+          <h2>라이브러리 코드 수정 없이 라이브러리 개조하기</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2020-07-09T00:00:00Z'>
+        2020/07/09
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/ioredis">#ioredis</a>
+        </li>
+        
+        <li>
+          <a href="/tags/monkey-patch">#monkey patch</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="로깅의-필요성">로깅의 필요성</h2>
+<p>요새 작업하고 있는 프로젝트에서 <a href="https://github.com/typeorm/typeorm">typeorm</a>과 <a href="https://github.com/luin/ioredis">ioredis</a>를 쓰고 있다.
+기능이 검증된 코드를 짜기 위해서 유닛 테스트를 도배하고 있다.
+하지만 유닛 테스트로는 성능을 확인할 순 없다.
+redis MSET 한번으로 될 일을 SET 100번 호출하고 있더라도 유닛테스트는 통과할 것이다.</p>
+<p>최적화라는 빅-픽쳐를 위해 서버가 redis, rdbms로 요청 보낼때 로그를 남기기로 했다.
+지정된 규격으로 로그를 찍으면 CloudWatch Logs를 통해서 elasticsearch에 저장되도록 만들고 싶다.</p>
+<h2 id="typeorm-custom-logger">typeorm: custom logger</h2>
+<p>typeorm은 로깅 갈아끼우는걸 기본적으로 지원한다.
+<a href="https://typeorm.io/#/logging/using-custom-logger">custom logger</a>를 쓰면 된다고 한다.
+문서에서 시키는대로 하면 잘 돌아간다.</p>
+<pre><code class="language-ts">export class SimpleConsoleLogger implements Logger {
+  logQuery(query: string, parameters?: any[], queryRunner?: QueryRunner) {
+    logger.info({ty: 'typeorm', query});
+  }
+  ...
+}
+</code></pre>
+<h2 id="ioredis-v4173-debug">ioredis (v4.17.3): debug</h2>
+<p>ioredis는 typeorm만큼 자유롭지 않다.
+ioredis는 <a href="https://www.npmjs.com/package/debug">debug</a>를 쓴다.
+<a href="https://github.com/luin/ioredis/blob/v4.17.3/lib/utils/debug.ts#L1">https://github.com/luin/ioredis/blob/v4.17.3/lib/utils/debug.ts#L1</a></p>
+<p>환경변수에 <code>DEBUG=ioredis:*</code>를 넣으면 로그를 볼 수 있다.
+<img src="/posts//ioredis-logging-with-monkey-patch/ioredis-debug.png" alt="ioredis logging"></p>
+<p>ioredis 코드에 정의된 디버그 로그가 찍히기 때문에 마음대로 커스터마이징 할 수 없다.
+<a href="https://github.com/luin/ioredis/blob/v4.17.3/lib/redis/index.ts#L704">https://github.com/luin/ioredis/blob/v4.17.3/lib/redis/index.ts#L704</a></p>
+<p>이럴때는 ioredis는 fork해서 custom logger를 구현하면 된다.
+잘 구현해서 풀리퀘를 보내면 ioredis에서 머지해줄테고 많은 사람들이 이득을 본다.
+이래서 오픈소스가 좋은 것이다.</p>
+<p>하지만 나는 게으르다.
+풀리퀘를 만드는 것도 귀찮고 이슈에서 영어로 토론하기도 귀찮다.
+ioredis 안고치고 로깅 기능을 추가하기로 했다.</p>
+<h2 id="monkey-patch">monkey patch</h2>
+<p>ioredis를 보니까 redis 명령은 <code>sendCommand</code>를 거쳐가더라.
+<a href="https://github.com/luin/ioredis/blob/v4.17.3/lib/redis/index.ts#L650">https://github.com/luin/ioredis/blob/v4.17.3/lib/redis/index.ts#L650</a></p>
+<p><code>sendCommand</code>를 고쳐서 로깅을 추가하면 원하는 형태로 만들수 있지 않을까?
+<a href="https://en.wikipedia.org/wiki/Monkey_patch">monkey patch</a>라는 좋은 기법이 있다.</p>
+<pre><code class="language-js">const default_sendCommand = redis.sendCommand.bind(redis);
+  redis.sendCommand = async (...params) =&gt; {
+    ...
+    default_sendCommand(...params);
+    ...
+  }
+}
+</code></pre>
+<p><img src="/posts//ioredis-logging-with-monkey-patch/ioredis-logging.png" alt="ioredis logging"></p>
+<p>왼쪽은 터미널에서 실행한 결과이고 오른쪽은 <code>redis-cli monitor</code>이다.
+몽키 패치가 잘 돌아간다.
+C, C++ 같은 언어였으면 훨씬 복잡했을텐데 자바스크립트라서 간단하게 문제를 해결했다.</p>
+<pre><code class="language-javascript">const Redis = require('ioredis');
+
+function makeRedis() {
+  const redis = new Redis({ lazyConnect: true });
+
+  const default_sendCommand = redis.sendCommand.bind(redis);
+  redis.sendCommand = async (...params) =&gt; {
+    const command = params[0];
+    const { name, args } = command;
+
+    const start = Date.now();
+    const result = await default_sendCommand(...params);
+    const end = Date.now()
+
+    const elapsed = end - start;
+    console.log(`redis: ${name} ${args.join(' ')} [${elapsed}ms]`);
+
+    return result;
+  };
+
+  return redis;
+}
+
+async function main() {
+  const redis = makeRedis();
+  await redis.connect();
+
+  await redis.mset('foo', 1, 'bar', 2);
+  console.log(await redis.get('foo'));
+  await redis.del('foo', 'bar');
+  console.log(await redis.get('bar'));
+}
+
+main().then(process.exit).catch(console.error);
+</code></pre>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/typescript-and-hoisting/" title="Next: 타입스크립트와 호이스팅">
+          타입스크립트와 호이스팅
+          
+          <br/><small>오늘의 멍청한 코드</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/typeorm-entity-proxy-for-save/" title="Previous: typeorm에서 repository.save() 호출할때 UPDATE 쿼리만 사용하기">
+          typeorm에서 repository.save() 호출할때 UPDATE 쿼리만 사용하기
+          
+          <br/><small>custom repository &#43; proxy</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/ioredis-logging-with-monkey-patch\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

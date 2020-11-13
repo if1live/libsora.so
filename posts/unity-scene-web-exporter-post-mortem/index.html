@@ -1,0 +1,656 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> Unity Scene Web Exporter 개발 포스트모템 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="Unity Scene Web Exporter 개발 포스트모템" />
+  
+
+  
+  <meta name="keywords" content="webvr, postmortem" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/unity-scene-web-exporter-post-mortem/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="Unity Scene Web Exporter 개발 포스트모템">
+<meta name="twitter:description" content="개요  Unity Scene Web exporter Live Demo 목적 : 오브젝트 배치를 유니티에서 하고싶다 개발 기간 : 2016년 3월 ~ 2016년 8월 언어 : 유니티 C#  Unity3D / Three.js screenshot
+Live Demo : Three.js
+   // global variables var camera, scene, re">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/unity-scene-web-exporter-post-mortem/" rel="bookmark" title="Permalink to Unity Scene Web Exporter 개발 포스트모템">
+          <h1>Unity Scene Web Exporter 개발 포스트모템</h1>
+          
+          <h2>WebVR로 가는 또 다른길</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2016-08-28T00:00:00Z'>
+        2016/08/28
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/webvr">#webvr</a>
+        </li>
+        
+        <li>
+          <a href="/tags/postmortem">#postmortem</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="개요">개요</h2>
+<ul>
+<li><a href="https://github.com/if1live/unity-scene-web-exporter/">Unity Scene Web exporter</a></li>
+<li><a href="http://libsora.so/unity-scene-web-exporter/">Live Demo</a></li>
+<li>목적 : 오브젝트 배치를 유니티에서 하고싶다</li>
+<li>개발 기간 : 2016년 3월 ~ 2016년 8월</li>
+<li>언어 : 유니티 C#</li>
+</ul>
+<p><strong>Unity3D / Three.js screenshot</strong></p>
+<p><img src="/posts/unity-scene-web-exporter-post-mortem/manual-mini-threejs-viewer.jpg" alt="screenshot"></p>
+<p><strong>Live Demo : Three.js</strong></p>
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r80/three.min.js"></script>
+<div id="demo-container"></div>
+<script>
+<p>// global variables
+var camera, scene, renderer;</p>
+<p>function findByUserData(node, key, value) {
+if(node.userData &amp;&amp; node.userData[key] == value) {
+return node;
+}
+for(var i = 0 ; i &lt; node.children.length ; i++) {
+var child = node.children[i];
+var found = findByUserData(child, key, value);
+if(found != null) {
+return found;
+}
+}
+return undefined;
+}</p>
+<p>function setupScene(result) {
+scene = result;
+// find main camera by tag
+camera = findByUserData(scene, &ldquo;tag&rdquo;, &ldquo;MainCamera&rdquo;);
+// calculate aspect. use window size.
+var winsize = renderer.getSize();
+camera.aspect = winsize.width / winsize.height;
+camera.updateProjectionMatrix();
+}</p>
+<p>function init() {
+// three.js renderer
+var container = document.getElementById(&lsquo;demo-container&rsquo;);
+renderer = new THREE.WebGLRenderer( { antialias: true } );
+renderer.setClearColor( 0x333333 );
+renderer.setSize( container.offsetWidth, container.offsetWidth * (10.0 / 16));
+console.log(container.offsetWidth);
+console.log(container.offset * (10.0 / 16));
+console.log(&ldquo;todo&rdquo;);
+renderer.setPixelRatio( window.devicePixelRatio );
+container.appendChild( renderer.domElement );</p>
+<pre><code>window.addEventListener( 'resize', onWindowResize, false );
+
+// Load scene - Begin
+var loader = new THREE.ObjectLoader();
+// TODO : input yout exported json file
+var url = '/posts/unity-scene-web-exporter-post-mortem/scene.json';
+loader.load(url, function(obj) {
+  setupScene(obj);
+});
+// Load scene - End
+</code></pre>
+<p>};</p>
+<p>function onWindowResize() {
+var container = document.getElementById(&lsquo;demo-container&rsquo;);
+var width = container.offsetWidth;
+var height = width * (10.0 / 16);
+camera.aspect = width / height;
+camera.updateProjectionMatrix();
+renderer.setSize(width, height);
+}</p>
+<p>var tickcount = 1;
+function animate() {
+if(scene &amp;&amp; camera) {
+tickcount += 1;
+// 적당히 카메라가 움직이면 볼만하지 않을까?
+var campos = camera.position;
+var height = campos.y;
+var radius = Math.sqrt(campos.x * campos.x + campos.z * campos.z);
+var diff = 1.0 * (Math.PI * 2) / 360.0;
+var rad = tickcount * diff;
+var rad2 = Math.sin(rad) * 40 * (Math.PI * 2 / 360.0);
+var x = Math.sin(rad2) * radius;
+var z = Math.cos(rad2) * radius;
+camera.position.set(x, height, z);
+camera.lookAt(new THREE.Vector3(0, height, 0));</p>
+<pre><code>  renderer.render(scene, camera);
+}
+requestAnimationFrame(animate);
+</code></pre>
+<p>}</p>
+<p>init();
+requestAnimationFrame(animate);
+</script></p>
+<h2 id="왜-시작했는가">왜 시작했는가?</h2>
+<p>2015년 3월, <a href="https://github.com/borismus/webvr-boilerplate">WebVR boilerplate</a>를 보고 감명받아서 <a href="http://vr.5minlab.com/">회사 홈페이지를 VR</a>로 만들었다.
+<a href="http://vr.5minlab.com/">회사 VR 홈페이지</a>은 WebVR boilerplate를 기반으로 만들었는데 이것은 <a href="http://threejs.org/">three.js</a> 기반이다.
+그래서 씬을 수정하는 작업(물체를 생성, 배치, 광원을 배치, 크기를 조절,&hellip;)을 javascript로 한다.</p>
+<pre><code class="language-javascript">// 회사 로고
+var geometry = new THREE.PlaneGeometry(1, 1);
+var mesh = new THREE.Mesh(geometry, material);
+mesh.position.set(2.8, 4.35, -0.2);
+var scale = 0.003;
+mesh.scale.set(760*scale, 517*scale, 1);
+mesh.rotation.y = -Math.PI/2;
+scene.add(mesh);
+</code></pre>
+<p>로고 하나를 배치하려고 수치를 바꾸고 새로고침, 어떻게 보이는지 확인하고 다시 수치를 조정하고 새로고침,&hellip;
+수치 조정과 새로고침을 반복하는게 피곤하더라.
+만약 좋은 3D 에디터가 있어서 여기에서 물체를 배치하고 이를 three.js에 그대로 띄울수 있다면 노가다가 줄어들지 않을까?</p>
+<blockquote>
+<p>이미 유니티라는 좋은 에디터가 있는데 여기에서 물체를 배치하고 export한 결과물을 three.js에 그대로 띄운다면 삽질이 줄어들지 않을까?
+유니티에서 배치를 하고 객체에 ID를 지정하는거야. 그리고 몇가지 정보를 객체에 같이 저장해두는거야.
+three.js에서는 ID로 객체에 접근해서 미리 저장해둔 값을 이용해서 로직을 짜는거야.</p>
+</blockquote>
+<h2 id="어떤-기능을-만들까">어떤 기능을 만들까?</h2>
+<p>쓸만한 exporter가 있나 뒤져보다가 <a href="https://github.com/drojdjou/J3D">J3D</a>와 <a href="https://www.assetstore.unity3d.com/en/#!/content/40550">Three.js JSON Exporter</a>를 발견했다.
+Three.js JSON Exporter 정도면 내가 필요로하는 기능이 전부 들어있지만 오픈소스가 아니라는점이 마음에 걸렸다.
+Exporter를 쓰다보면 커스터마이징 하고싶은게 생길텐데 자유도가 없는 라이브러리를 쓰고싶진 않았다.
+그래서 오픈소스인 J3D를 개선해서 Three.js JSON exporter에 있는 몇가지 기능을 넣어보기로 했다.</p>
+<ul>
+<li>기본적인 Scene Export : 모델, 텍스쳐, 라이트, &hellip;.</li>
+<li>Lightmap : 라이트맵까지 export하면 그럴싸한 씬을 보여줄수 있을거다</li>
+<li>Script properties : 스크립트 변수를 export하면 로직 작성하는데 이용할수 있을거다.</li>
+</ul>
+<h2 id="custom-json-format-vs-threeobjectloader">Custom JSON Format VS THREE.ObjectLoader</h2>
+<p>참고할 라이브러리 2개가 생겼으니 각각을 분석하고 한가지 길을 선택하기로 했다.</p>
+<ul>
+<li>J3D
+<ol>
+<li>유니티에서 독자규격 JSON파일로 export한다</li>
+<li>독자규격 JSON을 읽을수 있는 파서를 javascript으로 구현한다.</li>
+<li>새로 만든 파서가 export된 JSON을 읽어서 three.js로 렌더링한다.</li>
+</ol>
+</li>
+<li>Three.js JSON Exporter
+<ol>
+<li>Three.js의 <a href="http://threejs.org/docs/#Reference/Loaders/ObjectLoader">ObjectLoader</a>로 읽을수 있는 JSON으로 유니티에서 export한다</li>
+<li>export한 JSON을 ObjectLoader로 읽는다</li>
+</ol>
+</li>
+</ul>
+<p>처음에는 J3D의 방식(독자규격 JSON)을 따라가는 방향을 골랐다. 이유는 파일 용량과 로딩시간 때문이다.
+ObjectLoader의 경우 메시 데이터와 씬 데이터를 하나의 JSON에 전부 집어넣는다.
+그래서 씬이 복잡해지면 몇MB가 넘는 JSON파일이 생긴다. 그리고 이 씬 파일을 전부 받기전까지는 렌더링을 못할거다.
+(실제로 Three.js JSON exporter의 데모 중 하나는 씬 JSON 파일의 용량이 십MB를 넘어서 초기 로딩이 매우 느리다.)
+반면, J3D는 씬 데이터와 모델 데이터를 분리했다.</p>
+<pre><code class="language-javascript">J3D.Loader.loadJSON(&quot;model/filename.json&quot;, function(jsmeshes) {
+    J3D.Loader.loadJSON(&quot;model/filenameScene.json&quot;, function(jsscene) {
+        J3D.Loader.parseJSONScene(renderer, scene, jsscene, jsmeshes);
+    });
+});
+</code></pre>
+<p>export한 데이터의 대부분은 메시 데이터일 것이다.
+만약 씬데이터에는 객체의 위치 정보와 bounding box의 정보만 넣어두고 메시의 실제 정보는 나중에 로딩하게 만들면 반응속도 자체가 짧아지지 않을까?
+메시 데이터를 스트리밍하면 커넥션 한번으로 메시 파일을 낱개로 분리해서 서버에서 클라로 내려주는것도 가능하지 않을까?</p>
+<ol>
+<li>최소한의 씬 데이터(위치 정보, bounding box,&hellip;)를 로딩한다.
+<ul>
+<li>파일 크기 : 몇KB</li>
+<li>아직 로딩되지 않은 모델은 bounding box로만 보여준다.</li>
+<li>몇초안에 씬 로딩 완료, 유저는 화면을 볼수있다.</li>
+</ul>
+</li>
+<li>메시 데이터를 로딩한다
+<ul>
+<li>파일 크기 : 몇백KB~몇MB</li>
+<li>로딩되면 bounding box를 모델로 교체한다.</li>
+</ul>
+</li>
+</ol>
+<p>실제로 구현해보니까 몇가지 문제가 있었다.</p>
+<p>메시 데이터를 서버로부터 받은후 이를 처리할때 순간적으로 끊긴다.
+ObjectLoader를 씬을 한번에 로딩하고 이후에는 로딩 과정이 없다. 그래서 처음 한번만 느리다.
+J3D같이 씬과 모델 데이터를 분리하면 모델 데이터를 받은 다음에 이를 읽어야한다.
+자바스크립트는 싱글쓰레드이기때문에 모델 읽어서 올리는동안 렌더링이 멈춘다.
+Web worker를 이용해서 모델 데이터 읽는것을 최적화해봤지만 BufferGeometry를 생성하고 모델데이터를 올리는 동안에 끊김이 발생하더라.</p>
+<p>그래도 성능 문제 하나뿐이면 큰 문제가 아니다.
+이는 나중에 최적화로 대응하는게 가능하니까.
+게다가 최초 로딩속도가 빨라진 것의 trade-off로 생각할수 있으니까.</p>
+<p>진짜 문제는 내가 <strong>관리할 코드가 두 세트</strong>라는거다.</p>
+<p>유니티에서 독자규격으로 export했다면 독자규격을 처리할수 있는 파서를 javascript로 짜야 three.js가 이를 처리할수 있을거다.
+exporter에 새로운 필드를 하나 추가했다면 loader도 이것을 처리할수 있도록 수정해야된다.
+직렬화/역직렬화를 각각 수동으로 짜는것만큼 귀찮은일도 없는데 이 작업을 피할수 없더라.</p>
+<p>그래서 Three.js가 바로 알아들을수 있는 포맷으로 export하는쪽으로 방향을 바꿨다.</p>
+<h2 id="2개의-엔진-2개의-설계">2개의 엔진, 2개의 설계</h2>
+<ul>
+<li>유니티는 <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity Component System</a> 기반이고 Three.js는 전통적인 <a href="https://en.wikipedia.org/wiki/Scene_graph">Scene Graph</a> 기반이다.</li>
+<li>유니티에서는 하나의 객체가 렌더링되는 객체이면서 동시에 광원일수 있지만 Three.js에서는 불가능하다.</li>
+<li>유니티에서는 라이트맵은 별개의 시스템으로 굴러가지만 Three.js에서는 텍스쳐와 통합되어있다.</li>
+<li>유니티의 Material과 Three.js의 Material은 1:1로 매칭되지 않는다. 비슷하게 매칭되는게 있을뿐이다.</li>
+<li>유니티는 DX 좌표계를 사용하지만 Three.js는 GL좌표계를 사용한다.</li>
+<li>유니티에서의 Plane Mesh는 XZ평면(바닥)처럼 생겼지만 Three.js의 Plane Mesh는 XY평면(벽)처럼 생겼다.</li>
+<li>유니티의 Box Mesh와 Three.js의 Box Mesh는 UV좌표가 다르다.</li>
+<li>유니티에서는 Ambient Light는 Scene정보의 일종이지만 Three.js의 광원의 일종이다.</li>
+<li>&hellip;</li>
+</ul>
+<p>유니티와 Three.js의 수많은 차이점을 몸으로 배웠다.</p>
+<h2 id="a-frame">A-Frame</h2>
+<p>프로젝트는 처음 시작하던 2016년 3월에는 <a href="https://aframe.io/">A-Frame</a> 안정버전이 0.1.0, 개발버전이 0.2.0이었다.
+버전이 워낙 낮고 기능이 별거 없어서 A-Frame 대신 Three.js로 VR 홈페이지를 만드는 길을 선택했다.
+몇달동안 A-Frame을 지켜보니까 생각보다 발전속도가 빠르더라. 게다가 A-Frame 커뮤니티는 살아있다는 느낌이 들었다.
+2016년 3월에 WebVR로 삽질할때는 three.js가 r75였지만 내가 몇달동안 신경쓰지 못한 사이에 r80까지 버전이 올라갔더라.
+나는 바뻐서 유지보수를 못하고 있었는데 A-Frame은 꾸준히 발전해서 0.2.0 안정버전도 릴리즈하더라.
+내가 three.js로 밑바닥부터 만들면 A-Frame보다 더 성능이 빠르게 만들수 있을거같지만 나는 혼자고 A-Frame은 커뮤니티다.
+맨먼스(man month)로는 절대 이길수 없다는 생각이 들어서 exporter에 A-Frame도 넣기로 했다.</p>
+<p>A-Frame을 export하는 기능은 <a href="https://github.com/umiyuki/UnityAFrameExporter">UnityAFrameExporter</a>를 참고했다.
+UnityAFrameExporter의 코드를 분석하는데 내가 모르는 A-frame기능이 있더라.
+잘 뒤져보니까 UnityAFrameExporter가 A-Frame 0.1.0, 나는 A-Frame 0.2.0 기준으로 작업하고 있어서 내용이 다른거였다.
+워낙 버전이 낮다보니까 API가 계속 바뀌고 있더라. 현재는 안정버전이 0.3.0까진 나왔으니 또 달라졌을거다.
+API가 안정되지 않은 라이브러리를 대상으로 exporter만드니까 유지보수 측면에서 앞으로도 귀찮은 일이 생길거같다.</p>
+<h2 id="lightmap">Lightmap</h2>
+<p>J3D에는 라이트맵을 export하는 <a href="https://github.com/drojdjou/J3D/blob/85ef1c77eca95b8665d457a947b136a0ee4bedf2/unity/Assets/Editor/data/LightmapExportData.cs#L30-L65">코드</a>가 있다.
+하지만 유니티 4.x 시절에 작성된 코드라서 그런지 유니티 5.x에서는 제대로 돌아가지 않았다.
+(J3D는 Unity3D 4.5.3f3에서 테스트되었다고 한다)
+첫번째 문제는 라이트맵 텍스쳐의 경로를 기존의 방법으로는 얻을수 없다는거다.
+두번째 문제는 라이트맵 텍스쳐의 경로를 알아내도 텍스쳐의 내용을 읽을수 없다는거다.</p>
+<p>경로 문제는 <a href="http://answers.unity3d.com/questions/1114251/lightmappingcompleted-callback-occurs-before-light.html">포럼</a>의 도움을 받아서 해결했다.</p>
+<pre><code class="language-csharp">string curScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path;
+string[] parts = curScene.Split('/', '\\');
+string sceneName = parts[parts.Length - 1].Split('.')[0];
+string lightmapPath = Path.GetDirectoryName(curScene) + &quot;/&quot; + sceneName + &quot;/&quot;;
+string filepath = lightmapPath + &quot;Lightmap-&quot; + &quot;0&quot; + &quot;_comp_light.exr&quot;;
+</code></pre>
+<p>라이트맵에 접근해도 이를 읽을수 없는건 라이트맵 텍스쳐의 Read/Write Enabled 플래그가 꺼져있기 때문이다.</p>
+<p><img src="/posts//unity-scene-web-exporter-post-mortem/lightmap-texture-readable.png" alt="Read/Write Enabled"></p>
+<p>이를 수동으로 바꾸면 라이트맵에 접근할수 있지만 라이트맵을 다시 구우면 속성이 사라진다.
+그래서 라이트맵의 Read/Write Enabled를 스크립트상에서 건드렸다.</p>
+<pre><code class="language-csharp">// readable 설정 켜주기
+TextureImporter texImporter = (TextureImporter)AssetImporter.GetAtPath(filepath);
+if (!texImporter.isReadable) {
+    texImporter.isReadable = true;
+    texImporter.SaveAndReimport();
+}
+</code></pre>
+<p>라이트맵 텍스쳐를 export하는 <a href="https://github.com/if1live/unity-scene-web-exporter/blob/8bd26d0e9e5416f4d373f492eff9726213821764/UnityProject/Assets/Kanau/UnityScene/Containers/LightmapContainer.cs#L72-L124">코드</a>이다.
+J3D의 라이트맵 export하는 코드를 고쳐서 쓰고있다.</p>
+<h2 id="좋았던-점">좋았던 점</h2>
+<p>처음 목표로 잡았던 수준, 아니 그 이상의 기능까지 만들었다.
+A-frame export는 처음에는 생각하지 않았다.</p>
+<p>만든거로 자랑 한번 해봤다. 게다가 쓰는 사람도 있는거같다.
+<a href="https://aframevr.slack.com">A-Frame slack</a>에 보여줬더니 <a href="https://twitter.com/aframevr/status/769168488095109120">A-Frame 트위터</a>에도 뜨고 <a href="https://aframe.io/blog/awoa-26/">A-Frame 블로그</a>에도 올라갔다.
+어떻게 쓰는지 물어보는 메일 받아봤으니 쓰는 사람이 적어도 한명은 있는거같더라.</p>
+<h2 id="나빴던-점">나빴던 점</h2>
+<p>개발 기간이 생각보다 늘어졌다.
+시간날때 잠깐씩 작업했고 다른일이 생기거나 바뻐지면 존재 자체를 잊어버렸기 때문에 개발기간이 길어진거같다.
+개발기간이 길어지니까 어떻게 짯는지 기억이 안나더라. 그래서 하드코딩으로 넘겨버린 부분이 몇군데 생겨버렸다.</p>
+<p>export하는 접근법을 잘못 잡아서 삽질을 했다.
+J3D같은 방식을 채택한건 잘못된 선택이었다. 자주 당한 문제였으니 조금 더 생각해봤으면 J3D의 문제를 깨달을수 있었을텐데.
+처음부터 Three.js ObjectLoader로 갔으면 개발기간이 짧았을거다.</p>
+<p>유니티, Three.js의 문서를 자세히 안읽고 작업을 시작해서 삽질이 길어졌다.
+조금 더 생각하고 작업했으면 씬그래프 설계를 엎는 횟수를 줄이는게 가능했을텐데.</p>
+<h2 id="배운거">배운거</h2>
+<p>유니티를 자체를 GUI 프레임웍으로 사용하는게 가능하다는걸 깨달았다.
+유니티 자체를 일종의 RAD(Rapid Application Development) 도구로 사용하는게 가능하겠더라.</p>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/migration-from-pelican-to-hugo-post-mortem/" title="Next: 블로그를 Pelican에서 Hugo로 이사하기">
+          블로그를 Pelican에서 Hugo로 이사하기
+          
+          <br/><small>파이썬 탈주 포스트모템</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/unity-tip-game-object-comment/" title="Previous: 유니티 게임객체, 프리팹에 주석 붙이는 편법">
+          유니티 게임객체, 프리팹에 주석 붙이는 편법
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/unity-scene-web-exporter-post-mortem\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

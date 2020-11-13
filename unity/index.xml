@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unities on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/unity/</link>
+    <description>Recent content in Unities on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>유니티 프로젝트 빌드 시스템 구축하기</title>
+      <link>https://libsora.so/posts/make-unity-build-system/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/make-unity-build-system/</guid>
+      <description>개요 내가 만든 Toy Clash는 Samsung GearVR, Google Daydream, SteamVR, iOS를 지원한다. 이걸로 끝이 아니라 조만간 Windows Store도 추가될 예정이다.
+내가 개발해보니까 이정도 갯수의 플랫폼을 지원하기 위해서는 빌드 시스템 수준에서도 크로스 플랫폼을 고려해야 하더라. 게임을 개발하면서 빌드시스템이 어떻게 변화되어서 최종 형태를 갖추었는지 정리해봤다.
+수동 빌드 초기에는 빌드시스템이고 뭐고 없었다. 빌드를 뽑아서 보여줄 사람이 없는데 뭣하러 빌드에 공을 들이나? 유니티에서 직접 빌드했다.
+간단한 빌드 스크립트 유니티에는 커맨드 라인을 통해 스크립트의 특정 함수를 호출하는 기능이 있다.</description>
+    </item>
+    
+    <item>
+      <title>유니티 로그 뷰어, Sagiri</title>
+      <link>https://libsora.so/posts/introduce-sagiri/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/introduce-sagiri/</guid>
+      <description>개요 게임 개발하다보면 로그를 계속 보게 된다. 유니티의 경우 에디터 환경에서는 console창을 이용해서 로그를 볼수있다. 하지만 윈도우, 안드로이드, iOS 환경으로 빌드한 이후에는 로그를 보는게 쉽지 않다. 그래도 에디터에서는 정상적으로 돌아가지만 실제 기기에서는 문제가 생기는 경우가 있기때문에 로그를 보는 기능은 빌드에서도 필요하다.
+sagiri는 유니티 로그를 웹브라우저에서 보기 위해서 개발된 라이브러리이다. CUDLR과 Unity-File-Debug를 섞어서 만들었다. 개발이 대강 끝났으니 sagiri를 개발하게 된 과정을 정리해보기로 했다.
+왜 로그 뷰어를 새로 짰는가? 로그를 찍자 빌드된 게임에서 로그를 찍으면 플랫폼에 따라서 적절히 처리된다.</description>
+    </item>
+    
+    <item>
+      <title>유니티에서 Switch Platform 안쓰고 크로스 플랫폼 지원하기</title>
+      <link>https://libsora.so/posts/unity-cross-platform-without-platform-switch/</link>
+      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/unity-cross-platform-without-platform-switch/</guid>
+      <description>switch platform? ios, android를 동시에 지원하는 게임을 유니티로 만든다고 가정해보자. 안드로이드 빌드, iOS 빌드를 만들때마다 Switch Platform을 하면 시간이 오래 걸린다. 에셋이 많아지면 많아질수록 시간이 길어져서 수십분이 걸릴수 있다. 이 글에서는 switch platform을 매번 누르지 않고 여러 플랫폼을 동시에 다루는 방법을 다룬다.
+Solution 1. 프로젝트 복제 가장 간단한 방법은 프로젝트 폴더를 2개 만드는 것이다.
+ 유니티 프로젝트가 있는 git 저장소가 있다 git clone 받아서 game_ios 폴더로 만든다. git clone 받아서 game_anriod 폴더를 만든다.</description>
+    </item>
+    
+    <item>
+      <title>Unity Launcher 소개</title>
+      <link>https://libsora.so/posts/introduce-unity-launcher/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/introduce-unity-launcher/</guid>
+      <description>유니티 프로젝트를 진행하다보면 여러 버전의 유니티와 여러개의 프로젝트 폴더가 필요한 일이 생기게 된다. 간단한 예시를 만들어보자. 과거의 특정 시점에서 브렌치를 따서 트레일러용 빌드를 개발한다고 가정해보자. (이를 trailer 브렌치라고 부르자)
+trailer 브렌치는 오래된 코드다보니 master 브렌치와 필요한 유니티 버전이 다를 수 있다. 하나의 프로젝트 폴더를 버전이 다른 유니티로 열다보면 asset import가 오래 걸리니 저장소를 하나 더 클론받게 될것이다. 다음과 같은 식으로 구성될수있다.
+ master branch, c:/devel/game-master, unity 5.6.2p3 trailer branch, c:/devel/game-trailer, unity 5.</description>
+    </item>
+    
+    <item>
+      <title>유니티에서 에셋을 파일이름 기반으로 관리하는 편법</title>
+      <link>https://libsora.so/posts/unity-util-asset-name-attribute/</link>
+      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/unity-util-asset-name-attribute/</guid>
+      <description>문제 : 오디오 파일과 함수를 어떻게 연결할것인가? 게임에서 사용할 수십, 수백개의 오디오 파일이 있다. 그리고 어떤 상황(또는 함수)에서 어떤 사운드 파일을 재생해야되는지를 알고있다. 이것을 구현하는게 목적이다. 간단한 방법은 사운드 에셋을 컴포넌트에 직접 연결하는것이다.
+public class AudioPlayer : MonoBehaviour { public AudioClip clickA; public void Play() { ... } }  AudioClip을 멤버변수로 갖는 스크립트를 만든후 이것을 게임 객체에 붙인다. 그리고 오디오 클립을 연결킨다. 이후 Play()에서 적절히 재생하면 된다. 이 방법은 간단하지만 동시에 무식하다.</description>
+    </item>
+    
+    <item>
+      <title>[#if UNITY_EDITOR] 줄이는 편법</title>
+      <link>https://libsora.so/posts/unity-tip-remove-if-unity-editor/</link>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/unity-tip-remove-if-unity-editor/</guid>
+      <description>내 경우 유니티 에디터 확장을 따로 짜기 귀찮아서 MonoBehaviour 대신 VFW의 BaseBehaviour를 자주 사용한다. 그래서 에디터에서만 쓸수있는 클래스가 스크립트에서 자주 등장한다. 대표적인 예로 UnityEditor.AssetDatabase가 있다.
+using UnityEditor; class AssetFindDemo : BaseBehaviour { [Show] void Find_AssetDB() { var founds = AssetDatabase.FindAssets(&amp;quot;AssetFindDemo&amp;quot;); foreach (var found in founds) { var x = AssetDatabase.GUIDToAssetPath(found); Debug.LogFormat(&amp;quot;found : {0}&amp;quot;, x); } } }  겉보기에는 멀정해보이지만 이 코드로는 빌드를 뽑을수 없다. UnityEditor 네임스페이스는 빌드에서는 못쓰기 떄문이다. 그래서 빌드를 뽑고 싶으면 전처리기를 이용해야한다.</description>
+    </item>
+    
+    <item>
+      <title>MonoBehaviour를 더 좋게 만들어주는 라이브러리, VFW</title>
+      <link>https://libsora.so/posts/unity-library-vfw/</link>
+      <pubDate>Sun, 22 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/unity-library-vfw/</guid>
+      <description>유니티로 개발하던 게임을 얼마전에 출시했다. 덕분에 몇달만에 여유가 생겼다. 그동안 바뻐서 블로그를 방치했었는데 다시 운영해볼까한다. 재밌는 떡밥이 뭐가 있을까 생각해봤는데 몇달동안 한게 유니티라서 유니티밖에 생각나는게 없더라. 당분간은 유니티 만지면서 건진걸 정리할 생각이다.
+VFW  VFW is an editor extension that offers much more advance editor extensibility features than what comes out of the box with Unity. A better drawing API, a faster GUI layout system for editor drawing, tons of attributes/drawers, helper types and more.</description>
+    </item>
+    
+    <item>
+      <title>유니티 게임객체, 프리팹에 주석 붙이는 편법</title>
+      <link>https://libsora.so/posts/unity-tip-game-object-comment/</link>
+      <pubDate>Sun, 22 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/unity-tip-game-object-comment/</guid>
+      <description>코딩을 하다보면 코드에 여러가지 설명을 넣고 싶을때가 있다. 어떤 알고리즘을 사용했는지, 어떤 웹페이지에서 긁어온 소스인지, 어떤 인자를 함수에 넣어야하는지&amp;hellip;. 이런 설명을 넣고싶을때는 주석을 이용한다.
+마찬가지로 게임객체, 프리팹에 설명을 넣고 싶을때가 있다. 이 프리팹은 어떤 목적으로 만들어졌는지, 객체에 붙어있는 여러개의 컴포넌트가 서로 어떻게 엮여서 굴러가는지, 멤버 변수 이름을 바꾸다 AudioClip과의 연결이 끊어졌을때 어떤 파일과 연결해야되는지&amp;hellip;. 보통은 코드에 주석으로 넣거나 인스펙터를 개조해서 게임 객체에 설명을 집어넣을수 있다.
+하지만 같은 스크립트를 쓰는 여러가지 객체마다 설명이 다르게 붙어야하는 경우에는 코드 수정으로 대응할수 없다.</description>
+    </item>
+    
+  </channel>
+</rss>

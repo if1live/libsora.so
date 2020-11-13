@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etcs on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/etc/</link>
+    <description>Recent content in Etcs on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 07 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/etc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OMR카드와 2진법</title>
+      <link>https://libsora.so/posts/omr-and-binary-number-system/</link>
+      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/omr-and-binary-number-system/</guid>
+      <description>다들 중, 고등학교때 OMR 카드를 봤을 것이다. 중, 고등학교때 중복답안이 존재하는 문제도 풀어봤을 것이다. 그리고 채점 결과를 받아봤을 것이다. 그것을 보면 자신이 어떤 답을 골랐고 맞췄나 틀렸나도 알 수 있다. 대부분의 문제는 답을 1개만 골랐을테니 숫자로 뜨지만 중복답안의 경우는 A~Z을 이용한다.
+이를 잘 이용하면 다음과 같은게 가능하다.
+시험 오답코드로 만들어낸 (트위터 원본은 계정이 플텍이 되어서 링크를 걸 수 없었다)
+내가 중3 2학기 기말고사, 고3 2학기 기말고사때 했던짓을 지금도 누군가는 하고있더라. (중3 2학기 기말고사, 고3 2학기 기말고사는 고입, 대입에 영향을 주지 않아서 마음껏 말아먹었다) 옛날 생각이 나서 오답 코드 관련 글을 써보기로 했다.</description>
+    </item>
+    
+    <item>
+      <title>12 ≦ x ≦ 0, 12 ≦ x ≦ 7</title>
+      <link>https://libsora.so/posts/12-lte-x-lte-0/</link>
+      <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/12-lte-x-lte-0/</guid>
+      <description>SNS을 하다 재밌는 짤을 봤다.
+말도 안되는 것처럼 보이지만 즐거운 C의 세계에서는 가능하다.
+12 ≦ x ≦ 0 연산자 우선순위를 보자.
+ &amp;lt;, &amp;gt;, &amp;lt;=, &amp;gt;= : 왼쪽에서 오른쪽  읽기 쉽게 괄호를 치자. 12 &amp;lt;= x &amp;lt;= 0 는 (12 &amp;lt;= x) &amp;lt;= 0 와 같다. C의 세계에서는 true/false가 1/0이나 마찬가지니까 (1 or 0) &amp;lt;= 0 라고 쓸수있다. 12 &amp;lt;= x가 false인 x를 찾으면 된다. x는 12보다 작다.
+12 ≦ x ≦ 7 12 &amp;lt;= x &amp;lt;= 7 에 괄호를 치면 (12 &amp;lt;= x) &amp;lt;= 7 이다.</description>
+    </item>
+    
+    <item>
+      <title>NDC 2017 &lt;로보리콜&gt; 포스트모템 정리</title>
+      <link>https://libsora.so/posts/ndc-2017-robo-recall/</link>
+      <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/ndc-2017-robo-recall/</guid>
+      <description>2017년 4월 26일에 NDC 2017을 갔다왔다. 잊어버리기전에 기억나는 내용을 정리해본다. 나와 관련있는 부분 아니면 기록도 안해놨다. 그래서 전체 내용을 알아보고 싶으면 다른 자료를 보는게 좋을 것이다.
+세션 소개  제목 : &amp;lt;로보리콜&amp;gt; 포스트모템 발표분야 : 가상현실 발표내용의난이도 : 기본적인 사전지식 필요 수강권장대상 : VR 개발자 학생참관여부 : 학생 참관 가능 공개수준 : L1-Public Open  발표자 소개 : 신광섭 - 에픽게임즈코리아
+현재 Developer Relations Lead이자 프로그래머로서 근무중이며, 이전에는 소프트맥스에서 언리얼 엔진 2, 3를 이용해서 마그나카르타 PS2/PSP와 Xbox 360 버전을 개발했습니다.</description>
+    </item>
+    
+    <item>
+      <title>Awesome 3.5 install Guide for Ubuntu 13.10</title>
+      <link>https://libsora.so/posts/awesome-3-5-install/</link>
+      <pubDate>Sat, 22 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/awesome-3-5-install/</guid>
+      <description>Why not 3.4? On Ubuntu 13.10, current stable version is 3.4.15-1. awesome 3.4 doesn&amp;rsquo;t support different wallpeper on each screen. awesome 3.5 support it. I want this feature.
+Object Install awesome 3.5.3(current stable) on ubuntu 13.10
+Try PPA, but&amp;hellip; I&amp;rsquo;m lazy, so I like package rather than compile. I try using PPA.
+ PPA for Arnaud Guignard PPA for Klaus Vormweg  After install awesome 3.5, I execute awesome, But crash occur.</description>
+    </item>
+    
+    <item>
+      <title>eZ430-Chronos Google OTP 삽질기</title>
+      <link>https://libsora.so/posts/ez430-chronos-google-otp/</link>
+      <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/ez430-chronos-google-otp/</guid>
+      <description>몇달전에 손목시계가 필요했다 + 개발가능이면 더 좋겠지 해서 eZ430-Chronos를 충동적으로 샀다. 막상 질러놓고 이걸 어따 쓸까 하다가 마땅한 방법이 생각이 안나서 방치해놧다가 Google OTP로 쓰는 걸 보고 나도 저거로 써야지해서 삽질했다. 삽질 마무리할 겸 주요 삽질 내용을 정리해봤다. (물론 여기에 나온게 내가 한 모드 삽질내용은 아니다. 짜잘한 삽질은 까먹어서&amp;hellip; 윈7/8에 드라이버 설치하는 방법이라든가&amp;hellip; 그정도는 근성으로 해결할수 있을거라고 믿고 건너뛴다)
+펌웨어 업글 됩니까? eZ430-Chronos는 Wireless Firmware Update는 지원한다. 펌웨어 업그레이드 하겠다고 시계 뚜껑따는 삽질을 안해도 되니까 정말 좋은 기능이다.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi를 무선공유기로 쓰기</title>
+      <link>https://libsora.so/posts/raspberry-pi-hostapd/</link>
+      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/raspberry-pi-hostapd/</guid>
+      <description>내 방은 집의 무선네트워크에서 미묘하게 사각지대에 위치한다. 그래서 누워서 인터넷하면 잘 끊긴다. 이를 해결하고자 집에서 굴러다니는 라즈베리 파이와 옛날에 사서 묵혀놓은 USB무선랜을 조합해서 무선공유기로 쓰기로 했다. 적절한 문서를 기반으로 삽질하면서 몇군데 수정했다. 기본적으로는 문서를 기반으로 따라서 진행하고 문제가 생겼을때 아래의 내용을 참고하면 도움이 될거다.
+내부 네트워크는 접속이 되는데 밖으로 나가질 못한다? 라즈베리파이를 무선공유기로 돌리는데 성공했고 외부장치에서 라즈베리파이로 무선접속하는것은 성공했다. 라즈베리파이에 HTTP서버가 있어서 거기에 접속을 시도했더니 접속은 문제없이 되는데 외부 사이트로는 접속이 안된다?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Designs on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/design/</link>
+    <description>Recent content in Designs on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://libsora.so/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>나의 백엔드 배포 환경 정책</title>
+      <link>https://libsora.so/posts/my-backend-deployment-environment-policy/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/posts/my-backend-deployment-environment-policy/</guid>
+      <description>배포 환경(Development environment)은 목적에 따라서 각각 다른 스테이지로 소프트웨어 배포하는걸 말한다. 예시로 설명하면 쉬운데 말로 쓰니까 어렵다. 개발 서버와 프로덕션 서버를 분리해서 실수로 개발 서버 말아먹어도 서비스에는 영향이 가지 않도록 만드는 것을 뜻한다.
+wikipedia 문서를 참조하면 남들은 아래와 같이 환경으로 나눈다고 카더라.
+ local development integration testing staging production  내 경우는 아래와 같이 환경을 나눴다
+   stage dotenv     (local) development   dev unstable   nightly nightly   devqa devqa   staging-1 staging-1   staging-2 staging-2    왜 이 꼴이 되었는지 자기합리화하는 글을 써보았다.</description>
+    </item>
+    
+    <item>
+      <title>관대한 코드는 쉽게 망가진다</title>
+      <link>https://libsora.so/posts/generous-code-breaks-easily/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/generous-code-breaks-easily/</guid>
+      <description>개요 KOCW를 통해서 집합론을 공부하기 시작했다. 동영상 강의 보기를 눌렀더니 크롬에서는 안돌아가더라. 액티브엑스 기반 강의라고 붙어있더니 역시나 크롬에서 안되는거같더라. 그래서 익스플로러를 켜고 인강을 들어갔다. IE로도 동영상 강의가 나오지 않더라. 왜 안돌아가나 확인해가 위해서 크롬 개발자 도구를 켰더니 이런 코드가 있더라.
+function window.onload() { .... }  잉? 함수 이름에 . 들어가는게 가능했어? 이런 코드는 처음봤다. 처음보는 황당한 코드, 한때는 잘 돌아갔던 프로그램, 답은 뻔하다. IE 구버전. IE 호환성 모드를 켜고 인강을 켜니까 잘 돌아갔다.</description>
+    </item>
+    
+    <item>
+      <title>HTTP 요청에 body를 붙여서 보내면 어떤 일이 벌어질까? part 2</title>
+      <link>https://libsora.so/posts/http-request-with-body-and-java-httpurlconnection/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/http-request-with-body-and-java-httpurlconnection/</guid>
+      <description>삽질의 시작 이전에 HTTP GET 요청에 body를 붙여서 보내면 어떤 일이 벌어질까?를 썼다. 나중에 자바의 HttpURLConnection의 동작이 안드로이드 버전의 UnityWebRequest와 똑같다는 소리를 들었다. 유니티 개발자들이 HTTP 라이브러리 만들기 귀찮아서 플랫폼별로 내장된 HTTP 라이브러리를 쓴거 아닐까? 하는 망상을 했다. 그래서 HttpURLConnection로 HTTP 요청을 보낼때 body 붙이는 짓을 해봤다.
+테스트 const express = require(&#39;express&#39;); const app = express(); app.use(express.json()); app.use(express.urlencoded({ extended: true })); app.all(&#39;/&#39;, (req, res) =&amp;gt; { res.json({ method: req.method, body: req.</description>
+    </item>
+    
+    <item>
+      <title>HTTP GET 요청에 body를 붙여서 보내면 어떤 일이 벌어질까?</title>
+      <link>https://libsora.so/posts/http-get-request-with-body-and-http-library/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/http-get-request-with-body-and-http-library/</guid>
+      <description>삽질의 시작 요새 유니티로 게임을 만들고 있다. 나는 서버쪽을 작업하고 있다. 서버는 HTTP 기반으로 구현하고 있다. 실시간 통신이 필요없으면 HTTP 쓰는게 편하잖아? RESTful API 같은 통신 규격으로 구현하고 있다. GET, POST, DELETE, PUT 으로 행동을 구분하고 인자는 모두 body에 json을 붙여서 넘겼다. GET의 경우도 특별한 구분없이 POST랑 똑같은 인터페이스를 유지하도록 했다. 이 접근법은 elasticseach의 검색 API를 보고 배웠다.
+curl -X GET &amp;quot;localhost:9200/twitter/_search&amp;quot; -H &#39;Content-Type: application/json&#39; -d&#39; { &amp;quot;query&amp;quot; : { &amp;quot;term&amp;quot; : { &amp;quot;user&amp;quot; : &amp;quot;kimchy&amp;quot; } } } &#39;  query string을 쓰면 인자의 타입이 문자열로 인식되니 숫자로 변환해서 처리하는게 귀찮다.</description>
+    </item>
+    
+    <item>
+      <title>django를 관리툴로 쓰자</title>
+      <link>https://libsora.so/posts/use-django-as-admin-tool/</link>
+      <pubDate>Sun, 13 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/use-django-as-admin-tool/</guid>
+      <description>개요 서비스를 개발하다보면 어떤 식으로든 어드민 툴이 필요해진다. 간단한 게시판을 만든다고 생각하자. 관리자의 업무중에는 게시판의 스팸글을 지우는게 있을 것이다. 스팸글 몇 개는 SQL query로 대응할수 있을 것이다. 그러던 어느날, 쿼리에 게시글 id를 잘못 넣어서 의도하지 않은 게시글을 지워버릴지도 모르는 일이다. 또는 게시판 관리하는 업무를 다른 사람한테 넘기고 싶은데 SQL을 아는 사람만 업무를 이어받을 수 있는 상황이 될지 모른다. 어드민 툴을 만들었으면 마우스 클릭 하나로 글을 지울 수 있었을것이다. 그렇다면 쿼리 입력하다 실수할 가능성도 낮아지고 다른 사람한테 일을 넘기도 쉽다.</description>
+    </item>
+    
+    <item>
+      <title>로그 파일은 좋다</title>
+      <link>https://libsora.so/posts/log-file-is-good/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/log-file-is-good/</guid>
+      <description>개요 예전에 재밌는 버그를 밟은적 있다. 코드는 아래와 같이 굴러갔다.
+ 요청이 들어오면 transaction 시작. 요청이 들어오면 트랜잭션이 시작되도록 프레임웍이 구현되어 있었다. 로그를 DB에 기록 로직을 적절히 수행 transaction 완료. 요청 끝날때 트랜잭션이 끝남  로그를 왜 DB에 기록했는가? 몇가지 이유가 있었다.
+하나는 검색이 쉬워서이다. 로그 테이블을 잘 만들고 로그를 잘 저장하면 검색이 쉽다. 아직도 터미널을 쓸 줄 모른느 컴맹이라서 grep 쓰는것보다 SQL이 쉽더라.
+웹서버가 여러대였기에 DB를 쓰는게 편했다. 로그를 웹서버 로컬에 각각 기록하면 나중에 로그 파일을 뒤지기 위해 여러대의 웹서버를 열버봐야할텐데 그건 귀찮더라.</description>
+    </item>
+    
+    <item>
+      <title>로그는 무죄</title>
+      <link>https://libsora.so/posts/log-file-is-not-guilty/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/log-file-is-not-guilty/</guid>
+      <description>수정 내역  2019/01/06: 작성 2019/01/07: 게시 중단  </description>
+    </item>
+    
+  </channel>
+</rss>

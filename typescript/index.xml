@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescripts on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/typescript/</link>
+    <description>Recent content in Typescripts on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>타입스크립트로 API 명세 작성하고 서버/클라 stub 생성하기</title>
+      <link>https://libsora.so/posts/stub-from-typescript-api-specification/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/stub-from-typescript-api-specification/</guid>
+      <description>개요 얼마전에 백엔드/프론트엔드로 구성된 운영툴을 짰다. 백엔드는 typescript + express로 굴러간다. 프론트엔드는 typescript + react로 굴러간다.
+양쪽을 같은 언어로 구현했으니까 RPC를 싸게 만들 방법이 있지 않을까 생각해서 나온 결과물이다. 요즘 세상에 RPC를 새로 만드는건 바퀴의 재발명같아 보인다. 하지만 다른 RPC를 붙여서 프로젝트를 복잡하게 만들고 싶지 않았다.
+타입스크립트로 API 명세를 작성하고 이를 사용해서 HTTP API 서버/클라 구현하는 기법을 정리했다.
+specification 간단한 예제니까 API 명세에는 최소한의 정보만 넣자. HTTP method, URL, 응답과 출력만 명시한다.</description>
+    </item>
+    
+    <item>
+      <title>타입스크립트와 호이스팅</title>
+      <link>https://libsora.so/posts/typescript-and-hoisting/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/typescript-and-hoisting/</guid>
+      <description>타입스크립트에는 union type이 있다. 타입스크립트는 매우 좋은 언어라서 분기를 적절히 처리해주면 union type의 특정 타입으로 한정할 수 있다. 아래의 코드는 string | null 타입이 들어왔지만 null을 분기로 빼냈다. 그래서 분기 아래에서는 a가 string인게 보장된다.
+function f(a: string | null) { if (a === null) { return; } const x = () =&amp;gt; console.log(a); function y() { console.log(a); } }  덕분에 arrow function x는 a를 string으로 추론할 수 있다. 역시 타입스크립트는 좋은 언어.</description>
+    </item>
+    
+    <item>
+      <title>타입스크립트와 순환 의존성</title>
+      <link>https://libsora.so/posts/typescript-and-circular-dependency/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/typescript-and-circular-dependency/</guid>
+      <description>타입스크립트와 순환 의존성 circular dependency(순환 의존성, circular reference, 순환 참조)는 대부분의 언어에서 발생시킬 수 있는 문제이다. C 에서도 circular dependency 문제가 있다. C 에서는 전방선언 같은 수단을 쓰지 않으면 컴파일이 되지 않기 때문에 문제를 쉽게 찾을수 있다.
+타입스크립트 역시 순환 의존성 문제가 발생할 수 있다. 하지만 타입스크립트에서의 순환 의존성 문제는 C와는 조금 다르다.
+undefined 순환 의존성을 구현한 간단한 예제이다.
+const-a.ts
+import { b } from &#39;./const-b&#39;; console.log({ b }); export const a: number = b + 1;  const-b.</description>
+    </item>
+    
+    <item>
+      <title>타입 안전한 express 앱 구현하기</title>
+      <link>https://libsora.so/posts/make-typesafe-express-app/</link>
+      <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/make-typesafe-express-app/</guid>
+      <description>개요 import express from &#39;express&#39;; const app = express(); app.get(&#39;/sum&#39;, (req, res) =&amp;gt; { const a = parseInt(req.query.a, 10); const b = parseInt(req.query.b, 10); if (isNaN(a)) { throw new Error(&#39;not a number&#39;); } if (isNaN(b)) { throw new Error(&#39;not a number&#39;); } const result = a + b; res.json({ result }); }); const port = 5000; app.listen(port, () =&amp;gt; console.log(`running 127.0.0.1:${port}`));  위의 코드는 express, 타입스크립트를 사용해서 만든 간단한 서버이다. 서버는 간단하고 대응되는 클라를 짜는것도 간단한 일이다.</description>
+    </item>
+    
+    <item>
+      <title>타입스크립트에서 절대경로 쓰기</title>
+      <link>https://libsora.so/posts/use-absolute-path-in-typescript/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/use-absolute-path-in-typescript/</guid>
+      <description>개요 요새 타입스크립트를 쓰고있다. 100줄짜리 프로그램 짜는게 아니니 소스파일이 수십개로 나뉘어져있다. 파일에 접근하기 위해서는 디렉토리 구조도 몇단계로 내려가야 한다. 소스 파일간의 import하는 일이 많은데 타입스크립트에서는 기본적으로 상대경로 쓰더라. 그래서 import에 들어가는 경로가 깨끗하지 않다. ../../..가 자주 등장하더라.
+import { bar } from &#39;../../../../bar&#39;; export const foo = () =&amp;gt; { console.log(bar()); };  설계에 따라서는 상대경로로 밑에서 경로를 접근하는것보다 위에서 내려가는게 빠를 수 있다. 그리고 import 경로로 깔끔하게 만들 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

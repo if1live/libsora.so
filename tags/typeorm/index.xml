@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typeorm on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/tags/typeorm/</link>
+    <description>Recent content in typeorm on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/typeorm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typeorm에서 repository.save() 호출할때 UPDATE 쿼리만 사용하기</title>
+      <link>https://libsora.so/posts/typeorm-entity-proxy-for-save/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/typeorm-entity-proxy-for-save/</guid>
+      <description>repository.save() 의 함정 typeorm으로 아래와 같은 엔티티를 정의했다고 치자.
+@Entity() export class UserEntity { @PrimaryColumn() key1: string; @PrimaryColumn() key2: string; @Column() data: string; }  엔티티를 살짝 고쳐서 저장하자.repository.save()를 이용하면 쉽게 저장할 수 있다. (BEGIN TRANSACTION, COMMIT이 쿼리에 들어가는걸 없애려고 transaction을 껏다)
+const repo = conn.manager.getRepository(UserEntity); user.data = &#39;save&#39;; await repo.save(user, { transaction: false });  데이터 저장하는건 1줄인데 실행되는 SQL은 1개가 아니다.
+query: SELECT &amp;quot;UserEntity&amp;quot;.&amp;quot;key1&amp;quot; AS &amp;quot;UserEntity_key1&amp;quot;, &amp;quot;UserEntity&amp;quot;.&amp;quot;key2&amp;quot; AS &amp;quot;UserEntity_key2&amp;quot;, &amp;quot;UserEntity&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

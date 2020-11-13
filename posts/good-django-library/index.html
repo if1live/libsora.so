@@ -1,0 +1,492 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> Django용 적절한 라이브러리 소개 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="Django용 적절한 라이브러리 소개" />
+  
+
+  
+  <meta name="keywords" content="django, library" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/good-django-library/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="Django용 적절한 라이브러리 소개">
+<meta name="twitter:description" content="2년 전, 신규 웹 프로젝트를 django로 시작했지만 django의 몇가지 문제 때문에 flask로 갈아탔다. 프로젝트 시작한지 얼마되지 않은 시점이어서 코드가 별로 없었기 때문에 프레임웍을 바꾸는것이 별 부담이 되지 않았고 django에서 어떻게든 문제를 해결하려고 삽질할 수도 있었겠지만 flask로 선택하면 바로 해결되기 때문에 삽질하기 귀찮아서 dj">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/good-django-library/" rel="bookmark" title="Permalink to Django용 적절한 라이브러리 소개">
+          <h1>Django용 적절한 라이브러리 소개</h1>
+          
+          <h2>쉽게 붙일 수 있는 적절한 라이브러리</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2014-08-10T00:00:00Z'>
+        2014/08/10
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/django">#django</a>
+        </li>
+        
+        <li>
+          <a href="/tags/library">#library</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <p>2년 전, 신규 웹 프로젝트를 django로 시작했지만 django의 몇가지 문제
+때문에 flask로 갈아탔다. 프로젝트 시작한지 얼마되지 않은 시점이어서
+코드가 별로 없었기 때문에 프레임웍을 바꾸는것이 별 부담이 되지 않았고
+django에서 어떻게든 문제를 해결하려고 삽질할 수도 있었겠지만 flask로
+선택하면 바로 해결되기 때문에 삽질하기 귀찮아서 django를 버렸다.</p>
+<p>지금 시점에서 django와 flask 중 하나를 선택하라고 어떻게 할까? 지금은
+django로 여러가지 삽질을 해서 과거에 해결하지 못했던 문제를 해결할 수
+있는 라이브러리를 알고 있다. 그래서 이번 기회에 내가 알고있는 django를
+flask만큼 좋게 만드는 몇가지 라이브러리를 소개한다.</p>
+<h2 id="url-routing">URL Routing</h2>
+<p>Django의 urls.py 는 정규식을 이용해서 URL Routing을 설정한다. 근데
+정규식이라는게 사람이 읽기 좋은 물건이던가? 아래는 <code>/year/2014/may/</code> 와
+같이 연도/월을 표현한 URL을 잡아내는 표현이다.</p>
+<ul>
+<li><code>^year/(?P&lt;year&gt;\d{4,4})/(?P&lt;month&gt;\w+)/$</code></li>
+<li><code>/year/&lt;int4:year&gt;/&lt;word:month&gt;</code></li>
+</ul>
+<p>정규식으로 표현된 위의 표현보다 아래쪽이 더 읽기 쉽다. (아래의 문법은 flask에서 사용하는 방식이다.
+<a href="http://flask.pocoo.org/docs/api/#url-route-registrations">flask-url-route</a>)</p>
+<p>아래와 같은 표현을 위의 정규식으로 바꿀수 있으면 URL 관리가 더 편하지 않을까?
+이때 사용할수 있는 라이브러리가
+<a href="http://amitu.com/smarturls/">smarturls</a> 이다.</p>
+<pre><code class="language-python"># Django default URL
+urlpatterns = patterns('',
+    ('^year/(?P&lt;year&gt;\d{4,4})/(?P&lt;month&gt;\w+)/$', 'month.view'),
+)
+
+# smarturls
+urlpatterns = patterns('',
+    surl('/year/&lt;int4:year&gt;/&lt;word:month&gt;/', 'month.view'),
+)
+</code></pre>
+<p>smarturls은 기존 django프로젝트에 끼워넣어도 문제가 생기지 않는다는 점이
+좋다.</p>
+<h2 id="debugger">Debugger</h2>
+<p><img src="/posts/good-django-library/twdp_0804.png" alt="image"></p>
+<p>Django 개발 도중에 에러가 발생하면 위와 같은 화면을 자주 볼 것이다.
+문제가 몇번째 줄에서 어떤식으로 발생했는지를 볼 수 있다. 이것만 있어도
+php보다는 정신건강에 좋다. 만약 에러난 지점에서 pdb가 돌아가서 변수값을
+직접 확인해볼수 있으면 더 좋지 않을까?</p>
+<p><img src="/posts/good-django-library/debug-screenshot.png" alt="image"></p>
+<p>위의 화면은 werkzeug의 디버거이다. 문제가 발생한 지점에서 shell을 띄워서
+변수값을 직접 확인할수도 있고 함수도 호출할 수 있다. flask의 경우는
+werkzeug를 이용하기 때문에 위의 디버거를 그냥 쓸수있지만 django는 그렇지
+않다.</p>
+<p>하지만 추가 라이브러리를 쓰면 django에서도 이 좋은 디버거를 쓸 수 있다.
+<a href="https://github.com/django-extensions/django-extensions">django-extensions</a>
+과 <a href="http://werkzeug.pocoo.org/">werkzeug</a> 를 깔면 django에서 werkzeug를
+쓸 수 있다. 설치한 다음에 <code>runserver</code> 대신 <code>runserver_plus</code> 를 쓰면
+된다. 기존 django 프로젝트에 끼워넣어도 문제없이 작동한다.</p>
+<h2 id="jinja2">Jinja2</h2>
+<p><a href="http://jinja.pocoo.org/docs/">jinja2</a> 는 매우 적절한 템플릿 엔진이다.
+django 내장 템플릿 엔진보다 훨씬 좋다. 내가 django 템플릿을 버리고
+jinja2로 갈아타도록 만든 특징은 템플릿에서 함수 호출이 가능하다는 것과
+필터에 인자를 여러개 넘기는 것이 가능하다는 점이다.</p>
+<pre><code class="language-html">&lt;p&gt;{{ foo.bar(1, 'asd') }}&lt;/p&gt;
+&lt;p&gt;{{ &quot;Hello World&quot;|replace(&quot;Hello&quot;, &quot;Goodbye&quot;) }}&lt;/p&gt;
+</code></pre>
+<p>django에서 템플릿 엔진을 <a href="http://jinja.pocoo.org/docs/">jinja2</a> 로
+바꿔끼우는 직접 사용해본것이 2가지이다.</p>
+<ul>
+<li><a href="https://github.com/niwibe/django-jinja">django-jinja</a></li>
+<li><a href="https://github.com/coffin/coffin">coffin</a></li>
+</ul>
+<p><a href="https://github.com/coffin/coffin">coffin</a> 의 경우 기존 django 템플릿과
+섞어서 사용가능하다. 확장자가 .html이면 django template으로 취급하고
+.jinja2이면 jinja2 template로 취급하는 식이다. 그래서 기존의 django
+프로젝트에 도입해도 문제가 생기지 않는다. (기본 템플릿이 2벌 되는건 다른
+이야기) (django-jinja도 django template과 섞어서 작동하는지는
+테스트해보지 않았다. 하지만 아마도 되겠지)</p>
+<h2 id="정리">정리</h2>
+<p>2년전에 django를 버리고 flask로 갈아탄 이유는 다음과 같다.</p>
+<ul>
+<li>django template보다 jinja2가 좋더라</li>
+<li>django의 urls.py는 이해하기 어렵다. flask와 같은 url routing이 마음에 든다</li>
+<li>승리의 Debugger!</li>
+<li>django ORM보다 sqlalchemy가 마음에 든다. 그런데 플젝 하나에 ORM 2개 탑재하는건 좀 그렇잖아?</li>
+</ul>
+<p>하지만 지금 과거와 같은 상황이라면 어떤 선택을 할까? 지금이라면 django를
+버리지 않을거다.</p>
+<ul>
+<li>jinja2 : <a href="https://github.com/coffin/coffin">coffin</a>, <a href="https://github.com/niwibe/django-jinja">django-jinja</a></li>
+<li>URL Routing: <a href="http://amitu.com/smarturls/">smarturls</a></li>
+<li>Debugger: <a href="https://github.com/django-extensions/django-extensions">django-extensions</a></li>
+<li>ORM : flask+sqlalchemy = 로직 코드 / django ORM = django admin. 하나의 프로젝트, 2개의 ORM.</li>
+</ul>
+<p>p.s.: 위의 라이브러리와 <a href="http://amitu.com/importd/">importd</a> 를 합쳐서 간단한 예제 프로젝트를 만들었다.
+<a href="https://github.com/if1live/importd-boilerplate">importd-boilerplate</a>
+당분간은 웹질할 건수가 생기면 이거 기반으로 작업할듯.</p>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/ez430-chronos-development-review/" title="Next: EZ430-Chronos 개발 후기">
+          EZ430-Chronos 개발 후기
+          
+          <br/><small>EZ430-Chronos 펌웨어 손보면서 배운것</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/introduce-importd/" title="Previous: importd - Django as a micro-framework">
+          importd - Django as a micro-framework
+          
+          <br/><small>d is for django</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/good-django-library\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,513 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> NetFUNNEL 우회하기 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="NetFUNNEL 우회하기" />
+  
+
+  
+  <meta name="keywords" content="hack, netfunnel" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/bypass-netfunnel/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="NetFUNNEL 우회하기">
+<meta name="twitter:description" content="개요 서민형 안심전환대출 신청하게 되었다. 신청하러 들어갔더니 대기 페이지가 뜨더라.
+기다리는 것보다 뜯어서 우회하는게 빠를거같더라. 나는 인내심이 없는 인간이라서 뜯어봤다. (얼마나 인내심이 없냐하면 신청이 끝나는 29일에 글을 쓰려고 했으나 참지 못하고 지금 쓴다)
+방법 1 팝업에서 대기자 수가 계속 바뀐다. 이것에 대응되는 코드를 찾고 하나씩 따라가면">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/bypass-netfunnel/" rel="bookmark" title="Permalink to NetFUNNEL 우회하기">
+          <h1>NetFUNNEL 우회하기</h1>
+          
+          <h2>대기없이 서민형 안심전환대출 신청하기</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2019-09-21T00:00:00Z'>
+        2019/09/21
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/hack">#hack</a>
+        </li>
+        
+        <li>
+          <a href="/tags/netfunnel">#netfunnel</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="개요">개요</h2>
+<p><a href="https://www.hf.go.kr/">서민형 안심전환대출</a> 신청하게 되었다.
+신청하러 들어갔더니 대기 페이지가 뜨더라.</p>
+<p><img src="/posts//bypass-netfunnel/waiting.png" alt="대기"></p>
+<p>기다리는 것보다 뜯어서 우회하는게 빠를거같더라.
+나는 인내심이 없는 인간이라서 뜯어봤다.
+(얼마나 인내심이 없냐하면 신청이 끝나는 29일에 글을 쓰려고 했으나 참지 못하고 지금 쓴다)</p>
+<h2 id="방법-1">방법 1</h2>
+<p>팝업에서 대기자 수가 계속 바뀐다.
+이것에 대응되는 코드를 찾고 하나씩 따라가면 될거같다.</p>
+<p><img src="/posts//bypass-netfunnel/inspect-dom.png" alt="DOM"></p>
+<p><code>NetFunnel_Loading_Popup_Count</code>로 검색하면 하나만 걸린다.</p>
+<pre><code class="language-js">NetFunnel.countdown = function() {
+    if (NetFunnel.gLastData &amp;&amp; NetFunnel.gLastData.time_left &gt;= 0) {
+        if (NetFunnel.gPop) {
+            var tTime = NetFunnel.gPop.getObj(&quot;NetFunnel_Loading_Popup_TimeLeft&quot;);
+            var tCount = NetFunnel.gPop.getObj(&quot;NetFunnel_Loading_Popup_Count&quot;);
+            var tNext = NetFunnel.gPop.getObj(&quot;NetFunnel_Loading_Popup_NextCnt&quot;);
+</code></pre>
+<p><a href="https://www.hf.go.kr/_common/js/netfunnel.js">netfunnel.js</a>의 <code>countdown()</code>이다.
+js 파일명을 보니 <code>netfunnel</code>이라는 솔루션이 있나보다.</p>
+<p>제정신을 갖고 만든 솔루션이라면 클라이언트에서 카운트다운을 세지 않을 것이다.
+서버에서 결과를 클라로 보내고 클라는 이를 적절히 처리할 것이다.</p>
+<p><img src="/posts//bypass-netfunnel/inspect-network.png" alt="inspect network"></p>
+<p>네트워크를 뜯어보면 주기적으로 클라가 서버로 요청보내는게 보인다.
+폴링 방식으로 구현했나보다. 주고받는 response의 내용도 읽어보자.</p>
+<pre><code class="language-js">NetFunnel.gRtype=5002;NetFunnel.gControl.result='5002:201:key=2D02981FDB2DDE611B1D8C81B900312B5B57188B66DC8029EB79317DDAB32C7CE54D1E713188A821AF52E5B2FF09F2981050587F7A9D0A06787D50CF33ECA6929CDFAE73A86DC8BF1EA234386BFC00E442165990BD55429602E0DFCDFA16BA59672C302C392C312C38323132392C30&amp;nwait=82129&amp;nnext=675&amp;tps=0.599689&amp;ttl=3&amp;ip=netfunnel.hf.go.kr&amp;port=443'; NetFunnel.gControl._showResult();
+</code></pre>
+<p><code>NetFunnel.gRtype=5002</code>가 매우 거슬린다.
+<code>5002</code>에는 특별한 의미가 있을 것이다.
+검색하면 아래의 코드가 튀어나온다.</p>
+<pre><code class="language-js">NetFunnel.RTYPE_NONE = 0;
+NetFunnel.RTYPE_CHK_ENTER = 5002;
+NetFunnel.RTYPE_ALIVE_NOTICE = 5003;
+NetFunnel.RTYPE_SET_COMPLETE = 5004;
+NetFunnel.RTYPE_GET_TID_CHK_ENTER = 5101;
+</code></pre>
+<p>여기까지 보니까 NetFUNNEL의 동작이 상상되더라.
+나라면 이렇게 구현했을거다.</p>
+<ol>
+<li>클라가 서버한테 요청을 보낸다.</li>
+<li>서버는 니 차례는 아직이니 대기하라는 응답을 보낸다.</li>
+<li>폴링 반복</li>
+<li>떄가 되면 서버에서 완료했다는 응답을 보낸다.</li>
+<li>클라는 기다릴 필요가 없어졌다는걸 확인하고 적절한 함수를 호출한다.</li>
+</ol>
+<p>로직에 개입할거같이 생긴 상수 몇개 찾았다.
+검색 결과에 브레이크 포인트 찍어보니까 의심되는 곳에서 멈추더라.</p>
+<pre><code class="language-js">NetFunnel.TsClient.prototype._showResult = function() {
+    this._resetAlarm();
+    if (NetFunnel.gAlreadyProc == 1 &amp;&amp; NetFunnel.gRtype == NetFunnel.RTYPE_GET_TID_CHK_ENTER) {
+        return
+    }
+    NetFunnel.gAlreadyProc = 1;
+    NetFunnel.PopupUtil.hideWaitPopup();
+    this.retval = new NetFunnel.RetVal(this.result);
+    if (this.retval.getReqType() == NetFunnel.RTYPE_GET_TID_CHK_ENTER) {
+        this.retval.setReqType(NetFunnel.RTYPE_CHK_ENTER)
+    }
+    if (NetFunnel.TS_DEBUG_MODE) {
+        NetFunnel.printDebugMsg(&quot;recv&quot;, this.result)
+    }
+</code></pre>
+<pre><code class="language-js">this.retval = new NetFunnel.RetVal(this.result);
+if (this.retval.getReqType() == NetFunnel.RTYPE_GET_TID_CHK_ENTER) {
+    this.retval.setReqType(NetFunnel.RTYPE_CHK_ENTER)
+}
+</code></pre>
+<p><code>result</code>를 채운후 <code>getReqType()</code>로 비교하네?
+<code>getReqType()</code>의 리턴값이 5002가 아니라 5004가 되도록 바꿔두면 이후의 대기가 끝난거처럼 동작하지 않을까?</p>
+<p>해보면 잘 된다.</p>
+<p>이 방법을 통해 기다리지 않고 우회해서 신청을 넣었다.</p>
+<h2 id="방법-2">방법 2</h2>
+<p>방법1로 일단 NetFUNNEL 우회는 성공했다.</p>
+<p>하지만 이게 최선의 방법이었을까?
+NetFUNNEL을 한두군데에만 팔아먹었을리 없다.
+다른 사람들은 어떻게 우회했나 찾아보려고 했다.
+&ldquo;NetFunnel 우회&quot;를 입력하니까 첫 페이지에 개발 문서가 뜨더라.</p>
+<p><img src="/posts//bypass-netfunnel/google-search.png" alt="google search"></p>
+<p>???</p>
+<p><a href="https://doc.netfunnel.co.kr/index.php?mid=guide_netfunnel&amp;category=405">문서</a>를 읽어봤다.</p>
+<blockquote>
+<p>넷퍼넬 우회 기능 (Client Side Bypass)</p>
+<p>넷퍼넬 적용 후 시스템에 문제가 생기거나 네트워크에 문제가 발생한 경우
+서비스 소스에 적용된 넷퍼넬 함수를 우회하도록 설정할 수 있습니다.
+&ldquo;false&rdquo; 값을 &ldquo;true&rdquo; 로 변경해주면 넷퍼넬 서버로 요청하지 않고 우회합니다.</p>
+<p>NetFunnel.TS_BYPASS = false; // NetFUNNEL Routine Bypass [true|false]</p>
+</blockquote>
+<p><code>NetFunnel.TS_BYPASS</code>가 사용되는 곳에 전부 브레이크 포인트 잡았다.
+그리고 처음으로 쓰이게 되는 지점에서 <code>NetFunnel.TS_BYPASS = true</code>로 설정해주면 될거같더라.</p>
+<pre><code class="language-js">NetFunnel.TsClient.prototype.getTidChkEnter = function(a, c, e, d) {
+    NetFunnel.gPrevWaitTime = -1;
+    if (NetFunnel.TS_BYPASS == true) {
+        this.fireEvent(null, this, &quot;onSuccess&quot;, {
+            rtype: this._mReqType,
+</code></pre>
+<p>쉽게 우회할 수 있다.</p>
+<h2 id="오늘의-교훈">오늘의 교훈</h2>
+<ul>
+<li>RTFM: Read The Fucking Manual (빌어먹을 안내서를 읽으시오)</li>
+<li>문서를 잘 읽자</li>
+<li>공개해도 되는 문서인지 아닌지 한번쯤 생각하자</li>
+<li>코드를 뜯기고 싶지 않다면 난독화는 선택이 아닌 필수
+<ul>
+<li>하지만 <a href="https://github.com/soimort/translate-shell/issues/94">뚫고자하는 의지가 있다면 난독화는 문제가 되지 않는다</a></li>
+</ul>
+</li>
+</ul>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/web/express-error-and-http-status-code/" title="Next: express에서 에러로 HTTP status code 통제하기">
+          express에서 에러로 HTTP status code 통제하기
+          
+          <br/><small>throw new createError.BadRequest()</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/typescript-and-circular-dependency/" title="Previous: 타입스크립트와 순환 의존성">
+          타입스크립트와 순환 의존성
+          
+          <br/><small>TypeError: class_X is not a constructor</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/bypass-netfunnel\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

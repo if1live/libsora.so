@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/tags/</link>
+    <description>Recent content in Tags on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>diagram</title>
+      <link>https://libsora.so/tags/diagram/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/diagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uml</title>
+      <link>https://libsora.so/tags/uml/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/uml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws lambda</title>
+      <link>https://libsora.so/tags/aws-lambda/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/aws-lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://libsora.so/tags/serverless/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api specification</title>
+      <link>https://libsora.so/tags/api-specification/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/api-specification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://libsora.so/tags/typescript/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cls-hooked</title>
+      <link>https://libsora.so/tags/cls-hooked/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/cls-hooked/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>express</title>
+      <link>https://libsora.so/tags/express/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>https://libsora.so/tags/logging/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monkey patch</title>
+      <link>https://libsora.so/tags/monkey-patch/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/monkey-patch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typeorm</title>
+      <link>https://libsora.so/tags/typeorm/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/typeorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ioredis</title>
+      <link>https://libsora.so/tags/ioredis/</link>
+      <pubDate>Thu, 09 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ioredis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hoisting</title>
+      <link>https://libsora.so/tags/hoisting/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/hoisting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deployment</title>
+      <link>https://libsora.so/tags/deployment/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stage</title>
+      <link>https://libsora.so/tags/stage/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/stage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>staging</title>
+      <link>https://libsora.so/tags/staging/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/staging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2019</title>
+      <link>https://libsora.so/tags/2019/</link>
+      <pubDate>Sun, 29 Dec 2019 02:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>circular dependency</title>
+      <link>https://libsora.so/tags/circular-dependency/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/circular-dependency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>circular reference</title>
+      <link>https://libsora.so/tags/circular-reference/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/circular-reference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hack</title>
+      <link>https://libsora.so/tags/hack/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/hack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netfunnel</title>
+      <link>https://libsora.so/tags/netfunnel/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/netfunnel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>https://libsora.so/tags/http/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://libsora.so/tags/javascript/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://libsora.so/tags/web/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphql</title>
+      <link>https://libsora.so/tags/graphql/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/graphql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jest</title>
+      <link>https://libsora.so/tags/jest/</link>
+      <pubDate>Wed, 03 Jul 2019 01:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/jest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mocha</title>
+      <link>https://libsora.so/tags/mocha/</link>
+      <pubDate>Wed, 03 Jul 2019 01:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/mocha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://libsora.so/tags/testing/</link>
+      <pubDate>Wed, 03 Jul 2019 01:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bug</title>
+      <link>https://libsora.so/tags/bug/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webpack</title>
+      <link>https://libsora.so/tags/webpack/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/webpack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://libsora.so/tags/design/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ie</title>
+      <link>https://libsora.so/tags/ie/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>specification</title>
+      <link>https://libsora.so/tags/specification/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/specification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alias</title>
+      <link>https://libsora.so/tags/alias/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/alias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ts-node</title>
+      <link>https://libsora.so/tags/ts-node/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ts-node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thinking</title>
+      <link>https://libsora.so/tags/thinking/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/thinking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>library</title>
+      <link>https://libsora.so/tags/library/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/library/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://libsora.so/tags/django/</link>
+      <pubDate>Sun, 13 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>article</title>
+      <link>https://libsora.so/tags/article/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log file</title>
+      <link>https://libsora.so/tags/log-file/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/log-file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>binary number system</title>
+      <link>https://libsora.so/tags/binary-number-system/</link>
+      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/binary-number-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lint</title>
+      <link>https://libsora.so/tags/lint/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/lint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>censorship</title>
+      <link>https://libsora.so/tags/censorship/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/censorship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>warning</title>
+      <link>https://libsora.so/tags/warning/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/warning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://libsora.so/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>endian</title>
+      <link>https://libsora.so/tags/endian/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/endian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>union</title>
+      <link>https://libsora.so/tags/union/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/union/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>modulo operator</title>
+      <link>https://libsora.so/tags/modulo-operator/</link>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/modulo-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mod</title>
+      <link>https://libsora.so/tags/mod/</link>
+      <pubDate>Thu, 16 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/mod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ntfs</title>
+      <link>https://libsora.so/tags/ntfs/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ntfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>symbolic link</title>
+      <link>https://libsora.so/tags/symbolic-link/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/symbolic-link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>black magic</title>
+      <link>https://libsora.so/tags/black-magic/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/black-magic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>overflow</title>
+      <link>https://libsora.so/tags/overflow/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/overflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>floating-point</title>
+      <link>https://libsora.so/tags/floating-point/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/floating-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fizz-buzz</title>
+      <link>https://libsora.so/tags/fizz-buzz/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/fizz-buzz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c</title>
+      <link>https://libsora.so/tags/c/</link>
+      <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>useless</title>
+      <link>https://libsora.so/tags/useless/</link>
+      <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/useless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://libsora.so/tags/blog/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://libsora.so/tags/golang/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jupyter</title>
+      <link>https://libsora.so/tags/jupyter/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package management</title>
+      <link>https://libsora.so/tags/package-management/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/package-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postmortem</title>
+      <link>https://libsora.so/tags/postmortem/</link>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/postmortem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome os</title>
+      <link>https://libsora.so/tags/chrome-os/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/chrome-os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hangul</title>
+      <link>https://libsora.so/tags/hangul/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/hangul/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>build</title>
+      <link>https://libsora.so/tags/build/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unity</title>
+      <link>https://libsora.so/tags/unity/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/unity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>https://libsora.so/tags/log/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c#</title>
+      <link>https://libsora.so/tags/c#/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csharp</title>
+      <link>https://libsora.so/tags/csharp/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optimize</title>
+      <link>https://libsora.so/tags/optimize/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/optimize/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technique</title>
+      <link>https://libsora.so/tags/technique/</link>
+      <pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/technique/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ndc</title>
+      <link>https://libsora.so/tags/ndc/</link>
+      <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ndc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development note</title>
+      <link>https://libsora.so/tags/development-note/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/development-note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trade my info</title>
+      <link>https://libsora.so/tags/trade-my-info/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/trade-my-info/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>warning.or.kr</title>
+      <link>https://libsora.so/tags/warning.or.kr/</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/warning.or.kr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>define</title>
+      <link>https://libsora.so/tags/define/</link>
+      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/define/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>include</title>
+      <link>https://libsora.so/tags/include/</link>
+      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/include/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>preprocessor</title>
+      <link>https://libsora.so/tags/preprocessor/</link>
+      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/preprocessor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>x-macro</title>
+      <link>https://libsora.so/tags/x-macro/</link>
+      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/x-macro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webvr</title>
+      <link>https://libsora.so/tags/webvr/</link>
+      <pubDate>Sun, 28 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/webvr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://libsora.so/tags/hugo/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pelican</title>
+      <link>https://libsora.so/tags/pelican/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/pelican/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site generator</title>
+      <link>https://libsora.so/tags/static-site-generator/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prefix</title>
+      <link>https://libsora.so/tags/prefix/</link>
+      <pubDate>Sun, 05 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/prefix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>techinque</title>
+      <link>https://libsora.so/tags/techinque/</link>
+      <pubDate>Sun, 05 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/techinque/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fixed point</title>
+      <link>https://libsora.so/tags/fixed-point/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/fixed-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>font</title>
+      <link>https://libsora.so/tags/font/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/font/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freetype2</title>
+      <link>https://libsora.so/tags/freetype2/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/freetype2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>harfbuzz</title>
+      <link>https://libsora.so/tags/harfbuzz/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/harfbuzz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>normalized vector</title>
+      <link>https://libsora.so/tags/normalized-vector/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/normalized-vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>noto sans</title>
+      <link>https://libsora.so/tags/noto-sans/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/noto-sans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>noto sans thai</title>
+      <link>https://libsora.so/tags/noto-sans-thai/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/noto-sans-thai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vector</title>
+      <link>https://libsora.so/tags/vector/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vector length</title>
+      <link>https://libsora.so/tags/vector-length/</link>
+      <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/vector-length/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atan2</title>
+      <link>https://libsora.so/tags/atan2/</link>
+      <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/atan2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angle</title>
+      <link>https://libsora.so/tags/angle/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/angle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://libsora.so/tags/markdown/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sine</title>
+      <link>https://libsora.so/tags/sine/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/sine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>array</title>
+      <link>https://libsora.so/tags/array/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>loop</title>
+      <link>https://libsora.so/tags/loop/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/loop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>delete</title>
+      <link>https://libsora.so/tags/delete/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/delete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>destructor</title>
+      <link>https://libsora.so/tags/destructor/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/destructor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recursion</title>
+      <link>https://libsora.so/tags/recursion/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
+      <link>https://libsora.so/tags/twitter/</link>
+      <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcc</title>
+      <link>https://libsora.so/tags/gcc/</link>
+      <pubDate>Sun, 06 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/gcc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>printf</title>
+      <link>https://libsora.so/tags/printf/</link>
+      <pubDate>Sun, 06 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/printf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>undefined behavior</title>
+      <link>https://libsora.so/tags/undefined-behavior/</link>
+      <pubDate>Sun, 06 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/undefined-behavior/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://libsora.so/tags/python/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://libsora.so/tags/ruby/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpp</title>
+      <link>https://libsora.so/tags/cpp/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictionary</title>
+      <link>https://libsora.so/tags/dictionary/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hash</title>
+      <link>https://libsora.so/tags/hash/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/hash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>key</title>
+      <link>https://libsora.so/tags/key/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/key/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>map</title>
+      <link>https://libsora.so/tags/map/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>table</title>
+      <link>https://libsora.so/tags/table/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exception</title>
+      <link>https://libsora.so/tags/exception/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/exception/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>int</title>
+      <link>https://libsora.so/tags/int/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/int/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>integer</title>
+      <link>https://libsora.so/tags/integer/</link>
+      <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/integer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>default argument</title>
+      <link>https://libsora.so/tags/default-argument/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/default-argument/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>default parameter value</title>
+      <link>https://libsora.so/tags/default-parameter-value/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/default-parameter-value/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optional parameter</title>
+      <link>https://libsora.so/tags/optional-parameter/</link>
+      <pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/optional-parameter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multiple assignment</title>
+      <link>https://libsora.so/tags/multiple-assignment/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/multiple-assignment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>buffer overflow</title>
+      <link>https://libsora.so/tags/buffer-overflow/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/buffer-overflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>buffer overrun</title>
+      <link>https://libsora.so/tags/buffer-overrun/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/buffer-overrun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debug</title>
+      <link>https://libsora.so/tags/debug/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/debug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debugging</title>
+      <link>https://libsora.so/tags/debugging/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/debugging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lldb</title>
+      <link>https://libsora.so/tags/lldb/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/lldb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memory bug</title>
+      <link>https://libsora.so/tags/memory-bug/</link>
+      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/memory-bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://libsora.so/tags/go/</link>
+      <pubDate>Sun, 20 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>constant</title>
+      <link>https://libsora.so/tags/constant/</link>
+      <pubDate>Fri, 27 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/constant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macro</title>
+      <link>https://libsora.so/tags/macro/</link>
+      <pubDate>Fri, 27 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/macro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>refactoring</title>
+      <link>https://libsora.so/tags/refactoring/</link>
+      <pubDate>Fri, 27 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/refactoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://libsora.so/tags/api/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api-design</title>
+      <link>https://libsora.so/tags/api-design/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/api-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>array_search</title>
+      <link>https://libsora.so/tags/array_search/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/array_search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bitmask</title>
+      <link>https://libsora.so/tags/bitmask/</link>
+      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/bitmask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>낚시</title>
+      <link>https://libsora.so/tags/%EB%82%9A%EC%8B%9C/</link>
+      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/%EB%82%9A%EC%8B%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>비트마스트</title>
+      <link>https://libsora.so/tags/%EB%B9%84%ED%8A%B8%EB%A7%88%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/%EB%B9%84%ED%8A%B8%EB%A7%88%EC%8A%A4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://libsora.so/tags/html/</link>
+      <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>newline</title>
+      <link>https://libsora.so/tags/newline/</link>
+      <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/newline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>textarea</title>
+      <link>https://libsora.so/tags/textarea/</link>
+      <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/textarea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>local variable</title>
+      <link>https://libsora.so/tags/local-variable/</link>
+      <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/local-variable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>off-by-one</title>
+      <link>https://libsora.so/tags/off-by-one/</link>
+      <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/off-by-one/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stack allocation</title>
+      <link>https://libsora.so/tags/stack-allocation/</link>
+      <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/stack-allocation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>voodoo magic</title>
+      <link>https://libsora.so/tags/voodoo-magic/</link>
+      <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/voodoo-magic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>doge math</title>
+      <link>https://libsora.so/tags/doge-math/</link>
+      <pubDate>Thu, 17 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/doge-math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fullwidth</title>
+      <link>https://libsora.so/tags/fullwidth/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/fullwidth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>halfwidth</title>
+      <link>https://libsora.so/tags/halfwidth/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/halfwidth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>반각</title>
+      <link>https://libsora.so/tags/%EB%B0%98%EA%B0%81/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/%EB%B0%98%EA%B0%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>전각</title>
+      <link>https://libsora.so/tags/%EC%A0%84%EA%B0%81/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/%EC%A0%84%EA%B0%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strcmp</title>
+      <link>https://libsora.so/tags/strcmp/</link>
+      <pubDate>Tue, 21 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/strcmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>string literal</title>
+      <link>https://libsora.so/tags/string-literal/</link>
+      <pubDate>Mon, 20 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/string-literal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template metaprogramming</title>
+      <link>https://libsora.so/tags/template-metaprogramming/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/template-metaprogramming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TMP</title>
+      <link>https://libsora.so/tags/tmp/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/tmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>템플릿 메타프로그래밍</title>
+      <link>https://libsora.so/tags/%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A9%94%ED%83%80%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link>
+      <pubDate>Mon, 13 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A9%94%ED%83%80%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://libsora.so/tags/linux/</link>
+      <pubDate>Mon, 08 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memory</title>
+      <link>https://libsora.so/tags/memory/</link>
+      <pubDate>Mon, 08 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system programming</title>
+      <link>https://libsora.so/tags/system-programming/</link>
+      <pubDate>Mon, 08 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/system-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filesystem</title>
+      <link>https://libsora.so/tags/filesystem/</link>
+      <pubDate>Thu, 04 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/filesystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unsigned</title>
+      <link>https://libsora.so/tags/unsigned/</link>
+      <pubDate>Thu, 04 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/unsigned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ext2</title>
+      <link>https://libsora.so/tags/ext2/</link>
+      <pubDate>Wed, 03 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ext2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memory address</title>
+      <link>https://libsora.so/tags/memory-address/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/memory-address/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>synchronization</title>
+      <link>https://libsora.so/tags/synchronization/</link>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/synchronization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>signal</title>
+      <link>https://libsora.so/tags/signal/</link>
+      <pubDate>Sun, 23 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/signal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system call</title>
+      <link>https://libsora.so/tags/system-call/</link>
+      <pubDate>Sat, 22 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/system-call/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>timing</title>
+      <link>https://libsora.so/tags/timing/</link>
+      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/timing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interrupt</title>
+      <link>https://libsora.so/tags/interrupt/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/interrupt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>process</title>
+      <link>https://libsora.so/tags/process/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>schdeuling</title>
+      <link>https://libsora.so/tags/schdeuling/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/schdeuling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scheduler</title>
+      <link>https://libsora.so/tags/scheduler/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/scheduler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>study</title>
+      <link>https://libsora.so/tags/study/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>importd</title>
+      <link>https://libsora.so/tags/importd/</link>
+      <pubDate>Mon, 11 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/importd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ez430</title>
+      <link>https://libsora.so/tags/ez430/</link>
+      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ez430/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>awesome</title>
+      <link>https://libsora.so/tags/awesome/</link>
+      <pubDate>Sat, 22 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/awesome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>excel</title>
+      <link>https://libsora.so/tags/excel/</link>
+      <pubDate>Sun, 23 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xlsx</title>
+      <link>https://libsora.so/tags/xlsx/</link>
+      <pubDate>Sun, 23 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/xlsx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ie7</title>
+      <link>https://libsora.so/tags/ie7/</link>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ie7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ie8</title>
+      <link>https://libsora.so/tags/ie8/</link>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ie8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>responsive web</title>
+      <link>https://libsora.so/tags/responsive-web/</link>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/responsive-web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fucking ie</title>
+      <link>https://libsora.so/tags/fucking-ie/</link>
+      <pubDate>Sun, 02 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/fucking-ie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ga</title>
+      <link>https://libsora.so/tags/ga/</link>
+      <pubDate>Sun, 02 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static html generator</title>
+      <link>https://libsora.so/tags/static-html-generator/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/static-html-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travis-ci</title>
+      <link>https://libsora.so/tags/travis-ci/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/travis-ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latency</title>
+      <link>https://libsora.so/tags/latency/</link>
+      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/latency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wireless</title>
+      <link>https://libsora.so/tags/wireless/</link>
+      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/wireless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oculus</title>
+      <link>https://libsora.so/tags/oculus/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/oculus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>assert</title>
+      <link>https://libsora.so/tags/assert/</link>
+      <pubDate>Mon, 14 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/assert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3d</title>
+      <link>https://libsora.so/tags/3d/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gorilla</title>
+      <link>https://libsora.so/tags/gorilla/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/gorilla/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gui</title>
+      <link>https://libsora.so/tags/gui/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/gui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ogre</title>
+      <link>https://libsora.so/tags/ogre/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ogre/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://libsora.so/tags/ui/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cegui</title>
+      <link>https://libsora.so/tags/cegui/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/cegui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://libsora.so/tags/windows/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kgc</title>
+      <link>https://libsora.so/tags/kgc/</link>
+      <pubDate>Mon, 30 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/kgc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>irrlicht</title>
+      <link>https://libsora.so/tags/irrlicht/</link>
+      <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/irrlicht/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cg</title>
+      <link>https://libsora.so/tags/cg/</link>
+      <pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/cg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gl</title>
+      <link>https://libsora.so/tags/gl/</link>
+      <pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/gl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>console</title>
+      <link>https://libsora.so/tags/console/</link>
+      <pubDate>Sun, 28 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/console/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mpd</title>
+      <link>https://libsora.so/tags/mpd/</link>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/mpd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry pi</title>
+      <link>https://libsora.so/tags/raspberry-pi/</link>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rpi</title>
+      <link>https://libsora.so/tags/rpi/</link>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/rpi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>singleton</title>
+      <link>https://libsora.so/tags/singleton/</link>
+      <pubDate>Tue, 18 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/singleton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://libsora.so/tags/test/</link>
+      <pubDate>Tue, 18 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unittest</title>
+      <link>https://libsora.so/tags/unittest/</link>
+      <pubDate>Tue, 18 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/unittest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chronos</title>
+      <link>https://libsora.so/tags/chronos/</link>
+      <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/chronos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>otp</title>
+      <link>https://libsora.so/tags/otp/</link>
+      <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/otp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>glsl</title>
+      <link>https://libsora.so/tags/glsl/</link>
+      <pubDate>Sat, 27 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/glsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shader</title>
+      <link>https://libsora.so/tags/shader/</link>
+      <pubDate>Sat, 27 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/shader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>billboard</title>
+      <link>https://libsora.so/tags/billboard/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/billboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opengl</title>
+      <link>https://libsora.so/tags/opengl/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/opengl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text</title>
+      <link>https://libsora.so/tags/text/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mesh</title>
+      <link>https://libsora.so/tags/mesh/</link>
+      <pubDate>Sat, 20 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/mesh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>access point</title>
+      <link>https://libsora.so/tags/access-point/</link>
+      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/access-point/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hostapd</title>
+      <link>https://libsora.so/tags/hostapd/</link>
+      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/hostapd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspbian</title>
+      <link>https://libsora.so/tags/raspbian/</link>
+      <pubDate>Tue, 09 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/raspbian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>box2d</title>
+      <link>https://libsora.so/tags/box2d/</link>
+      <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/box2d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dll</title>
+      <link>https://libsora.so/tags/dll/</link>
+      <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/dll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pinvoke</title>
+      <link>https://libsora.so/tags/pinvoke/</link>
+      <pubDate>Tue, 12 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/pinvoke/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encoding</title>
+      <link>https://libsora.so/tags/encoding/</link>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/encoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flask</title>
+      <link>https://libsora.so/tags/flask/</link>
+      <pubDate>Thu, 31 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>https://libsora.so/tags/project/</link>
+      <pubDate>Thu, 31 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>allocator</title>
+      <link>https://libsora.so/tags/allocator/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/allocator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>axis</title>
+      <link>https://libsora.so/tags/axis/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/axis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cocos2dx</title>
+      <link>https://libsora.so/tags/cocos2dx/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/cocos2dx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gamedev</title>
+      <link>https://libsora.so/tags/gamedev/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/gamedev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>property</title>
+      <link>https://libsora.so/tags/property/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/property/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://libsora.so/tags/emacs/</link>
+      <pubDate>Mon, 31 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>set</title>
+      <link>https://libsora.so/tags/set/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/set/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag</title>
+      <link>https://libsora.so/tags/tag/</link>
+      <pubDate>Tue, 18 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/tag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pch</title>
+      <link>https://libsora.so/tags/pch/</link>
+      <pubDate>Sat, 08 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/pch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cross platform</title>
+      <link>https://libsora.so/tags/cross-platform/</link>
+      <pubDate>Fri, 30 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/cross-platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>indent</title>
+      <link>https://libsora.so/tags/indent/</link>
+      <pubDate>Wed, 28 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/indent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>namespace</title>
+      <link>https://libsora.so/tags/namespace/</link>
+      <pubDate>Wed, 28 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/namespace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>casting</title>
+      <link>https://libsora.so/tags/casting/</link>
+      <pubDate>Tue, 27 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/casting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interface</title>
+      <link>https://libsora.so/tags/interface/</link>
+      <pubDate>Tue, 27 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maya</title>
+      <link>https://libsora.so/tags/maya/</link>
+      <pubDate>Sun, 03 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/maya/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sample-article</title>
+      <link>https://libsora.so/tags/sample-article/</link>
+      <pubDate>Sun, 03 Jan 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/sample-article/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

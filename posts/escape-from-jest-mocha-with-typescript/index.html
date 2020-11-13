@@ -1,0 +1,526 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> Jest 탈출기 - 타입스크립트 &#43; Mocha &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="Jest 탈출기 - 타입스크립트 &#43; Mocha" />
+  
+
+  
+  <meta name="keywords" content="testing, jest, mocha" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/escape-from-jest-mocha-with-typescript/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="Jest 탈출기 - 타입스크립트 &#43; Mocha">
+<meta name="twitter:description" content="개요 Jest 탈출기 - Jest는 느리다, Jest 탈출기 - Mocha를 쓰자에서는 자바스크립트 기준으로 예제를 작성했다. 하지만 실제로 내가 쓰는 언어는 타입스크립트이다.
+이 글에서는 타입스크립트에서 mocha 굴리는 방법을 다룬다.
+목표: 타입스크립트로 작성된 테스트 돌리기 아래의 테스트는 타입스크립트로 작성되었다. 이것을 mocha로 돌리는게 목표">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/escape-from-jest-mocha-with-typescript/" rel="bookmark" title="Permalink to Jest 탈출기 - 타입스크립트 &#43; Mocha">
+          <h1>Jest 탈출기 - 타입스크립트 &#43; Mocha</h1>
+          
+          <h2>ts-node, tsc</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2019-07-03T01:00:00&#43;09:00'>
+        2019/07/03
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/testing">#testing</a>
+        </li>
+        
+        <li>
+          <a href="/tags/jest">#jest</a>
+        </li>
+        
+        <li>
+          <a href="/tags/mocha">#mocha</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="개요">개요</h2>
+<p><a href="/posts/escape-from-jest-jest-is-slow">Jest 탈출기 - Jest는 느리다</a>,
+<a href="/posts/escape-from-jest-use-mocha">Jest 탈출기 - Mocha를 쓰자</a>에서는 자바스크립트 기준으로 예제를 작성했다.
+하지만 실제로 내가 쓰는 언어는 타입스크립트이다.</p>
+<p>이 글에서는 타입스크립트에서 mocha 굴리는 방법을 다룬다.</p>
+<h2 id="목표-타입스크립트로-작성된-테스트-돌리기">목표: 타입스크립트로 작성된 테스트 돌리기</h2>
+<p>아래의 테스트는 타입스크립트로 작성되었다.
+이것을 mocha로 돌리는게 목표이다.</p>
+<pre><code class="language-js">import { Sample } from '@src/sample';
+
+test('ok', () =&gt; {
+  const x = new Sample();
+  expect(x.foo()).toBe(1);
+});
+</code></pre>
+<p><code>@src</code>는 <code>tsconfig.json</code>에 설정한 paths이다.
+<a href="/posts/use-absolute-path-in-typescript">타입스크립트에서 절대경로 쓰기</a>에서 다뤘다.
+여기에서는 다루지 않는다.</p>
+<p><code>test()</code>를 mocha에서도 쓸 수 있게 만드는 방법은 <a href="/posts/escape-from-jest-use-mocha">Jest 탈출기 - Mocha를 쓰자</a>에서 다뤘다.
+여기에서는 다루지 않는다.</p>
+<h2 id="ts-node--typescript">ts-node + typescript</h2>
+<p><a href="https://www.npmjs.com/package/ts-node">ts-node</a> 설명에서도 mocha 사용법이 나온다.
+적당히 붙여넣고 tsconfig-paths만 맞춰주면 잘 돌아간다.</p>
+<pre><code class="language-sh">mocha \
+    -r node_modules/ts-node/register/transpile-only \
+    -r node_modules/tsconfig-paths/register \
+    -r bootload \
+    src/__tests__/sample.test.ts
+</code></pre>
+<h2 id="tsc--mocha--javascript">tsc + mocha + javascript</h2>
+<p>ts-node + mocha를 쓰면 jest보다 빠르게 테스트 돌아간다.
+하지만 더 빠르게 만드는게 가능할거같다.
+어려운 문제를 해체해서 쉬운 문제 여러 개로 만들면 된다.
+타입스크립트를 자바스크립트로 컴파일하는 과정와 mocha 돌리는 과정을 분리한다.</p>
+<p><code>tsc</code> 를 실행하면 타입스크립트를 자바스크립트로 컴파일 할 수 있다.
+<code>--skipLibCheck</code> 옵션을 쓰면 더 효율적으로 컴파일 할 수 있다.</p>
+<pre><code>$ time npx tsc
+
+real    0m8.804s
+user    0m0.015s
+sys     0m0.150s
+
+
+$ time npx tsc --skipLibCheck
+
+real    0m4.665s
+user    0m0.015s
+sys     0m0.121s
+</code></pre>
+<p>이제 컴파일된 자바스크립트를 mocha로 굴려야한다.
+mocha를 그냥 쓰면 안돌아간다. <code>@src</code>는 자바스크립트가 처리하지 못한다.
+webpack을 잘 쓰면 될거같은데 webpack 출력물을 그대로 mocha에 넣어도 굴러갈지 모르겠더라.
+삽질하기 귀찮아서 쉬운 방법을 선택했다.
+bable을 쓰자.</p>
+<p>아래와 같은 <code>.bablerc</code>를 넣어주면 자바스크립트에서 <code>@src</code>를 처리할 수 있다.</p>
+<pre><code class="language-json">{
+  &quot;plugins&quot;: [
+    [
+      &quot;module-resolver&quot;,
+      {
+        &quot;root&quot;: [
+          &quot;./dist&quot;
+        ],
+        &quot;alias&quot;: {
+          &quot;@src&quot;: &quot;./dist/&quot;
+        }
+      }
+    ]
+  ]
+}
+</code></pre>
+<p><code>-r babel-core/register</code>을 넣어주면 mocha에서 babel을 사용한다.</p>
+<pre><code class="language-sh">mocha \
+    -r babel-core/register \
+    -r bootload \
+    dist/__tests__/sample.test.js
+</code></pre>
+<h2 id="성능">성능</h2>
+<p>tsc + mocha 조합으로 테스트 돌리는게 ts-node + mocha보다 빠르다.
+ts-node는 간단하게 쓰기 좋은거지 성능 생각하면서 쓸 물건이 아닌가보다.</p>
+<p>내 경우 타입스크립트 컴파일 할라고 <code>tsc -w --skipLibCheck</code>를 켜둔다.
+간단한 수정의 경우는 1초안에 컴파일이 끝난다.
+mocha가 전체 테스트하는데는 4-5초 정도 걸린다.</p>
+<p>ts-node는 10초 이상 걸린다.
+체감상 2-3배는 느린거같다.</p>
+<h2 id="ts-node에-의미가-있는가">ts-node에 의미가 있는가?</h2>
+<p>ts-node + mocha 조합은 느리지만 그렇다고 쓸모없는건 아니다.
+테스트 실패시 콜스택이 멀쩡하게 나온다.</p>
+<p>tsc + mocha 조합은 타입스크립트 파일을 테스트에 쓰는게 아니다.
+컴파일된 자바스크립트 파일을 테스트하는 것이다.
+그래서 테스트 실패시 콜스택에는 자바스크립트 파일의 좌표가 나온다.</p>
+<pre><code class="language-txt">at Test.&lt;anonymous&gt; (&lt;hidden&gt;/src/server/__tests__/app.test.js:20:26)
+at Test.assert (node_modules\supertest\lib\test.js:181:6)
+at Server.localAssert (node_modules\supertest\lib\test.js:131:12)
+at Server.EventEmitter.emit (domain.js:442:20)
+at emitCloseNT (net.js:1618:8)
+at process._tickCallback (internal/process/next_tick.js:63:19)
+</code></pre>
+<p>ts-node + mocha 조합에서는 타입스크립트 파일의 좌표가 제대로 나온다.</p>
+<pre><code class="language-txt">at Test.&lt;anonymous&gt; (src\server\__tests__\app.test.ts:19:18)
+at Test.assert (node_modules\supertest\lib\test.js:181:6)
+at Server.localAssert (node_modules\supertest\lib\test.js:131:12)
+at Server.EventEmitter.emit (domain.js:442:20)
+at emitCloseNT (net.js:1618:8)
+at process._tickCallback (internal/process/next_tick.js:63:19)
+</code></pre>
+<h2 id="결론">결론</h2>
+<p>이것이 Jest 탈출기의 마지막 글이다.</p>
+<p>jest 탈출 이전에는 유닛테스트 한번 돌리는데 1분이 걸려서 테스트 이터레이션을 자주 돌리지 못했다.
+watch 걸어두는건 생각도 못했다.
+테스트 결과를 보는데 1분이 걸리니 watch를 왜 띄우지?
+그 시간에 코딩을 하고말지.</p>
+<p>tsc + mocha + babel로 탈출한 이후에는 watch를 켜고 작업한다.
+<code>tsc -w --skipLibCheck</code>는 매우 빠르게 돌아간다. 간단한 수정은 1초 안에 끝난다.
+mocha로 테스트 전체 돌아가는데도 5초면 충분하다.
+저장하고 5-6초면 전체 테스트가 끝난다. 그것도 통합 테스트가!</p>
+<p>이제 TDD 하는 기분을 낼 수 있다.</p>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/escape-from-jest-use-mocha/" title="Next: Jest 탈출기 - Mocha를 쓰자">
+          Jest 탈출기 - Mocha를 쓰자
+          
+          <br/><small>Jest/Mocha 동시에 지원하기</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/graphql/graphql-http-status-code/" title="Previous: GraphQL에서는 어떤 HTTP status code를 사용할까?">
+          GraphQL에서는 어떤 HTTP status code를 사용할까?
+          
+          <br/><small>아무도 관심갖지 않는 GraphQL 이야기 - part 1</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/escape-from-jest-mocha-with-typescript\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

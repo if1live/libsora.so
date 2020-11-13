@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>memory on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/tags/memory/</link>
+    <description>Recent content in memory on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 08 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Process Address Space</title>
+      <link>https://libsora.so/posts/system-programming-process-address-space/</link>
+      <pubDate>Mon, 08 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/system-programming-process-address-space/</guid>
+      <description>시스템 프로그래밍 시험 공부하면서 정리한 내용이다. 내용 갱신은 없을 예정이다.
+개요  선형 주소 공간 : 2 ** BIT_PER_LONG byte, 32bit의 경우 4GB 0 ~ 3GB (PAGE_OFFSET) : Process Address Space 3G의 Process Address Space에 대해서 자세하게 다룬다.  Kernel Memory Allocation  관련 커널 함수 (이전 내용의 연속)  alloc_pages()  버디 시스템에서 연속된 프레임 할당   vmalloc()  불연속적인 메모리 영역 할당   kmem_cache_alloc(), kmalloc()  slab 할당자 이요.</description>
+    </item>
+    
+    <item>
+      <title>Memory Management</title>
+      <link>https://libsora.so/posts/system-programming-memory-management/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/system-programming-memory-management/</guid>
+      <description>시스템 프로그래밍 시험 공부하면서 정리한 내용이다. 내용 갱신은 없을 예정이다.
+Linux Memory Management  가상 메모리 요구 페이지 (Demand Paged Virtual Memory) 모델  물리 페이지의 매핑, 할당, 관리 2차 메모리의 관리 : swapping   아키텍쳐 독립적인 모델  다양한 아키텍쳐에서 다양한 메모리 매핑을 지원하는 인터페이스 include/linux/mm.h, mm/*   아키텍쳐 매핑이 필요하다.  메모리 모델은 물리 메모리에 매핑되어야한다.    Process (Virtual) Address Space  프로세스의 선형 주소공간은 2개의 구역으로 구성된다  유저 주소 공간 커널 주소 공간    유저 주소 공간  0x00000000 ~ PAGE_OFFSET (IA32의 경우 일반적으로 0xC0000000, 3GB) 유저모드, 커널 모드에서 접근 가능  커널 주소 공간  PAGE_OFFSET (3G) ~ 0xffffffff 커널 모드에서만 접근 가능 커널은 모든 프로세스 주소 공간의 높은 메모리에 매핑되지만, 낮은 주소의 물리 메모리에 저장된다.</description>
+    </item>
+    
+    <item>
+      <title>Memory Addressing</title>
+      <link>https://libsora.so/posts/system-programming-memory-addressing/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/system-programming-memory-addressing/</guid>
+      <description>시스템 프로그래밍 시험 공부하면서 정리한 내용이다. 내용 갱신은 없을 예정이다.
+Memroy Addressing (Intel x86)   논리 주소 (Logical Address)
+ 명령어나 데이터를 참조할때 사용하는 주소 세그먼트 + 오프셋    선형 주소 (Linear Address)
+ 32bit unsigned integer, 4GB 가상 주소 (Virtual Address) 0x00000000 ~ 0xffffffff    물리 주소 (Physical Address)
+ 메모리칩 안의 메모리셀에 접근할때 사용하는 주소    논리 주소 =&amp;gt; 세그멘테이션 유닛 =&amp;gt; 선형 주소 =&amp;gt; 페이징 유닛 =&amp;gt; 물리 주소</description>
+    </item>
+    
+  </channel>
+</rss>

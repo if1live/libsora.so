@@ -1,0 +1,3827 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>https://libsora.so/</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/dbml-entity-relation-diagram-as-code/</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/diagram/</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/library-and-framework/</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/mermaid-diagram-as-code/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/uml/</loc>
+    <lastmod>2020-11-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/aws-lambda/</loc>
+    <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/trap-callback-waits-for-empty-event-loop/</loc>
+    <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/serverless/</loc>
+    <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/serverless/</loc>
+    <lastmod>2020-10-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/api-specification/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/typescript/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/typescript/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/stub-from-typescript-api-specification/</loc>
+    <lastmod>2020-10-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/black-magic/</loc>
+    <lastmod>2020-07-11T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/cls-hooked/</loc>
+    <lastmod>2020-07-11T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/express/</loc>
+    <lastmod>2020-07-11T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/express-attach-console-log-to-response/</loc>
+    <lastmod>2020-07-11T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/logging/</loc>
+    <lastmod>2020-07-11T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/monkey-patch/</loc>
+    <lastmod>2020-07-11T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/typeorm/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/typeorm-entity-proxy-for-save/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ioredis/</loc>
+    <lastmod>2020-07-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ioredis-logging-with-monkey-patch/</loc>
+    <lastmod>2020-07-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/hoisting/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/typescript-and-hoisting/</loc>
+    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/deployment/</loc>
+    <lastmod>2020-01-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/design/</loc>
+    <lastmod>2020-01-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/stage/</loc>
+    <lastmod>2020-01-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/staging/</loc>
+    <lastmod>2020-01-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/my-backend-deployment-environment-policy/</loc>
+    <lastmod>2020-01-02T00:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/serverless-framework-plugins/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/2019/</loc>
+    <lastmod>2019-12-29T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/review-year-2019/</loc>
+    <lastmod>2019-12-29T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/post-mortem/</loc>
+    <lastmod>2019-12-29T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/circular-dependency/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/circular-reference/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/typescript-and-circular-dependency/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/hack/</loc>
+    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/hack/</loc>
+    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/netfunnel/</loc>
+    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/bypass-netfunnel/</loc>
+    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/web/express-error-and-http-status-code/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/http/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/javascript/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/web/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/web/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/graphql/</loc>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/graphql/</loc>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/graphql/graphql-http-status-code/</loc>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/jest/</loc>
+    <lastmod>2019-07-03T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/escape-from-jest-mocha-with-typescript/</loc>
+    <lastmod>2019-07-03T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/mocha/</loc>
+    <lastmod>2019-07-03T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/testing/</loc>
+    <lastmod>2019-07-03T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/testing/</loc>
+    <lastmod>2019-07-03T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/escape-from-jest-use-mocha/</loc>
+    <lastmod>2019-07-02T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/escape-from-jest-jest-is-slow/</loc>
+    <lastmod>2019-07-01T01:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/make-typesafe-express-app/</loc>
+    <lastmod>2019-06-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/bug/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/javascript/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/webpack/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/bug-of-monday-webpack-cli/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/in-ten-years-strong-mountains-will-change-and-javascript/</loc>
+    <lastmod>2019-02-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/design/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ie/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/specification/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/generous-code-breaks-easily/</loc>
+    <lastmod>2019-02-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/alias/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ts-node/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/use-absolute-path-in-typescript/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/http-request-with-body-and-java-httpurlconnection/</loc>
+    <lastmod>2019-02-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/thinking/</loc>
+    <lastmod>2019-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/thinking/</loc>
+    <lastmod>2019-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/peoples-thoughts-are-similar/</loc>
+    <lastmod>2019-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/library/</loc>
+    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/yup-declarative-input-validation/</loc>
+    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/http-get-request-with-body-and-http-library/</loc>
+    <lastmod>2019-01-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/django/</loc>
+    <lastmod>2019-01-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/use-django-as-admin-tool/</loc>
+    <lastmod>2019-01-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/article/</loc>
+    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/writing-article-is-hard/</loc>
+    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/log-file/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/log-file-is-good/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/log-file-is-not-guilty/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/development/</loc>
+    <lastmod>2018-12-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/-3-mod-3-is-not-equal-to-3-mod-3-in-javascript/</loc>
+    <lastmod>2018-12-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/binary-number-system/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/etc/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/omr-and-binary-number-system/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/lint/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/prevent-bug-by-if-statement-with-promise/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/censorship/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/warning/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/warning/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/warning-or-kr-in-real-case-2/</loc>
+    <lastmod>2018-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/c&#43;&#43;/</loc>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/endian/</loc>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/union/</loc>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/find-the-highest-order-bit/</loc>
+    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/modulo-operator/</loc>
+    <lastmod>2018-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/use-bit-op-as-mod-operator/</loc>
+    <lastmod>2018-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/use-casting-as-mod-operator/</loc>
+    <lastmod>2018-08-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/sign-of-mod-operator/</loc>
+    <lastmod>2018-08-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/mod/</loc>
+    <lastmod>2018-08-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ntfs/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/symbolic-link/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ntfs-symbolic-link/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/black-magic/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/overflow/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/make-10-with-overflow/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/floating-point/</loc>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/float-divide-without-divide/</loc>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/fizz-buzz/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/fizz-buzz-01/</loc>
+    <lastmod>2018-08-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/12-lte-x-lte-0/</loc>
+    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/c/</loc>
+    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/useless/</loc>
+    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/warning-or-kr-in-real-case/</loc>
+    <lastmod>2018-07-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/blog/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/golang-hugo-is-down/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/golang/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/jupyter/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/apply-jupyter-into-blog/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/package-management/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/postmortem/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/chrome-os/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/chrome-os/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/how-to-open-multiple-webapp-window-in-chrome-os/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/hangul/</loc>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/find-chrome-os-terminal-which-support-cjk-input/</loc>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/amazing-floating-point-100x07/</loc>
+    <lastmod>2017-11-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/build/</loc>
+    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/unity/</loc>
+    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/unity/</loc>
+    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/make-unity-build-system/</loc>
+    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/log/</loc>
+    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/introduce-sagiri/</loc>
+    <lastmod>2017-10-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/c#/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/csharp/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/csharp-dictionary-enum-key-without-gc/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/csharp-enum-to-int/</loc>
+    <lastmod>2017-08-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/optimize/</loc>
+    <lastmod>2017-08-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/technique/</loc>
+    <lastmod>2017-08-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/unity-cross-platform-without-platform-switch/</loc>
+    <lastmod>2017-08-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/introduce-unity-launcher/</loc>
+    <lastmod>2017-07-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ndc/</loc>
+    <lastmod>2017-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ndc-2017-robo-recall/</loc>
+    <lastmod>2017-05-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/development-note/</loc>
+    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/fumika-development-note/</loc>
+    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/trade-my-info/</loc>
+    <lastmod>2017-04-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/warning.or.kr/</loc>
+    <lastmod>2017-04-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/trade-my-info-warning-or-kr/</loc>
+    <lastmod>2017-04-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/unity-util-asset-name-attribute/</loc>
+    <lastmod>2017-02-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/unity-tip-remove-if-unity-editor/</loc>
+    <lastmod>2017-02-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/define/</loc>
+    <lastmod>2017-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/include/</loc>
+    <lastmod>2017-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/x-macro-is-useful/</loc>
+    <lastmod>2017-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/preprocessor/</loc>
+    <lastmod>2017-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/x-macro/</loc>
+    <lastmod>2017-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/unity-library-vfw/</loc>
+    <lastmod>2017-01-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/unity-tip-game-object-comment/</loc>
+    <lastmod>2017-01-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/unity-scene-web-exporter-post-mortem/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/webvr/</loc>
+    <lastmod>2016-08-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/hugo/</loc>
+    <lastmod>2016-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/pelican/</loc>
+    <lastmod>2016-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/static-site-generator/</loc>
+    <lastmod>2016-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/migration-from-pelican-to-hugo-post-mortem/</loc>
+    <lastmod>2016-08-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/prefix/</loc>
+    <lastmod>2016-06-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/techinque/</loc>
+    <lastmod>2016-06-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/dispatch-by-prefix/</loc>
+    <lastmod>2016-06-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/gksrmfdldkscuwudy-post-mortem/</loc>
+    <lastmod>2016-05-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/fixed-point/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/fixed-point/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/font/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/freetype2/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/harfbuzz/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/normalized-vector/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/noto-sans/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/noto-sans-thai/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/how-to-render-noto-sans-thai-correctly/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/vector/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/vector-length/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/vector-length-and-normalize-doom-version/</loc>
+    <lastmod>2016-05-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/atan2/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/atan2-doom-version/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/golang-package-management-failure-learned-from-github-kr-text/</loc>
+    <lastmod>2016-05-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/angle/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/angle-and-sine-doom-version/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/markdown/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/maya-markdown-preprocessor-post-mortem/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/sine/</loc>
+    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/fixed-point-intro/</loc>
+    <lastmod>2016-05-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/array/</loc>
+    <lastmod>2016-03-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/loop/</loc>
+    <lastmod>2016-03-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/double-loop-with-array/</loc>
+    <lastmod>2016-03-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/delete/</loc>
+    <lastmod>2016-03-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/recursion-with-destructor/</loc>
+    <lastmod>2016-03-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/destructor/</loc>
+    <lastmod>2016-03-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/recursion/</loc>
+    <lastmod>2016-03-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/twitter/</loc>
+    <lastmod>2016-03-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/twitter-image-archive-post-mortem/</loc>
+    <lastmod>2016-03-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/gcc/</loc>
+    <lastmod>2016-03-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/printf/</loc>
+    <lastmod>2016-03-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/printf-with-null-post-mortem/</loc>
+    <lastmod>2016-03-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/undefined-behavior/</loc>
+    <lastmod>2016-03-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/python/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ruby/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/http-request-params-trap-python-and-ruby/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/cpp/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/dictionary/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/hash/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/key/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/map/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/table/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/if-key-does-not-exist-then/</loc>
+    <lastmod>2016-02-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/exception/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/int/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/integer/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/make-int-from-invalid-value-python-and-ruby/</loc>
+    <lastmod>2016-02-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/default-argument/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/default-parameter-value/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/optional-parameter/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/default-argument-python-and-ruby/</loc>
+    <lastmod>2016-02-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/multiple-assignment/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/multiple-assignment-python-and-ruby/</loc>
+    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/buffer-overflow/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/buffer-overrun/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/debug/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/debugging/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/lldb/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/memory-bug/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/buffer-overflow-broken-dtor-debugging-post-mortem/</loc>
+    <lastmod>2016-01-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/go/</loc>
+    <lastmod>2015-12-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/golang-first-impression/</loc>
+    <lastmod>2015-12-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/constant/</loc>
+    <lastmod>2015-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/macro/</loc>
+    <lastmod>2015-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/refactoring/</loc>
+    <lastmod>2015-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/refactoring-c-macro-constant/</loc>
+    <lastmod>2015-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/api/</loc>
+    <lastmod>2015-11-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/api-design/</loc>
+    <lastmod>2015-11-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/array_search/</loc>
+    <lastmod>2015-11-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/alternatives-to-php-array-search/</loc>
+    <lastmod>2015-11-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/deceiving-code-bitmask/</loc>
+    <lastmod>2015-11-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/bitmask/</loc>
+    <lastmod>2015-11-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/%EB%82%9A%EC%8B%9C/</loc>
+    <lastmod>2015-11-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/%EB%B9%84%ED%8A%B8%EB%A7%88%EC%8A%A4%ED%8A%B8/</loc>
+    <lastmod>2015-11-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/html/</loc>
+    <lastmod>2015-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/what-is-textarea-newline/</loc>
+    <lastmod>2015-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/newline/</loc>
+    <lastmod>2015-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/textarea/</loc>
+    <lastmod>2015-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/local-variable/</loc>
+    <lastmod>2015-10-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/off-by-one/</loc>
+    <lastmod>2015-10-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/stack-allocation/</loc>
+    <lastmod>2015-10-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/voodoo-magic/</loc>
+    <lastmod>2015-10-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/stack-allocation-voodoo-magic/</loc>
+    <lastmod>2015-10-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/doge-math/</loc>
+    <lastmod>2015-09-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/doge-math-post-mortem/</loc>
+    <lastmod>2015-09-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/fullwidth/</loc>
+    <lastmod>2015-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/halfwidth/</loc>
+    <lastmod>2015-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/%EB%B0%98%EA%B0%81/</loc>
+    <lastmod>2015-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/%EC%A0%84%EA%B0%81/</loc>
+    <lastmod>2015-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/deceiving-code-fullwidth-halfwidth/</loc>
+    <lastmod>2015-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/strcmp/</loc>
+    <lastmod>2015-04-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/my-strcmp/</loc>
+    <lastmod>2015-04-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/string-literal-concatenation-technique/</loc>
+    <lastmod>2015-04-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/string-literal/</loc>
+    <lastmod>2015-04-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/friday-the-13th-tmp/</loc>
+    <lastmod>2015-04-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/template-metaprogramming/</loc>
+    <lastmod>2015-04-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/tmp/</loc>
+    <lastmod>2015-04-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A9%94%ED%83%80%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</loc>
+    <lastmod>2015-04-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/linux/</loc>
+    <lastmod>2014-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/memory/</loc>
+    <lastmod>2014-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-programming-process-address-space/</loc>
+    <lastmod>2014-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/study/</loc>
+    <lastmod>2014-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/system-programming/</loc>
+    <lastmod>2014-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/filesystem/</loc>
+    <lastmod>2014-12-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-programming-linux-file-system/</loc>
+    <lastmod>2014-12-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/unsigned/</loc>
+    <lastmod>2014-12-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/i-hate-unsigned/</loc>
+    <lastmod>2014-12-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ext2/</loc>
+    <lastmod>2014-12-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-programming-ext2-file-system/</loc>
+    <lastmod>2014-12-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-programming-memory-management/</loc>
+    <lastmod>2014-12-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/memory-address/</loc>
+    <lastmod>2014-11-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-programming-memory-addressing/</loc>
+    <lastmod>2014-11-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-prog-kernel-synchronization/</loc>
+    <lastmod>2014-11-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/synchronization/</loc>
+    <lastmod>2014-11-24T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/signal/</loc>
+    <lastmod>2014-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-prog-signals/</loc>
+    <lastmod>2014-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/system-call/</loc>
+    <lastmod>2014-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-prog-system-call/</loc>
+    <lastmod>2014-11-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/timing/</loc>
+    <lastmod>2014-11-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-prog-timing-measurements/</loc>
+    <lastmod>2014-11-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/with-statement-cpp/</loc>
+    <lastmod>2014-11-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/interrupt/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/sytem-prog-study-interrupt-and-exceptions/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-prog-linux-process-schduling/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/system-prog-linux-processes/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/process/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/schdeuling/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/scheduler/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/study/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/importd/</loc>
+    <lastmod>2014-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/introduce-importd/</loc>
+    <lastmod>2014-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/good-django-library/</loc>
+    <lastmod>2014-08-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ez430/</loc>
+    <lastmod>2014-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ez430-chronos-development-review/</loc>
+    <lastmod>2014-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/awesome/</loc>
+    <lastmod>2014-03-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/awesome-3-5-install/</loc>
+    <lastmod>2014-03-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/excel/</loc>
+    <lastmod>2014-02-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/xlsx/</loc>
+    <lastmod>2014-02-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/python-excel-library/</loc>
+    <lastmod>2014-02-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ie7/</loc>
+    <lastmod>2014-02-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ie8/</loc>
+    <lastmod>2014-02-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/responsive-web/</loc>
+    <lastmod>2014-02-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ie7-responsive-web-framework/</loc>
+    <lastmod>2014-02-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/fucking-ie/</loc>
+    <lastmod>2014-02-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ga/</loc>
+    <lastmod>2014-02-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/trade-my-info-ga/</loc>
+    <lastmod>2014-02-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/static-blog-sample/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/static-html-generator/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/travis-ci/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/latency/</loc>
+    <lastmod>2013-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/wireless/</loc>
+    <lastmod>2013-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/wireless-latency-benchmark/</loc>
+    <lastmod>2013-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/oculus-2014-predict-trend/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/cg/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/oculus/</loc>
+    <lastmod>2013-10-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/assert/</loc>
+    <lastmod>2013-10-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/libovr-assert-macro/</loc>
+    <lastmod>2013-10-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/3d/</loc>
+    <lastmod>2013-10-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/gorilla/</loc>
+    <lastmod>2013-10-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/gui/</loc>
+    <lastmod>2013-10-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/oculus-interactive-surface-1/</loc>
+    <lastmod>2013-10-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ogre/</loc>
+    <lastmod>2013-10-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/ui/</loc>
+    <lastmod>2013-10-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/cegui-build/</loc>
+    <lastmod>2013-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/cegui/</loc>
+    <lastmod>2013-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/windows/</loc>
+    <lastmod>2013-10-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/kgc/</loc>
+    <lastmod>2013-09-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/kgc2013-oculus-rift/</loc>
+    <lastmod>2013-09-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/irrlicht/</loc>
+    <lastmod>2013-08-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/irrlight-engine-review/</loc>
+    <lastmod>2013-08-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/cg/</loc>
+    <lastmod>2013-08-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/gl/</loc>
+    <lastmod>2013-08-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/oculus-rift-artifacts/</loc>
+    <lastmod>2013-08-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/console/</loc>
+    <lastmod>2013-07-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/irrlicht-console/</loc>
+    <lastmod>2013-07-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/rpi-mpd-controller/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/mpd/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/raspberry-pi/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/rpi/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/singleton/</loc>
+    <lastmod>2013-06-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/test/</loc>
+    <lastmod>2013-06-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/unittest/</loc>
+    <lastmod>2013-06-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/singleton-test/</loc>
+    <lastmod>2013-06-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/chronos/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ez430-chronos-google-otp/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/otp/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/i-hate-singleton/</loc>
+    <lastmod>2013-05-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/glsl/</loc>
+    <lastmod>2013-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/shader/</loc>
+    <lastmod>2013-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/glsl-example/</loc>
+    <lastmod>2013-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/text-billboard/</loc>
+    <lastmod>2013-04-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/billboard/</loc>
+    <lastmod>2013-04-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/opengl/</loc>
+    <lastmod>2013-04-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/text/</loc>
+    <lastmod>2013-04-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/mesh/</loc>
+    <lastmod>2013-04-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/simple-mesh/</loc>
+    <lastmod>2013-04-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/vincent-font-library/</loc>
+    <lastmod>2013-04-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/opengl-text-library/</loc>
+    <lastmod>2013-04-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/access-point/</loc>
+    <lastmod>2013-04-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/hostapd/</loc>
+    <lastmod>2013-04-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/raspberry-pi-hostapd/</loc>
+    <lastmod>2013-04-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/raspbian/</loc>
+    <lastmod>2013-04-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/box2d/</loc>
+    <lastmod>2013-02-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/box2d-common/</loc>
+    <lastmod>2013-02-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/csharp-cpp-dll/</loc>
+    <lastmod>2013-02-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/dll/</loc>
+    <lastmod>2013-02-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/pinvoke/</loc>
+    <lastmod>2013-02-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/encoding/</loc>
+    <lastmod>2013-02-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/python-hangul/</loc>
+    <lastmod>2013-02-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/flask/</loc>
+    <lastmod>2013-01-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/flask-project-structure/</loc>
+    <lastmod>2013-01-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/project/</loc>
+    <lastmod>2013-01-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/django-project-structure/</loc>
+    <lastmod>2013-01-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/uber-shader/</loc>
+    <lastmod>2013-01-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/allocator/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/auto-ptr/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/axis/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/box2d-block-allocator/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/box2d-stack-allocator/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/charp-like-property/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/cocos2dx-memory-management/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/cocos2dx/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/gamedev/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/class-init-with-memset/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/property/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/game-coord-system/</loc>
+    <lastmod>2013-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/emacs/</loc>
+    <lastmod>2012-12-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/emacs/</loc>
+    <lastmod>2012-12-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/emacs-home-dir/</loc>
+    <lastmod>2012-12-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/emacs-hangul-key/</loc>
+    <lastmod>2012-12-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/set/</loc>
+    <lastmod>2012-12-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/tag/</loc>
+    <lastmod>2012-12-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/set-based-tag/</loc>
+    <lastmod>2012-12-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/pch/</loc>
+    <lastmod>2012-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/cross-platform-stdafx/</loc>
+    <lastmod>2012-12-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/ccpoint-lua/</loc>
+    <lastmod>2012-12-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/cross-platform/</loc>
+    <lastmod>2012-11-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/platform-macro/</loc>
+    <lastmod>2012-11-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/namespace-indent/</loc>
+    <lastmod>2012-11-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/indent/</loc>
+    <lastmod>2012-11-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/namespace/</loc>
+    <lastmod>2012-11-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/cpp-casting/</loc>
+    <lastmod>2012-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/casting/</loc>
+    <lastmod>2012-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/interface/</loc>
+    <lastmod>2012-11-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/call-ctor-dtor/</loc>
+    <lastmod>2012-11-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/maya/</loc>
+    <lastmod>2010-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/maya-test/</loc>
+    <lastmod>2010-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/sample-article/</loc>
+    <lastmod>2010-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/sample/</loc>
+    <lastmod>2010-01-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/jupyter-test/</loc>
+    <lastmod>2010-01-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/markdown-test/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</urlset>

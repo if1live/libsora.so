@@ -1,0 +1,569 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> DOOM에서 배우는 atan2(y, x) 구현 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="DOOM에서 배우는 atan2(y, x) 구현" />
+  
+
+  
+  <meta name="keywords" content="fixed point, atan2" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/atan2-doom-version/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="DOOM에서 배우는 atan2(y, x) 구현">
+<meta name="twitter:description" content="개요 sin, cos가 있으면 각도를 벡터로 변환할 수 있다. 반대로 벡터를 각도로 변환할때는 atan2를 쓰면 된다. DOOM에서는 atan2를 어떻게 구현했나 코드를 뒤져봤다.
+아래의 내용을 읽기전에 DOOM에서 배우는 각도 표현하는 방법과 sin, cos 구현법를 읽어보는 것을 권장한다.
+어떻게 돌아가는가? DOOM에서 atan2(y, x)는 몇단계에">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/atan2-doom-version/" rel="bookmark" title="Permalink to DOOM에서 배우는 atan2(y, x) 구현">
+          <h1>DOOM에서 배우는 atan2(y, x) 구현</h1>
+          
+          <h2>386, 486 에서도 돌아가는 atan2</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2016-05-15T00:00:00Z'>
+        2016/05/15
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/fixed-point">#fixed point</a>
+        </li>
+        
+        <li>
+          <a href="/tags/atan2">#atan2</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="개요">개요</h2>
+<p>sin, cos가 있으면 각도를 벡터로 변환할 수 있다.
+반대로 벡터를 각도로 변환할때는 <a href="http://en.cppreference.com/w/c/numeric/math/atan2">atan2</a>를 쓰면 된다.
+DOOM에서는 atan2를 어떻게 구현했나 코드를 뒤져봤다.</p>
+<p>아래의 내용을 읽기전에 <a href="/posts/angle-and-sine-doom-version">DOOM에서 배우는 각도 표현하는 방법과 sin, cos 구현법</a>를 읽어보는 것을 권장한다.</p>
+<h2 id="어떻게-돌아가는가">어떻게 돌아가는가?</h2>
+<p>DOOM에서 <code>atan2(y, x)</code>는 몇단계에 걸쳐서 계산된다.</p>
+<ol>
+<li>tangent -&gt; angle 로 변환할수 있는 Lookup table을 준비한다.</li>
+<li><code>atan2(y, x)</code>를 lookup table의 인덱스로 변환하는 함수를 만든다. 0~45도만 지원하면 된다.</li>
+<li>0~45도에서만 돌아가는 <code>atan2(y, x)</code>를 이용해서 나머지 각도에서도 돌아가도록 만든다.</li>
+</ol>
+<h2 id="in-doom-source">In DOOM Source</h2>
+<h3 id="lookup-table">lookup table</h3>
+<p><a href="https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/tables.h#L74-L84">https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/tables.h#L74-L84</a></p>
+<pre><code class="language-c">#define SLOPERANGE	   2048
+#define SLOPEBITS	11
+#define DBITS	(FRACBITS-SLOPEBITS)
+
+typedef unsigned angle_t;
+
+// Effective size is 2049;
+// The +1 size is to handle the case when x==y
+//  without additional checking.
+extern angle_t			tantoangle[SLOPERANGE+1];
+</code></pre>
+<p>tantoangle는 0~45도 구간의 tangent를 angle로 변할할수 있는 lookup table이다.
+정확히 45도(x==y) 일때도 대응할수 있도록 크기를 <code>SLOPERANGE+1</code>로 잡았다.</p>
+<p><a href="https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/tables.c#L1870">https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/tables.c#L1870</a></p>
+<pre><code class="language-c">angle_t tantoangle[2049] =
+{
+    0,333772,667544,...
+    ...
+    536870912
+};
+</code></pre>
+<p>lookup table에서 <code>tantoangle[0]</code> = 0 = 0 Degree 이다.
+<code>tantoangle[2048]</code> = 536870912 = 0x2000 0000 = 45 Degree 이다.</p>
+<h3 id="atan2y-x---lookup-table-index">atan2(y, x) -&gt; lookup table index</h3>
+<p><a href="https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/tables.c#L49-L62">https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/tables.c#L49-L62</a></p>
+<p>0~45도 구간에서 atan2(y, x)를 lookup table에서의 인덱스로 변환하는 함수이다.</p>
+<pre><code class="language-c">int
+SlopeDiv
+( unsigned  num,
+  unsigned  den)
+{
+    unsigned   ans;
+
+    if (den &lt; 512)
+        return SLOPERANGE;
+
+    ans = (num&lt;&lt;3)/(den&gt;&gt;8);
+
+    return ans &lt;= SLOPERANGE ? ans : SLOPERANGE;
+}
+</code></pre>
+<p>코드를 한줄씩 해석하자.</p>
+<p><code>SlopeDiv(unsigned num, unsigned den)</code> :
+<code>atan2(y, x)</code> num=y, den=x와 같은거다. 아래의 설명에서는 num, den보다 x, y를 사용할거다.
+이 함수는 x &gt;= 0, y &gt;= 0, x &gt;= y 상태에서 굴러간다.</p>
+<p><code>if (den &lt; 512) { return SLOPERANGE; }</code> :
+unsigned는 사실 <code>fixed_t</code> 이다. <code>fixed_t</code>는 Q16.16 규격의 고정소수점이다.
+<code>fixed_t 512</code>는 고정소수점 <code>Q16.16(0x 00 00.01 00)</code>으로 <code>2 ** -8 = 0.00390625</code>이다.
+<code>SLOPERANGE</code>는 tantoangle lookup table의 마지막 요소의 인덱스이다.</p>
+<p>코드를 다시 쓰면 <code>if(x &lt; 0.00390625) { return tantoangle_LAST_INDEX; }</code>이다.
+x가 매우 작은 경우는 적당히 예외 처리한 것으로 보인다. 하는김에 den=0를 막아서 divided by zero도 막고.</p>
+<p><code>ans = (num&lt;&lt;3)/(den&gt;&gt;8);</code> :
+실제로 계산하고 싶은 내용은 <code>ans = (y / x) * (2 ** 11)</code>이다.
+<code>y/x</code>로 tangent를 구하고 <code>2048=2 ** 11</code>를 곱하면 0~2048사이의 값이 된다. (x &gt;= 0, y &gt;= 0, x &gt;= y라면 0~45도 구간이다. 해당 구간에서 tangent는 0~1이다)
+이 값을 lookup table의 인덱스로 이용할수 있다&hellip;.. 는 이론상 그런거고 현실에서는 다르다.</p>
+<p>x, y는 unsigned int이다. 그리고 x &gt;= y이다. 그리고 float는 쓰지 않았다.
+x==y를 제외한 모든 경우에서 <code>y/x = 0</code>이 되어버린다.
+그렇다고 <code>(y &lt;&lt; 11) / x)</code>를 계산하면 y가 별로 크지 않아도 오버플로우가 발생할수 있다 (32=2**5, 32&laquo;11 = 1&laquo;16, overflow!)
+그래서 DOOM은 편법을 썻다.</p>
+<ol>
+<li><code>2 ** 11</code> = <code>(2 ** 3) / (2 ** -8)</code></li>
+<li><code>den &gt;&gt; 8</code> : den은 512(2**9)보다 크거나 같다. 그렇기때문에 8비트를 오른쪽으로 shift해도 0이 되진 않을거다. (divided by zero 발생 안함)</li>
+<li><code>num &lt;&lt; 3</code> : num을 너무 큰수로만 쓰지 않으면 오버플로우가 발생하지 않을거다. (<code>num &lt;&lt; 11</code>보다는 안전하다)</li>
+</ol>
+<p><code>return ans &lt;= SLOPERANGE ? ans : SLOPERANGE;</code> : ans가 tantoangle 배열 범위를 벗어나지 않도록 한번더 확인한다.</p>
+<h3 id="045도-이외에서도-atan2y-x-돌아가도록">0~45도 이외에서도 atan2(y, x) 돌아가도록</h3>
+<p><a href="https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/r_main.c#L835-L836">https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/r_main.c#L835-L836</a></p>
+<pre><code class="language-c">viewx = player-&gt;mo-&gt;x;
+viewy = player-&gt;mo-&gt;y;
+</code></pre>
+<p>viwex, viewy는 계산의 기준점(플레이어의 위치)이다.</p>
+<p><a href="https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/r_main.c#L291-L374">https://github.com/id-Software/DOOM/blob/master/linuxdoom-1.10/r_main.c#L291-L374</a></p>
+<pre><code class="language-c">angle_t
+R_PointToAngle
+( fixed_t x,
+  fixed_t y )
+{
+    x -= viewx;
+    y -= viewy;
+
+    if ( (!x) &amp;&amp; (!y) )
+        return 0;
+
+    if (x&gt;= 0) {
+        // x &gt;=0
+        if (y&gt;= 0) {
+            // y&gt;= 0
+
+            if (x&gt;y) {
+                // octant 0
+                return tantoangle[ SlopeDiv(y,x)];
+            } else {
+                // octant 1
+                return ANG90-1-tantoangle[ SlopeDiv(x,y)];
+            }
+
+        } else {
+            // y&lt;0
+            y = -y;
+
+            if (x&gt;y) {
+                // octant 8
+                return -tantoangle[SlopeDiv(y,x)];
+            } else {
+                // octant 7
+                return ANG270+tantoangle[ SlopeDiv(x,y)];
+            }
+        }
+    } else {
+        // x&lt;0
+        x = -x;
+
+        if (y&gt;= 0) {
+            // y&gt;= 0
+            if (x&gt;y) {
+                // octant 3
+                return ANG180-1-tantoangle[ SlopeDiv(y,x)];
+            } else {
+                // octant 2
+                return ANG90+ tantoangle[ SlopeDiv(x,y)];
+            }
+        } else {
+            // y&lt;0
+            y = -y;
+            if (x&gt;y) {
+                // octant 4
+                return ANG180+tantoangle[ SlopeDiv(y,x)];
+            } else {
+                // octant 5
+                return ANG270-1-tantoangle[ SlopeDiv(x,y)];
+            }
+        }
+    }
+    return 0;
+}
+</code></pre>
+<p>코드는 길지만 별거없다. <a href="https://en.wikipedia.org/wiki/Octant_%28plane_geometry%29">360도를 8조각</a>으로 나눈것뿐이다.
+그리고 각각의 조각에 대해 따로 처리했다.
+0~45도에서만 돌아가는 SlopeDiv(y, x)를 구하기 위해서 x, y는 죄다 절대값을 사용하고 일부 각도 구간에서는 x, y축을 뒤집기도 했다.</p>
+<ul>
+<li>octant 0 (0~45deg) : tantoangle[ SlopeDiv(y,x)]</li>
+<li>octant 1 (45~90deg) : ANG90-1-tantoangle[ SlopeDiv(x,y)]</li>
+<li>octant 2 (90~135deg) : ANG90+ tantoangle[ SlopeDiv(x,y)]</li>
+<li>octant 3 (135~180deg) : ANG180-1-tantoangle[ SlopeDiv(y,x)]</li>
+<li>octant 4 (180~225deg) : ANG180+tantoangle[ SlopeDiv(y,x)]</li>
+<li>octant 5 (225~270deg) : ANG270-1-tantoangle[ SlopeDiv(x,y)]</li>
+<li>octant 6 (270~315deg) : ANG270+tantoangle[ SlopeDiv(x,y)]</li>
+<li>octant 7 (315~360deg) : -tantoangle[SlopeDiv(y,x)]</li>
+</ul>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/golang-package-management-failure-learned-from-github-kr-text/" title="Next: golang 패키지 관리의 약점과 대응책">
+          golang 패키지 관리의 약점과 대응책
+          
+          <br/><small>left-pad, 그것의 npm만의 문제인가? 그리고 golang의 해결법</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/vector-length-and-normalize-doom-version/" title="Previous: 고정소수점에서 2차원 벡터의 크기, 정규화된 벡터 계산하는 방법">
+          고정소수점에서 2차원 벡터의 크기, 정규화된 벡터 계산하는 방법
+          
+          <br/><small>DOOM에서 배우는 vector.length(), vector.normalize()</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/atan2-doom-version\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,570 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> NDC 2017 &lt;로보리콜&gt; 포스트모템 정리 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="NDC 2017 &lt;로보리콜&gt; 포스트모템 정리" />
+  
+
+  
+  <meta name="keywords" content="ndc" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/ndc-2017-robo-recall/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="NDC 2017 &lt;로보리콜&gt; 포스트모템 정리">
+<meta name="twitter:description" content="2017년 4월 26일에 NDC 2017을 갔다왔다. 잊어버리기전에 기억나는 내용을 정리해본다. 나와 관련있는 부분 아니면 기록도 안해놨다. 그래서 전체 내용을 알아보고 싶으면 다른 자료를 보는게 좋을 것이다.
+세션 소개  제목 : &amp;lt;로보리콜&amp;gt; 포스트모템 발표분야 : 가상현실 발표내용의난이도 : 기본적인 사전지식 필요 수강권장대상 : VR 개발자">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/ndc-2017-robo-recall/" rel="bookmark" title="Permalink to NDC 2017 &lt;로보리콜&gt; 포스트모템 정리">
+          <h1>NDC 2017 &lt;로보리콜&gt; 포스트모템 정리</h1>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2017-05-11T00:00:00Z'>
+        2017/05/11
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/ndc">#ndc</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <p>2017년 4월 26일에 NDC 2017을 갔다왔다.
+잊어버리기전에 기억나는 내용을 정리해본다.
+나와 관련있는 부분 아니면 기록도 안해놨다.
+그래서 전체 내용을 알아보고 싶으면 다른 자료를 보는게 좋을 것이다.</p>
+<h2 id="세션-소개">세션 소개</h2>
+<ul>
+<li>제목 : &lt;로보리콜&gt; 포스트모템</li>
+<li>발표분야 : 가상현실</li>
+<li>발표내용의난이도 : 기본적인 사전지식 필요</li>
+<li>수강권장대상 : VR 개발자</li>
+<li>학생참관여부 : 학생 참관 가능</li>
+<li>공개수준 : L1-Public Open</li>
+</ul>
+<p>발표자 소개 : 신광섭 - 에픽게임즈코리아</p>
+<p>현재 Developer Relations Lead이자 프로그래머로서 근무중이며,
+이전에는 소프트맥스에서 언리얼 엔진 2, 3를 이용해서
+마그나카르타 PS2/PSP와 Xbox 360 버전을 개발했습니다.</p>
+<p>세션소개</p>
+<p>이 세션에서는 &lsquo;로보리콜&rsquo;을 개발하며 중점을 둔,
+몰입감 있는 VR 경험을 선사하기 위해서 어떤 게임플레이적인 요소들에 대한 고려를 했는지와
+초당 90프레임으로 처리해야하는 VR 환경에서 &lsquo;로보리콜&rsquo;의 높은 그래픽 퀄리티와 게임 플레이를 구현하기 위해서,
+렌더링과 프레임워크 부분에서 이루어진 기술적 개선점과 최적화 방법에 대해서 다루어봅니다.</p>
+<h2 id="내용">내용</h2>
+<ul>
+<li>
+<p>개요</p>
+<ul>
+<li>개발 기간 : 12개월</li>
+<li>개발팀 규모 : 15명 + 외주 (외주에 대해서는 뒤에서 자세히 다룬다)</li>
+<li>최소사양 : i5 + GTX 970 (오큘러스 최소사양)</li>
+</ul>
+</li>
+<li>
+<p>렌더링 스펙</p>
+<ul>
+<li>배경
+<ul>
+<li>900 draw call</li>
+<li>1.8M polygon</li>
+</ul>
+</li>
+<li>배경+캐릭터
+<ul>
+<li>1200 draw call</li>
+<li>2.2M polygon</li>
+</ul>
+</li>
+<li>Actor
+<ul>
+<li>1600 tick function</li>
+<li>actor count &lt; 250</li>
+<li>tick function은 유니티의 update()와 비슷한거라고 하더라</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>세션 타임</p>
+<ul>
+<li>VR 게임하는 사람들은 보통 20분 정도 플레이한다고 카더라</li>
+<li>집중해서 게임하는 시간은 6-7분 정도</li>
+<li>스테이지당 15분정도로 설계</li>
+</ul>
+</li>
+<li>
+<p>시선 방향은 어떻게 결정되었는가?</p>
+<ul>
+<li>텔레포트하기 전에 결정하는 방향은 유저가 바라볼 방향이 아니다</li>
+<li>텔레포트하기 전게 결정하는 방향은 센서의 방향이다</li>
+<li>오큘러스 터치는 기본적으로 센서 2개를 쓴다</li>
+<li>센서 2개로는 정면밖에 인식 못한다</li>
+<li>플레이하면서 앞의 방향이 틀어질수 있다.</li>
+<li>하지만 유저는 앞의 방향이 틀어졌는지 알수없다 (헤드셋을 뒤집어쓰고 있으니까)</li>
+<li>텔레포트에서 사용하는 방향을 센서가 있는 방향으로 설정해서 플레이어가 계속 센서를 보도록 유도</li>
+</ul>
+</li>
+<li>
+<p>잘 보이는곳에 퀄리티 몰아주기</p>
+<ul>
+<li>로봇의 몸통은 눈높이니까 항상 보인다. 다리를 웬만해서는 볼일없다.</li>
+<li>-&gt; 항상 보이는 부위에 디테일 몰빵</li>
+<li>-&gt; 모든 부위를 잘 만들기에는 비용이 비싸니까</li>
+</ul>
+</li>
+<li>
+<p>최종 캐릭터 모델</p>
+<ul>
+<li>30K vertex</li>
+<li>캐릭터당 텍스쳐 2-3장
+<ul>
+<li>예: 로봇 (upper body + lower body + head/neck)</li>
+<li>성능 문제상 여러장의 텍스쳐 겹쳐서 효과내는게 어렵다</li>
+<li>normal map, specular map,,, 등을 전부 쓰진 않은듯</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>플레이어</p>
+<ul>
+<li>팔은 그럴싸하게 만들기 어렵다. 그래서 삭제. 손만 떠다닌다.</li>
+<li>만약 팔을 그린다면 IK를 써야되는데 잘못 만들면 없는것보다 몰입감이 적다.
+<ul>
+<li>팔꿈치를 알 방법이 없어서 그럴싸한 팔을 만들기 어렵다.</li>
+<li>(의견) 내가 그렇게 구현된거 해봤거든.</li>
+</ul>
+</li>
+<li>로봇 손인지 인간 손인지 애매하게 적당히 모델링</li>
+</ul>
+</li>
+<li>
+<p>외주</p>
+<ul>
+<li>주로 배경을 외주</li>
+<li>사진 기반으로 외주 맡기는것만 가능한 것만</li>
+<li>그래야 결과물을 통제하기 쉬우니까
+<ul>
+<li>뜬구름 잡는걸 외주맡기면 뜬구름 잡는 결과물이 나오니까</li>
+</ul>
+</li>
+<li>예: 사진에 있는 건물과 똑같은거 만들어주세요. 근데 사진과 달리 에어콘 실외기는 빼주세요.</li>
+<li>파트를 적당히 쪼개도록 요청
+<ul>
+<li>창문, 창틀, 벽,,, 을 쪼갬.</li>
+<li>조합해서 가로로 창문이 4개인 집, 6개인 집을 만들 수 있다.</li>
+<li>재사용하기 좋으니까</li>
+<li>대신 나중에 최적화해야된다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>렌더링</p>
+<ul>
+<li>deferred rendering : 일반적으로 90~100% 해상도로 렌더링</li>
+<li>forward rendering : 일반적으로 70~100% 해상도로 렌더링후 MSAA (x2 ~ x4) 적용</li>
+<li>로보리콜은 forward rendering 사용</li>
+<li>성능상의 문제 때문에</li>
+<li>디퍼드 렌더링을 쓰면 90fps를 맞출수 없었다.
+<ul>
+<li>90fps를 맞추려면 한 프레임을 11.1ms 안에 렌더링해야된다.</li>
+<li>로보리콜의 경우 디퍼드 렌더러는 렌더링만 11ms를 넘었음.</li>
+<li>포워드 렌더러로 바꾸고 8~9ms안에 렌더링 할 수 있었다</li>
+</ul>
+</li>
+<li>overdraw 주의
+<ul>
+<li>MSAA를 쓸때 overdraw는 성능에 영향을 준다</li>
+<li>LOD를 적용해서 문제를 해결</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="후기">후기</h2>
+<p>나도 <a href="https://www.oculus.com/experiences/gear-vr/1407846952568081/">VR게임</a>는 하나 만들어봤다.
+나는 타켓 플랫폼이 모바일VR인 기어VR인데 로보리콜은 PC VR인 오큘러스이다.
+그래서 여러가지 생각을 하면서 들었다.</p>
+<p>예를 들어 기어VR에서의 draw call 한계는 대략 100이다.
+근데 양쪽눈을 각각 그려야하니 실제로는 50 draw call이 한계다.
+(내가 개발할때는 Single-Pass Stereo rendering가 없었다. 나중에 생겼고 그나마 PC에서만 지원했다)
+로보리콜은 1200 draw call을 찍어다고카더라.
+세상에 드로우콜부터 20배 넘게 차이난다니!</p>
+<p>게다가 게임에서 사용한 폴리곤의 수는 단위가 M이래! M이라니! 백만폴리곤이래!
+나는 K였는데! (기어VR에서는 50k – 100k polygons per frame이 권장이다)</p>
+<p>이외에도 여러 가지가 있지만 그건 나중에 생각나면 써봐야지.</p>
+<h2 id="외부-링크">외부 링크</h2>
+<p>슬라이드를 공개 안하는거같더라.
+그마나 볼만한 링크만 정리해보자</p>
+<ul>
+<li><a href="http://www.vrn.co.kr/news/articleView.html?idxno=61">에픽게임스 &lsquo;로보리콜&rsquo; 개발 비법 공개</a></li>
+</ul>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/fumika-development-note/" title="Next: Project Fumika, 중고책 처분 프로세스 개발기">
+          Project Fumika, 중고책 처분 프로세스 개발기
+          
+          <br/><small>중고책 팔아요</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/introduce-unity-launcher/" title="Previous: Unity Launcher 소개">
+          Unity Launcher 소개
+          
+          <br/><small>유니티 프로젝트에 대응하는 버전의 유니티를 실행하는 런처</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/ndc-2017-robo-recall\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

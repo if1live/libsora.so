@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serverless on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/tags/serverless/</link>
+    <description>Recent content in serverless on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>callbackWaitsForEmptyEventLoop와 AWS Lambda의 함정</title>
+      <link>https://libsora.so/posts/trap-callback-waits-for-empty-event-loop/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/trap-callback-waits-for-empty-event-loop/</guid>
+      <description>개요 요새 typescript + express 백엔드를 짠다. 운영에 대해서는 조금도 생각하기 싫어서 AWS Lambda로 배포한다. serverless-http라는 좋은 물건을 쓰면 express를 AWS Lambda에서 돌릴 수 있다. express의 생산성을 유지하면서 AWS Lambda의 안정적인 운영을 챙길 수 있으니 좋은 구성이다. 하지만 개발 환경과 배포 환경이 근본적으로 달라서 여러가지 함정을 밟고 있다. 인상적이었던 함정 하나를 정리했다.
+sentry 전송 실패 그냥 express를 사용하는 경우 sentry 에러 전송은 생각할 필요없다. 서버가 데몬처럼 돌아가니까 에러 리포트가 잘 보내진다.</description>
+    </item>
+    
+    <item>
+      <title>serverless framework plugins</title>
+      <link>https://libsora.so/posts/serverless-framework-plugins/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/serverless-framework-plugins/</guid>
+      <description>개요 serverless framework은 aws lambda 같은 서버리스 플랫폼에 배포할때 유용한 도구이다. 하지만 serverless framework를 그대로 쓰는건 불편하다. 다행히도 serverless에는 플러그인이 많이 있고 적절한걸 붙이면 많이 편해진다.
+내가 사용 중인 serverless 플러그인을 정리해봤다. 사용법은 각각의 README를 참고하면 되기때문에 다루지 않았다.
+serverless-webpack 나는 타입스크립트를 사용한다. serverless에서 타입스크립트 사용하는 방법 찾다가 serverless-plugin-typescript를 찾아서 사용했다. serverless-plugin-typescript는 소개 첫줄부터 zero-config 를 강조하더라. 플러그인만 설치해도 타입스크립트를 쓸 수 있더라.
+나중에 더 배우고나니까 serverless가 타입스크립트를 기본적으로 지원하더라. serverless create --template aws-nodejs-typescript --name xxx 로 프로젝트를 생성시킬 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

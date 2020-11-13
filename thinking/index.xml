@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thinkings on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/thinking/</link>
+    <description>Recent content in Thinkings on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/thinking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>사람 생각하는건 비슷하다</title>
+      <link>https://libsora.so/posts/peoples-thoughts-are-similar/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/peoples-thoughts-are-similar/</guid>
+      <description>최근에 클라이언트-서버 웹 앱 만들기 - 자바와 자바스크립트로 배우는 모던 웹 앱 개발이라는 책을 읽었다. 도서관 돌아다니다보니 손에 잡혀서 읽어봤다.
+8장 API 디자인에 재밌는 내용이 나오더라.
+ 원래는 보기 좋은 URL도 요청 매개변수 때문에 &amp;lsquo;보기 흉한&amp;rsquo; URL이 되기도 한다. 어떤 상황에서는, HTTP GET에 해당하는 듯한 동작을 하면서도 계층적 데이터 구조로 정의하는 것이 더 쉬운 요청 객체를 사용해야 할 수도 있다. 한 예로, 많은 항목을 GET으로 조회해 가져오는데, 각 항목을 찾기 위해서는 여러 필드가 필요한 상황이 있겠다.</description>
+    </item>
+    
+    <item>
+      <title>나는 글을 쓰는게 어렵다</title>
+      <link>https://libsora.so/posts/writing-article-is-hard/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/writing-article-is-hard/</guid>
+      <description>2018년 12월 말의 풍경이 생각난다. 트위터에서 많은 사람들이 &amp;ldquo;2018년 회고&amp;quot;라는 글을 쓰더라. 트위터만이 아니다. 2018년 회고를 쓰는 사람은 그냥 많았다.
+그래서 나도 2018년 회고를 써볼까 생각했지만 관뒀다. 언제부터였나? 글 쓰는게 힘들어졌다.
+ 2018년 : 18개 (20.3일/개) 2017년 : 15개 (24.3일/개) 2016년 : 21개 (17.4일/개)  위는 몇년간 블로그에 작성한 글의 갯수와 글과 글 사이의 평균 시간 간격이다. 365 / n 나는 1년에 16500원씩 도메인 유지비를 내면서 3주에 글을 한개씩 쓴다. 가끔 도메인 유지비가 비싸다는 생각을 한다.</description>
+    </item>
+    
+  </channel>
+</rss>

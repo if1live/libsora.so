@@ -1,0 +1,147 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>/usr/lib/libsora.so on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/</link>
+    <description>Recent content in /usr/lib/libsora.so on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Library-and-frameworks</title>
+      <link>https://libsora.so/library-and-framework/</link>
+      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/library-and-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serverlesses</title>
+      <link>https://libsora.so/serverless/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typescripts</title>
+      <link>https://libsora.so/typescript/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Black-magics</title>
+      <link>https://libsora.so/black-magic/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/black-magic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Designs</title>
+      <link>https://libsora.so/design/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Post-mortems</title>
+      <link>https://libsora.so/post-mortem/</link>
+      <pubDate>Sun, 29 Dec 2019 02:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/post-mortem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hacks</title>
+      <link>https://libsora.so/hack/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/hack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webs</title>
+      <link>https://libsora.so/web/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphqls</title>
+      <link>https://libsora.so/graphql/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/graphql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testings</title>
+      <link>https://libsora.so/testing/</link>
+      <pubDate>Wed, 03 Jul 2019 01:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascripts</title>
+      <link>https://libsora.so/javascript/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thinkings</title>
+      <link>https://libsora.so/thinking/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/thinking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developments</title>
+      <link>https://libsora.so/development/</link>
+      <pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Etcs</title>
+      <link>https://libsora.so/etc/</link>
+      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/etc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Warnings</title>
+      <link>https://libsora.so/warning/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/warning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

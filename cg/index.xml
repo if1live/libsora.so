@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cgs on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/cg/</link>
+    <description>Recent content in Cgs on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 27 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/cg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2014년 오큘러스 트렌트 예측</title>
+      <link>https://libsora.so/posts/oculus-2014-predict-trend/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/oculus-2014-predict-trend/</guid>
+      <description>개요 오큘러스 대응해서 뭔가를 계속 개발하고 있는데 내가 가고 있는 길이 맞는 길인지 나도 확신을 못해서 정리해볼겸 써봤다. 제목은 거창하게 2014년 예측이지만 내가 게임 개발로 먹고사는 사람도 아니고 VR 관련 업종 사람도 아니고 그냥 취미로 오큘러스를 만지는거다보니까 얼마나 최근 트렌드를 따라가는지는 모르겠다.
+2014년을 예측한 방법은 간단하다.
+ 현재의 제약조건이 무엇인지 정리한다. 가능한것과 불가능한것을 명확해야 예측도 조금은 정확한 질테니까&amp;hellip; 남들은 뭐 만들고 있는지 찾아본다. 어차피 사람 생각하는게 다 비슷할테니까 내가 생각하는 방향이랑 남들이 생각하는 방향이랑 그렇게 크게 차이나진 않을것이다.</description>
+    </item>
+    
+    <item>
+      <title>OculusRift &#43; 3D GUI 개발기록 part 1</title>
+      <link>https://libsora.so/posts/oculus-interactive-surface-1/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/oculus-interactive-surface-1/</guid>
+      <description>이전부터 계속 만들어보고 싶었던 Doom3 같은 느낌의 3D GUI 데모를 만들어봣다
+목표 Oculus SDK와 적절히 결합시키기. 다른 엔진에서 오큘러스를 지원하도록 만든 코드를 보면 렌더링만 오큘러스 대응하거나 최초에 실행될떄만 HeadTracker를 인식하도록 되어있는거 같더라(적어도 내가 본 ogre, irrlicht 구현체는 그랬다) 얼마전에 Oculus SDK를 뜯어본김에 Oculus SDK랑 제대로 붙여보기로 했다. 제대로 붙이면 런타임 중에 HeadTracker를 뻇다꼇다해도 정상적으로 작동한다.
+3D GUI 를 적절히 돌려보자. 목표는 DOOM3 같은 느낌의 UI 만드는거다. 왜 자꾸 DOOM3 같이 만들고 싶어하는가?</description>
+    </item>
+    
+    <item>
+      <title>Build CEGUI 0.8.2 on Windows &#43; OGRE</title>
+      <link>https://libsora.so/posts/cegui-build/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/cegui-build/</guid>
+      <description>CEGUI 빌드 하느라 삽질좀 해서 공유용 문서를 썻다. 어차피 요즘 대세는 유니티니까 팀원말고는 보지도 않겠지.
+준비물  OGRE 빌드해놓기. 귀찮으면 prebuilt library가 있어도 된다. 오그레으로 샘플 한번이라도 제대로 빌드해봤으면 뭔소리인지 알거다 CEGUI 0.8.2 source 에서 받을 수 있다. 문서 작성 시점의 안정버전이 0.8.2 라서 그거 쓴다. Dependencies (Windows / Apple OS X Only) 를 받는다. CEGUI는 의존성이 크고 아름답게 걸린 물건이라서 수동으로 관련 라이브러리 하나씩 깔면 미친다. cmake. 왜냐하면 나는 cmake 빠돌이니까  빌드 과정 CEGUI Dependencies cegui-deps-0.</description>
+    </item>
+    
+    <item>
+      <title>KGC 2013 오큘러스 세션 구경 소감</title>
+      <link>https://libsora.so/posts/kgc2013-oculus-rift/</link>
+      <pubDate>Mon, 30 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/kgc2013-oculus-rift/</guid>
+      <description>KGC 2013 오큘러스 세션 구경 소감</description>
+    </item>
+    
+    <item>
+      <title>irrlicht engine 사용기</title>
+      <link>https://libsora.so/posts/irrlight-engine-review/</link>
+      <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/irrlight-engine-review/</guid>
+      <description>subtitle : 2달 정도 만져보고 간단한 프로젝트를 완료후의 irrlicht 사용 소감
+장점 빈곤한 자의 게임 엔진 / C++의 확장성 요즘 트렌드는 unity engine인거 게임업계 사람 아닌 나도 안다. 근데 유니티에서 오큘러스 리프트를 사용하려면 pro버전을 질러야한다. pro버전은 165만원&amp;hellip; 취미로 갖고놀게 엔진이나 사볼까? 하기에는 너무 비싸다. 게다가 opencv 장착, 또는 raspberry pi로의 확장도 고려하고 있어서 unity는 버렸다.
+아직도 살아있는 오픈소스 게임엔진 오픈소스 엔진중에서 포럼이 활성화되어있는거 찾아보면 irrlicht, ogre 정도 뿐인거같더라.
+크로스플랫폼 프로젝트에서 사용한 플랫폼은 맥, 윈도우인데 양쪽에서 적절히 굴러간다.</description>
+    </item>
+    
+    <item>
+      <title>Oculus Rift 개발하면서 구경한 이상현상</title>
+      <link>https://libsora.so/posts/oculus-rift-artifacts/</link>
+      <pubDate>Wed, 21 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/oculus-rift-artifacts/</guid>
+      <description>최근에 오큘러스 리프트 잡고 개발한게 있다. (프로젝트는 망했지만) 개발하면서 일반 CG에서는 절대로 볼수없고 오직 오큘러스 리프트에서만 구경할수 있는 이상 렌더링 몇개 발견해서 스샷 찍어놓은걸 간단히 정리했다.
+신개념 Z-fighting artifacts 이런 이상현상을 뭐라고 불러야 될지 잘 모르겠다. z-fighting이라고 써놨지만 기존의 CG에서 볼수있는 z-fighting하고는 다르다. 다음의 요소가 결합되어서 발생하는 버그로 추정된다.
+ 2개의 스프라이트를 겹쳐서 배치하기 왼쪽눈/오른쪽눈으로 볼때 달라지는 거리 거리에 따라서 렌더링할 객체 순서를 엔진이 정렬  주의 : 아래의 설명은 irrlicht engine기준이다.</description>
+    </item>
+    
+    <item>
+      <title>irrlicht-console sample</title>
+      <link>https://libsora.so/posts/irrlicht-console/</link>
+      <pubDate>Sun, 28 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/irrlicht-console/</guid>
+      <description>irrlicht engine에서 quake console같은걸 쓰고싶어서 하나 만들었다. 옛날부터 알고있었던 GLConsole와 이번에 새로 찾은 IrrConsole를 조합해서 만들었다.
+IrrConsole는 irrlicht engine에 잘 붙어서 좋은 물건인데 기본기능이 GLConsole보다 후진거같고 + 파서 문법이 그다지 맘에 들지도 않고 + GLConsole에는 전역변수 라이브러리가 끼어있어서 두개를 합치기로 했다. 만들고나니까 생각보다 쓸만하겠더라. (그리고 나는 만든게 아까워서 irrlicht engine밖으로 탈출하지 못하겟지&amp;hellip;)
+irrlicht-console page</description>
+    </item>
+    
+    <item>
+      <title>셰이더 프로그래밍 입문 for GLSL</title>
+      <link>https://libsora.so/posts/glsl-example/</link>
+      <pubDate>Sat, 27 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/glsl-example/</guid>
+      <description>포프님의 **셰이더 프로그래밍 입문**을 읽으면서 이거 GLSL로 구현하면서 공부해보자 하면서 만든게 있는데 귀찮아서 방치해놧다가 지금서야 정리했다. 책은 DX 기준으로 작성되어 있지만 GL과 DX는 수학상으로도(또한 구현상으로도) 다른게 많아서 좀 고쳤다.
+그리고 오늘 프로젝트를 분리시켰다!
+ Site Repo  Library OpenGL은 DirectX와는 달리 그 자체로는 뭐 어떻게 써먹을 방법이 없다. 수학라이브러리도 내장되어있지 않고 텍스쳐 로딩도 없고 창초기화도 없고 등등&amp;hellip;.되는게 하나도 없어서 라이브러리를 적절히 붙여야 돌릴 수 있다. 구현에 사용한 라이브러리/참고코드 목록이다. (아마도 다음부터 GL예제를 올리때는 귀찮아서 안쓰겟지만 한번은 쓰는게 낫겟지&amp;hellip;)</description>
+    </item>
+    
+    <item>
+      <title>3차원 공간에 2차원 객체 렌더링</title>
+      <link>https://libsora.so/posts/text-billboard/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/text-billboard/</guid>
+      <description>디버깅 용도(예를 들면, 물체의 좌표값, 게임객체의 상태등을 표시)로 3차원 공간상에 2차원 객체(텍스트 포함)를 그냥 출력하고 싶다. 이렇게 사용하기 위해서는 세가지 조건을 만족해야한다.
+첫번째는 카메라의 위치가 달라지더라도 빌보드처럼 기울어지지 않아야한다. 카메라 방향따라서 텍스트 방향이 달라지면 기울어지거나 뒤집때도 있을텐데 이걸 어떻게 읽을 수 있겠는가?
+두번째는 거리에 상관없이 동일한 크기로 나와야한다. 디버깅 용도인데 멀리있는 텍스트라고 작게나오고 가까이에 있다고 크게 나올 필요가 있는가? 읽기 쉬우려면 멀리있건 가까이에있건 동일한 크기로 나오는편이 좋다
+세번째는 3차원 공간상의 Z좌표까지 유지되어야한다는 점이다.</description>
+    </item>
+    
+    <item>
+      <title>Simple Mesh Library</title>
+      <link>https://libsora.so/posts/simple-mesh/</link>
+      <pubDate>Sat, 20 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/simple-mesh/</guid>
+      <description>glut에는 Cube / Sphere / Cone / Teapot&amp;hellip;등을 렌더링할 수 있는 함수가 존재한다. 하지만 glut를 안쓰고 glfw를 쓰거나 GLES환경에서는 그런거 없다. 간단한 테스트/디버깅용으로 Cube / Sphere 등을 렌더링할수 있으면 유용하긴한데&amp;hellip; 이거 하겟다고 본격적인 Model Loader를 추가하는것은 괜히 규모가 큰거 같아서 간단하게 사용할 수 있는 메시 라이브러리를 만들었던걸 정리해봣다.
+세부 기능  지원하는 형태  Cube Sphere Teapot   출력 형태  Wire Frame Mesh(Solid)   Vertex Format  Position Texture Coord Normal    모델을 렌더링하는데 필요한 Vertex List, Index List를 계산해준다.</description>
+    </item>
+    
+    <item>
+      <title>Vincent Font Library</title>
+      <link>https://libsora.so/posts/vincent-font-library/</link>
+      <pubDate>Fri, 19 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/vincent-font-library/</guid>
+      <description>Public Domain 8x8 Bitmap Font인 Vincent Font를 적절하게 사용하기 위해서 만든 코드를 정리했다. 앞으로는 새로운 OpenGL Text Library를 주로 사용하겠지만 왠지 아까워서&amp;hellip;
+원래 OpenGLES 2.0 환경에서 사용하기 위해서 만들었던거라서 렌더링하는 함수는 따로 없다. (gles 2.0은 쉐이더를 쓰니까 렌더링 부분까지 라이브러리로 넣기 미묘하더라) 라이브러리에서는 폰트를 렌더링 하기위한 Vertex/Texture Coord 까지만 제공하도록했다. 구조는 간단하니까 필요한 사람은 알아서 잘 수정해서 쓸 수 있을것이다.
+Repo 데모 스크린샷. 8x8폰트는 상당히 작다. 텍스트라벨의 원점은 왼쪽아래가 0,0이니까 사용할때 참고할 것</description>
+    </item>
+    
+    <item>
+      <title>OpenGL Text Library</title>
+      <link>https://libsora.so/posts/opengl-text-library/</link>
+      <pubDate>Wed, 17 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/opengl-text-library/</guid>
+      <description>OpenGL 자체에는 텍스트 출력 관련된 함수가 없다. 근데 개발과정, 디버깅의 용도로 텍스트 출력이 있었으면 한다. glut기반으로 개발하고 있다면 glutStrokeString / glutBitmapString 를 사용하면 된다. 하지만 나는 glut를 안쓴다. 혹은 glut를 사용할수 없는 환경(예를 들면 OpenGLES)의 경우에는 어떻게 하면될까? 이 때 선택할 수 있는 방법과 내가 선택한 방법 및 간단하게 만들어본 라이브러리에 대해서 써봣다.
+요구사항  될수있는한 간단하게 만든다  소스를 복붙하는것만으로도 다른 프로젝트에 사용할 수 있으면 좋겠다 cpp/h 딱 2개의 파일만 있으면 좋겟다.</description>
+    </item>
+    
+    <item>
+      <title>Uber Shader</title>
+      <link>https://libsora.so/posts/uber-shader/</link>
+      <pubDate>Sun, 27 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/uber-shader/</guid>
+      <description>기본 개념은 한 개의 쉐이더 소스를 짜고 ifdef/ifndef 질을 해서 쉐이더 코드를 여러 형태로 변화시키는 것이다. 이것이 의미가 있는 이유는 여러 종류의 광원모델을 기반으로 쉐이더를 짠다고 하더라도 똑같은 로직/속성의 반복이 등장하기 떄문이다. (즉, 쉐이더 코드의 중복을 줄일 수 있다.)
+간단한 예시 하나의 프래그먼트 쉐이더로 색을 그대로 칠하는것과 텍스쳐와 색을 조합해서 칠하는것을 처리하는 예제코드이다. 다음의 예제코드의 맨 앞부분에 매크로를 집어넣고 쉐이더를 컴파일하면 그 결과물은 각각 다른것이 나온다.
+void main() { vec4 color = vec4(1, 1, 1, 1); #if USE_TEXTURE == 1 gl_FragColor = texture2D(tex, texcoord) * color; #else gl_FragColor = color; #endif }  USE_TEXTURE 1 input #define USE_TEXTURE 1 // input original source // .</description>
+    </item>
+    
+    <item>
+      <title>게임 좌표계에 대한 고찰</title>
+      <link>https://libsora.so/posts/game-coord-system/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/game-coord-system/</guid>
+      <description>좌표계에 대한 고찰 3D 그래픽스 좌표계에는 크게 2가지(왼손 좌표계/오른손 좌표계)가 있다. 왼손/오른손 좌표계 모두 왼쪽..오른쪽 방향을 +x, 아래..위쪽 방향을 +y로 쓰지만 왼손 좌표계는 화면속으로 들어가는 방향이 +z이고 오른손 좌표계는 화면에서 나오는 방향이 +z이다. directx는 왼손 좌표계를 사용하고 opengl은 오른손 좌표계를 사용한다. 여기까지는 그래픽스에 대해서 잠깐이라도 공부해본 사람들은 다들 알만한 내용이다.
+그래픽스 좌표계의 특징을 보면 세로방향을 y축으로 사용하고 카메라에서 가까워지는/멀어지는 방향을 z축으로 사용한다. (가로 방향을 x축을 사용하는것은 어지간한 다른 좌표계에서도 마찬가지니까 일단 건너뛴다) 그래픽스 좌표계는 최종적으로 화면(모니터)에 대응되어야하기 때문에 모니터 화면에 대응되는 평면을 xy평면으로 만든것으로 보인다.</description>
+    </item>
+    
+  </channel>
+</rss>

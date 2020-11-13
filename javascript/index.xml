@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascripts on /usr/lib/libsora.so</title>
+    <link>https://libsora.so/javascript/</link>
+    <description>Recent content in Javascripts on /usr/lib/libsora.so</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>월요일의 버그 - webpack-cli</title>
+      <link>https://libsora.so/posts/bug-of-monday-webpack-cli/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/bug-of-monday-webpack-cli/</guid>
+      <description>문제!!! 이번주 월요일(2019/06/24)에 webpack 빌드를 돌렸는데 webpack-cli 안에서 터졌다.
+if (!e &amp;amp;&amp;amp; fileOwnerId === process.getuid()) utimesSync(openCollectivePath, now, now); TypeError: process.getuid is not a function at e (&amp;lt;hidden&amp;gt;\node_modules\webpack-cli\bin\cli.js:356:43) at FSReqWrap.oncomplete (fs.js:141:20)  금요일(2019/06/21)까지는 멀쩡하게 돌아가는 물건이었는데 왜??? 그것도 내 코드가 아니라 왜 webpack-cli에서???
+문제 분석 webpack-cli/bin/cli.js를 열어보면 원인을 쉽게 찾을 수 있다.
+/** * Show a hint to donate to our Opencollective * once a week, only on Monday */ const openCollectivePath = __dirname + &amp;quot;/opencollective.</description>
+    </item>
+    
+    <item>
+      <title>10년이면 강산도 변한다. 그리고 자바스크립트도</title>
+      <link>https://libsora.so/posts/in-ten-years-strong-mountains-will-change-and-javascript/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/posts/in-ten-years-strong-mountains-will-change-and-javascript/</guid>
+      <description>얼마전에 구버전 IE에서만 돌아가는 코드를 밟아서 글을 썼다. 글을 쓰다가가 옛날에 밟은 IE 구버전과 관련된 재밌는 코드가 생각났다. 그래서 옛날 이야기를 하나 더 써봤다.
+자바스크립트를 쓰다보면 다른 언어에서는 생각도 못한 코드를 가끔본다. 객체의 프로퍼티로 if, for, while 같은 키워드를 쓸 수 있다. 다른 언어였으면 문법에러로 처리했을지 모른다.
+a = {if: 1} &amp;gt; {if: 1} a.if &amp;gt; 1 a[&#39;if&#39;] &amp;gt; 1  재밌게도 위의 문법은 IE 구버전에서는 안돌아간다.
+IE 구버전에서는 키워드를 프로퍼티로 쓸 수 없다.</description>
+    </item>
+    
+  </channel>
+</rss>

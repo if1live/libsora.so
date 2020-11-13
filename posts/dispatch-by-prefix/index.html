@@ -1,0 +1,587 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> 윈도우에서 길고 아름다운 경로명을 사용하는 방법 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="윈도우에서 길고 아름다운 경로명을 사용하는 방법" />
+  
+
+  
+  <meta name="keywords" content="techinque, prefix" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/dispatch-by-prefix/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="윈도우에서 길고 아름다운 경로명을 사용하는 방법">
+<meta name="twitter:description" content="MAX_PATH 윈도우는 경로 최대길이가 제한되어 있다. MAX_PATH라는 상수로 260이다. 그래서 매우 긴 디렉토리를 만든 다음에 안에서 파일을 만들라고하면 다음과 같은 문제가 발생한다.
+지금이 90년대 컴퓨터도 아니고 고작 260글자까지밖에 지원하지 않는다고? MAX_PATH가 260라니 윈도우에 실망했습니다. 윈도우 팬 그만둡니다.
+로 끝내면 재미">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/dispatch-by-prefix/" rel="bookmark" title="Permalink to 윈도우에서 길고 아름다운 경로명을 사용하는 방법">
+          <h1>윈도우에서 길고 아름다운 경로명을 사용하는 방법</h1>
+          
+          <h2>prefix를 이용한 기법</h2>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2016-06-05T00:00:00Z'>
+        2016/06/05
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/techinque">#techinque</a>
+        </li>
+        
+        <li>
+          <a href="/tags/prefix">#prefix</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <h2 id="max_path">MAX_PATH</h2>
+<p>윈도우는 경로 최대길이가 제한되어 있다. <code>MAX_PATH</code>라는 상수로 260이다.
+그래서 매우 긴 디렉토리를 만든 다음에 안에서 파일을 만들라고하면 다음과 같은 문제가 발생한다.</p>
+<p><img src="/posts/dispatch-by-prefix/newfile-fail.png" alt="new file fail"></p>
+<p>지금이 90년대 컴퓨터도 아니고 고작 260글자까지밖에 지원하지 않는다고?
+MAX_PATH가 260라니 윈도우에 실망했습니다. 윈도우 팬 그만둡니다.</p>
+<p>로 끝내면 재미없다. MSDN을 읽어보자.</p>
+<h3 id="msdn">MSDN</h3>
+<blockquote>
+<p>Maximum Path Length Limitation</p>
+<p>In the Windows API (with some exceptions discussed in the following paragraphs),
+the maximum length for a path is MAX_PATH, which is defined as 260 characters.
+A local path is structured in the following order:
+drive letter, colon, backslash, name components separated by backslashes, and a terminating null character.
+For example, the maximum path on drive D is &ldquo;D:\some 256-character path string<NUL>&rdquo;
+where &ldquo;<NUL>&rdquo; represents the invisible terminating null character for the current system codepage.
+(The characters &lt; &gt; are used here for visual clarity and cannot be part of a valid path string.)</p>
+<p>The Windows API has many functions that also have Unicode versions to permit an extended-length path
+for a maximum total path length of 32,767 characters.
+This type of path is composed of components separated by backslashes,
+each up to the value returned in the lpMaximumComponentLength parameter of the GetVolumeInformation function
+(this value is commonly 255 characters).
+To specify an extended-length path, use the &ldquo;\?&quot; prefix.
+For example, &ldquo;\?\D:\very long path&rdquo;.</p>
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx">Naming Files, Paths, and Namespaces</a></p>
+</blockquote>
+<ul>
+<li><code>C:\short path</code> : 기존 방식으로 작동. MAX_PATH 의 제약을 벗어나지 못한다.</li>
+<li><code>\\?\D:\very long path</code> : <code>\\?\</code> prefix를 사용하면 32767글자까지 사용 가능하다.</li>
+</ul>
+<h3 id="example">Example</h3>
+<p>MSDN에 있는 내용을 참고해서 간단한 예제를 짯다.</p>
+<ol>
+<li>C드라이브에 들어간다</li>
+<li>새로운 디렉토리를 만든다. 디렉토리 이름은 다음과 같다.
+0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123</li>
+<li>소스를 컴파일하고 돌려본다.</li>
+</ol>
+<pre><code class="language-cpp">#define USE_EXTENDED_LENGTH 1
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+const std::string dirname  = &quot;0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123&quot;;
+const std::string filename = &quot;0123456789012345678901234567890123456789012345678901234567890123456789.txt&quot;;
+
+int main()
+{
+  std::string filepath = R&quot;(c:\)&quot; + dirname + R&quot;(\)&quot; + filename;
+#if USE_EXTENDED_LENGTH
+  filepath = std::string(R&quot;(\\?\)&quot;) + filepath;
+#endif
+
+  FILE *f = nullptr;
+  errno_t err = fopen_s(&amp;f, filepath.data(), &quot;wb&quot;);
+  if(err == 0) {
+    fprintf_s(f, &quot;hello world\n&quot;);
+    fclose(f);
+  } else {
+    fprintf(stderr, &quot;error code : %d\n&quot;, err);
+  }
+  return 0;
+}
+</code></pre>
+<p><code>USE_EXTENDED_LENGTH</code>가 비활성화 되어있으면 <code>\\?\</code>를 붙이지 않는다.
+활성화 되어있으면 <code>\\?\</code>를 붙여준다.</p>
+<p><code>\\?\</code>가 없으면 기존 방식으로 동작하고 에러가 발생한다.
+<img src="/posts/dispatch-by-prefix/long-path-cpp-fail.png" alt="long path c++ fail"></p>
+<p><code>\\?\</code>가 있으면 새로운 방식을 사용한다. 그래서 매우긴 경로의 파일명도 문제없이 만들 수 있다.
+<img src="/posts/dispatch-by-prefix/newfile-success.png" alt="new file success"></p>
+<h3 id="why">Why?</h3>
+<p>마이크로소프트는 하위호환성을 극단적으로 중요시하는 회사이다.
+애플처럼 OS 새로 업그레이드했다고 옛날에 돌아가던 프로그램이 안돌아가는 경우는 자주 일어나지 않는다.
+이런 회사에서 <code>MAX_PATH</code>를 고치게 가능할까?
+다른 개발자들이 <code>MAX_PATH</code>를 이용해서 어떤 기괴한 짓을 했을줄 알고?
+그렇지만 260글자 제한을 계속 유지하는건 말이 안된다.</p>
+<p>마소는 prefix를 이용해서 이 문제를 해결한 것으로 보인다.
+생긴게 뻔하면 기존 방식(MAX_PATH)를 이용한다.
+절대로 사용할거같지 않은 prefix인 <code>\\?\</code>를 붙이면 새로운 방식을 이용한다.
+이렇게 하면 하위호환성을 유지하면서 새로운 기능을 지원할수 있다.</p>
+<h2 id="응용-예제--utf-8">응용 예제 : UTF-8</h2>
+<p>prefix에 따라서 처리하는 방식이 바뀌는 다른 예제는 UTF-8이다.
+어떤 식으로 작동하는지는 표만 봐도 감을 잡을수 있을거다.</p>
+<table>
+<thead>
+<tr>
+<th>Bytes in sequence</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>0xxxxxxx</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>110xxxxx</code></td>
+<td><code>10xxxxxx</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>1110xxxx</code></td>
+<td><code>10xxxxxx</code></td>
+<td><code>10xxxxxx</code></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>11110xxx</code></td>
+<td><code>10xxxxxx</code></td>
+<td><code>10xxxxxx</code></td>
+<td><code>10xxxxxx</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="흑마법으로-응용">흑마법으로 응용</h2>
+<p>좋은 기법을 배웠으니 흑마법으로 응용해보자.
+아래는 이전에 prefix 기법을 이용한 사례이다.</p>
+<ol>
+<li><code>int do_something(const char *s)</code> 같이 생긴 함수가 있다.</li>
+<li>함수 안에서는 <code>strlen()</code>을 사용하고 있다.</li>
+<li>함수 인자로 적절한 문자열을 넣고 결과값을 받는다.</li>
+</ol>
+<p>위와 같은 함수가 있다. 겉보기에는 별 문제가 없어보인다.
+그런데 개발을 하다보니 새로운 요구사항이 추가되었다.</p>
+<ul>
+<li><code>\0</code>이 문자열 중간에 들어갈 수 있다. (예: <code>abc\0def</code>는 7글자로 인식해야 한다)</li>
+<li>함수가 사용하는 곳은 매우 많은데 한군데에서만 <code>\0</code>을 지원해도 문제없다.</li>
+</ul>
+<p>현재의 함수로는 위의 요구사항을 대응하기 어렵다.</p>
+<ol>
+<li>문자열의 끝을 알수 없다. <code>strlen()</code>는 <code>\0</code>가 문자열 중간에 섞여있으면 제대로 동작하지 않는다.</li>
+<li>함수 인터페이스를 고치기에는 수정할 코드가 많다. 새로운 요구사항이 필요한 곳은 한군데인데 이를 위해서 매우 많은 코드를 고쳐야한다. 인터페이스 하위호환성을 깨고싶진 않다.</li>
+</ol>
+<p>그래서 야매로 코드를 수정했다.</p>
+<p>일반적인 문자열 <code>abc</code>는 평소에 쓰던대로 인자에 넣어서 함수를 호출한다. 동작도 기존 그대로 유지한다.</p>
+<p><code>\0</code>이 중간에 들어간 경우 base64 인코딩한 다음에 prefix를 붙인 값을 인자로 사용했다.
+인자로 <code>prefix(0x01) + base64_encode(&quot;abc\0def&quot;)</code> 같은 값을 이용했다.
+일반적인 문자열에서는 쓸거같지 않은 값을 첫번째 글자에 넣고 이를 읽어서 분기했다.</p>
+<pre><code class="language-cpp">// 원래 있던 코드를 새로운 함수로 분리
+static int original_logic(const char *s, int length) {.....}
+
+int do_something(const char *s) {
+  if(s == nullptr) {
+    return original_logic(s, 0);
+  }
+
+  if(s[0] == 0x01) {
+    const char *base64_str = s[1];
+    int length = 0;
+    const char *str = base64_decode(base64_str, &amp;length);
+    return original_logic(str, length);
+
+  } else {
+    return original_logic(s, strlen(s));
+  }
+}
+
+
+int main()
+{
+  // 기존 인터페이스 유지
+  do_something(&quot;hello world&quot;);
+
+  // \0 이 있을때도 동작
+  char buffer[512];
+  buffer[0] = 0x01;
+  base64_encode(&quot;hello\0world&quot;, buffer[1]);
+  do_something(buffer);
+}
+</code></pre>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/gksrmfdldkscuwudy-post-mortem/" title="Next: gksrmfdldkscuwudy 포스트모템">
+          gksrmfdldkscuwudy 포스트모템
+          
+          <br/><small>한글이 안쳐져요 (알파벳-두벌식 변환기)</small>
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/migration-from-pelican-to-hugo-post-mortem/" title="Previous: 블로그를 Pelican에서 Hugo로 이사하기">
+          블로그를 Pelican에서 Hugo로 이사하기
+          
+          <br/><small>파이썬 탈주 포스트모템</small>
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/dispatch-by-prefix\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+

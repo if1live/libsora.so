@@ -1,0 +1,479 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Hugo 0.78.1" />
+
+  <title> 윈도/ios/안드로이드를 커버할수 있는 PCH 구조 잡기 &middot; /usr/lib/libsora.so </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="naver-site-verification" content="2ddc1a56777489f4a64a4f6a59822f8b1c1ea502"/>
+  <meta name="google-site-verification" content="VsvNNnJZUV-iLEYKNju16p-HtDqZeqL15H-VVy-HwpA" />
+
+  <meta name="gc:client-id" content="785d47c81cbc2fd42b65">
+  <meta name="gc:client-secret" content="5e5d558f0b16fae154aa47fc9d94f7c09e540ec7">
+
+  
+  <meta name="author" content="if1live" />
+  
+
+  
+  <meta name="description" content="윈도/ios/안드로이드를 커버할수 있는 PCH 구조 잡기" />
+  
+
+  
+  <meta name="keywords" content="cpp, pch" />
+  
+
+  
+  
+<meta name="twitter:card" content="summary">
+<meta name="og:url" content="https://libsora.so/posts/cross-platform-stdafx/">
+
+<meta name="twitter:site" content="@if1live">
+
+
+<meta name="twitter:title" content="윈도/ios/안드로이드를 커버할수 있는 PCH 구조 잡기">
+<meta name="twitter:description" content="윈도/ios/안드로이드를 커버할수 있는 PCH 구조 잡기">
+
+<meta name="twitter:image:src" content="https://www.gravatar.com/avatar/fb9672e7e0d256f39369595381d1ea07">
+
+
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://libsora.so/css/style-gen.css?2">
+
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  
+  <link href="https://libsora.so/index.xml" rel="alternate" type="application/rss+xml" title="/usr/lib/libsora.so" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous" />
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous" />
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css"
+  integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw=="
+  crossorigin="anonymous" />
+
+
+  
+  <script type="text/javascript">
+    var host = "libsora.so";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    } else {
+      console.log("skip https redirect");
+    }
+  </script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: "ca-pub-3043297488880636",
+  enable_page_level_ads: true
+});
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <h1 class="font-monospace">
+    <a href="https://libsora.so/">/usr/lib/libsora.so</a>
+  </h1>
+  <nav>
+    <h2 hidden>Navigation</h2>
+    <ul class="nav-link-list">
+      <li>
+        <a href="https://libsora.so/about/"  title="about">
+          <i class="fa fa-info"><span hidden>about</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/projects/"  title="projects">
+          <i class="fa fa-code"><span hidden>projects</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/archives/"  title="archives">
+          <i class="fa fa-archive"><span hidden>Archives</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/tags/"  title="tags">
+          <i class="fa fa-tags"><span hidden>Tags</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://libsora.so/search/"  title="search">
+          <i class="fa fa-search"><span hidden>Search</span></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<div class="container">
+  <article class="basic-content article-content">
+    <header>
+      <hgroup class="entry-title">
+        <a href="/posts/cross-platform-stdafx/" rel="bookmark" title="Permalink to 윈도/ios/안드로이드를 커버할수 있는 PCH 구조 잡기">
+          <h1>윈도/ios/안드로이드를 커버할수 있는 PCH 구조 잡기</h1>
+          
+        </a>
+      </hgroup>
+    </header>
+
+    <footer class="post-info">
+      <abbr class="published" title='2012-12-08T00:00:00Z'>
+        2012/12/08
+      </abbr>
+      
+      <address class="vcard author">
+        By <a href="//twitter.com/if1live">@if1live</a>
+      </address>
+      
+
+      <ul class="list-of-tags tags-in-article">
+        
+        <li>
+          <a href="/tags/cpp">#cpp</a>
+        </li>
+        
+        <li>
+          <a href="/tags/pch">#pch</a>
+        </li>
+        
+      </ul>
+    </footer>
+
+    <section class="entry-content">
+      <p>미리 컴파일된 헤더(PreCompiled Header, 이하 PCH라고 지칭한다)는 컴파일시간을 줄이는데 적절한 기능이다. (PCH가 무엇인지에 대한 설명은 지금 관심없기 때문에 일단은 건너뛴다. 알아서 검색하자. 어쨋든 좋은거다) 다만 PCH라는 개념은 대부분의 컴파일러(그래봣자 내가 쓰는 컴파일러라고 해봐야 msvc, llvm, gcc)에서 지원하긴하지만 표준은 아니다(마치 <code>#pragma once</code>같은 느낌) 덕분에 윈도우/아이폰/안드로이드에서 PCH를 사용하는 방법이 달라서 하나의 소스에서 3가지를 동시에 지원하기 위해서는 약간의 편법을 부려야한다. 일단 각각의 플랫폼에서의 PCH를 사용하기 위한 방법/제약은 다음과 같다</p>
+<ul>
+<li>
+<p>윈도우</p>
+</li>
+<li>
+<p>일반적으로 stdafx.h를 파일명으로 쓴다. (당연히 바꿀수도 있다)</p>
+</li>
+<li>
+<p>모든 cpp 파일의 주석을 제외한 <strong>첫번째 줄</strong>에는 <code>#include &quot;stdafx.h&quot;</code>가 들어가야한다.</p>
+</li>
+<li>
+<p>stdafx.cpp 파일을 따로 만들어야한다. 프로젝트 자체는 PCH를 사용, stdafx.cpp는 PCH 만들기 라고 설정해야 돌아간다</p>
+</li>
+<li>
+<p>iOS</p>
+</li>
+<li>
+<p>일반적으로 proj_name_Prefix.pch 를 기본 파일명으로 사용한다. (당연히 바꿀수 있다)</p>
+</li>
+<li>
+<p>cpp파일에서 명시적으로 <code>#include &quot;proj_name_Prefix.pch&quot;</code>를 인클루드 할 필요 없다</p>
+</li>
+<li>
+<p>obj-c 소스와 C++이 같은 PCH를 공유한다 (PCH는 프로젝트마다 1개씩만 존재할수 있다. 아니, 프로젝트보다 타겟이라는 표현이 적절하겠다)</p>
+<ul>
+<li>PCH파일안에 obj-c문법이 들어가면 c++소스 컴파일할때 에러가 난다. 반대로 PCH파일안에 C++문법이 들어가면 obj-c소스를 컴파일할때 컴파일 에러가 난다.</li>
+</ul>
+</li>
+<li>
+<p>안드로이드</p>
+</li>
+<li>
+<p>공식적으로는 PCH를 지원하지 않는다</p>
+<ul>
+<li>gcc는 PCH를 지원한다. 하지만 안드로이드 NDK에 사용되는 특수한 makefile 문법에는 pch를 정의할 자리가 없다. <a href="http://code.google.com/p/android/issues/detail?id=25412">외쿡의 삽질사례</a>를 볼때 ndk 자체를 고치면 가능하긴 한듯하다. 시간나면 해봐야지</li>
+</ul>
+</li>
+</ul>
+<p>즉, 윈도/iOS/안드로이드를 동시에 지원하는 pch소스 파일을 만들기 위해서는 pch를 지원하는 컴파일러, 지원하지 않는 컴파일러를 모두 커버할수 있도록 적절히 짜야한다는 소리이다. 사실 pch가 지원되지 않는 컴파일러라고 컴파일이 안되는건 아니다. 다만 pch가 지원되지 않는 컴파일러에서 pch같이 크고 아름다운 헤더를 모든 cpp에 인클루드 하면 컴파일타임이 막장스러워지는 사태가 발생하기 때문에 이를 방지하기 위해서 코드를 적절히 처리해줘야한다. (해당 사항은 GPG 4. 커다란 크로스플랫폼 라이브러리의 설계와 유지 에서도 다루는 내용이다)</p>
+<p>내가 프로젝트에 사용하는 코드의 구조는 다음과 같은 느낌이다.</p>
+<p>일단 msvc를 위해서 stdafx.cpp파일을 다음과 같이 만든다.</p>
+<pre><code class="language-cpp">#include &quot;stdafx.h&quot;
+</code></pre>
+<p>PCH를 지원하는 플랫폼/지원하지 않는 플랫폼에 대한 처리를 하기 위해서 다음과 같은 arch.h라는 파일을 미리 만든다. 소스의 내용은 <a href="/posts/platform-macro">플랫폼 매크로 선언 없이 윈도/iOS/안드로이드 구분하는 매크로</a>에서 이어진다</p>
+<pre><code class="language-cpp">// 적절히 현재 플랫폼에 따라서 SR_WIN, SR_IPHONE, SR_ANDROID가 0 or 1으로 설정된다
+//pch
+#if SR_WIN || SR_IPHONE
+#define SR_USE_PCH 1
+#else
+#define SR_USE_PCH 0
+#endif
+</code></pre>
+<p>진짜 핵심인 PCH의 내용은 다음과 같다.</p>
+<pre><code class="language-cpp">// Ŭnicode please
+// pch를 지원하지 않는 환경에서도 인클루드한게 통쨰로 인클루드 하는걸 방지하기위해서 이런식으로 처리했다
+#include &quot;arch.h&quot;
+
+#ifdef __cplusplus
+
+#include &quot;assert_include.h&quot;   // assert는 거의 전역에서 쓰니까
+
+#if SR_USE_PCH
+
+#include &lt;cstdlib&gt;
+#include &lt;cstdio&gt;
+#include &lt;cmath&gt;
+// 적절히 잡탕 c++라이브러리
+
+#endif  // SR_USE_PCH
+
+#endif  // __cplusplus
+
+#ifdef __OBJC__
+#import &lt;Foundation/Foundation.h&gt;
+// 적절히 잡탕 obj-c 라이브러리
+#endif
+</code></pre>
+<p>첫번째 줄에서 arch.h를 인클루드함으로써 해당 플랫폼이 PCH를 지원할수 있는지, 아니면 못하는지를 확인한다</p>
+<p><code>__cplusplus</code>와 <code>__OBJC__</code> 매크로를 사용해서 C++일때만 사용할 소스/아닐떄 사용할 소스를 분리한다. 이것으로 ios에서 obj-c와 c++을 섞어쓸수 있다.</p>
+<p>SR_USE_PCH 매크로를 사용해서 진짜 PCH의 내용이 될것을 잔뜩 집어넣는다. 이부분은 일반적으로 PCH를 작성하는방법과 동일하다.</p>
+<p>이런식으로 구성하면 별 문제없이 윈도우/아이폰/안드로이드를 커버할수 있다. 적절히 적용하여 빌드시간을 줄이고 적절히 개발을 하자.</p>
+
+    </section>
+
+    <ul class="articles-timeline">
+      <li class="previous-article">
+        
+        <a href="https://libsora.so/posts/ccpoint-lua/" title="Next: cocos2d-x 1.x-&gt;2.0으로 변하면서 바뀐 부분 :: CCPoint">
+          cocos2d-x 1.x-&gt;2.0으로 변하면서 바뀐 부분 :: CCPoint
+          
+        </a>
+        
+      </li>
+
+      <li class="next-article">
+        
+        <a href="https://libsora.so/posts/set-based-tag/" title="Previous: 집합 기반 태그 시스템 설계">
+          집합 기반 태그 시스템 설계
+          
+        </a>
+        
+      </li>
+    </ul>
+
+    <section class="entry-content">
+      <section class="disqus-section">
+<h1 hidden>Comment</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    var disqus_shortname = 'libsora';
+    var disqus_identifier = 'http://libsora.so\/posts\/cross-platform-stdafx\/';
+
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  } else {
+    console.log("skip disqus");
+  }
+</script>
+<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+    </section>
+  </article>
+</div>
+
+<footer class="footer">
+  <ul class="nav-link-list">
+    
+    
+    
+    <li>
+      
+      <a href="//twitter.com/if1live" title="Twitter"><i class="fa fa-twitter"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//github.com/if1live" title="GitHub"><i class="fa fa-github"> </i></a>
+    </li>
+    
+    
+    
+    <li>
+      
+      <a href="//bitbucket.org/if1live" title="BitBucket"><i class="fa fa-bitbucket"> </i></a>
+    </li>
+    
+
+    <li>
+      
+      <a href="https://libsora.so/index.xml"><i class="fa fa-rss"> </i></a>
+    </li>
+
+    
+  </ul>
+
+  <p>
+    <a href="//gohugo.io/" title="Hugo">Hugo</a> |
+    
+    <a href="//twitter.com/if1live/" title="@if1live">@if1live</a>
+    
+  </p>
+</footer>
+
+<script src="/js/common.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"
+  integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js"
+  integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA=="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-clike.min.js"
+  integrity="sha512-/WJ9ZNER39LEXW4XzFoMR6ct++/HT++A71MDW2gBbUJExj8hFRtde5Q5QzcHyBMxU97VeH1wEHGBRtNuGJpV4w=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-c.min.js"
+  integrity="sha512-TO7UeOg1N67oP7UU2OzrOm0oZrTz2TXGNRtkf/x+d9Pt5O8cb5jeSRcryiXqW/Nd25VEc8Qqtu8Dx1EVV7AJLQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-cpp.min.js"
+  integrity="sha512-dzF2RO45FHCMPdWDQ3I7Cn9xPvCM8x8T4ODz+kSPQl5CAuIMy6Ekb2i2DAjLEpG/V/DL9f/O7+9E/HZQQx89IA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-typescript.min.js"
+  integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-python.min.js"
+  integrity="sha512-EXseTM1JV8e3AonU5PfOUmzbPkUTRm4c4hVxv206gVeWZE/FwzSQBNWrUBaHsN3Idq9k76BEjUlXpluX1UFx6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-javascript.min.js"
+  integrity="sha512-UN3RxBb1KfsWQUMNl19SU/JPer3v8jTBpfGyQaBEuaVjP5q0Gz9ihj8MiHEUZYnc1krYRm5imVebjq1egsSaKA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-java.min.js"
+  integrity="sha512-p2vAaPEsPvlIESCpoEI5IyzZowfdVZ2O39PsrOrkuTQl+AjD57T4L/Wxv5S8WCToLou0twQZaWO+tt660Rqb6Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-csharp.min.js"
+  integrity="sha512-qvSIQfI/qEeMC1E1LMSPCsDl8vFzl0rkBfF6dDcnMJxQT+8M2WjSyDGqHQzZa+RChv3jkdKnZAo99BcAbGsnQg=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-bash.min.js"
+  integrity="sha512-CILPDr/8BlkkElCeI+f2yMu0fzgwWqpQ0Cdr0busFfySJJ4SoCRivbT6+Z+SWPkjWwBil9NO0tHd6NSfpwiQaA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-ruby.min.js"
+  integrity="sha512-Wgi0cnFpl5EY8xLe1RO+uTsot86wzAbW/BIoqZopPU+8YW79VDqQE9qTe1R+1uhxLsPBHE+nYwACS+eTsE5GtQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-go.min.js"
+  integrity="sha512-hVtwzUDz/n7RqQmiQ7xYAJCTTJe5C52Ung+4Kpz2fPRq7nq2h5gHHQe2HRy7f1Tj3OUVgTO5WRx7XuwT624C9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-less.min.js"
+  integrity="sha512-REVnwsprLWmQbtt0WjkS59nMvtKE0olIjUx+N/k3Gqa5WhmrZ7o0ahGhKYnIK6W2+ITg4cQ2UqZkka4RaZSM9Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-scss.min.js"
+  integrity="sha512-rAb9BrnkhMpxN7NoOM7WwPa3phfCMMUZw568Tyzlj9frNsdUUeltfCTATD6ccnVLtnERR+ZXS85Ybs7wo9IiTQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-css.min.js"
+  integrity="sha512-zDjwO/e5eVa5WfYra8CE827RFyA/nqhp8y4da+geEpAqpCnmfAHopCNobQ9sJeLBMQY0OLB+hT+k6bbb0FhdYQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-json.min.js"
+  integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-yaml.min.js"
+  integrity="sha512-j9sRnEoasdNn9OSwsCxjrQi1H55NqBFDJ+oe7me3sIfvDLeTyzvnZXf0eJqL5CvX6rswU2Sld9PnTVQ0Xy2CFQ=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-batch.min.js"
+  integrity="sha512-YzSVmlznJS4QEi5/tSS9iZ/tVFGdQSKO/F2jsofNH+5PifywJfsOtOZaia+URhumCMdXTTG2UZQ4vtBHWids+Q=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-lisp.min.js"
+  integrity="sha512-3c6jwEnUKsrvucb8b9xdDJw13zOdbeP83PvlSKeoTCCWGacG03MUWHCcBev2NKHA+w8IAWZsGXBcNMaIH/VWYA=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"
+  integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ=="
+  crossorigin="anonymous"></script>
+
+<script>
+  mermaid.initialize({ startOnLoad: true });
+
+  (function () {
+    const elems = document.querySelectorAll('code.language-mermaid');
+    for (let i = 0; i < elems.length; i++) {
+      const id = `mermaid-${i}`;
+      const elem = elems[i];
+      const source = elem.innerText;
+      const cb = (svg) => {
+        const div = document.createElement('div');
+        div.innerHTML = svg;
+        elem.parentElement.replaceWith(div);
+      };
+      mermaid.render(id, source, cb);
+    }
+  })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"
+  integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg=="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"
+  integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg=="
+  crossorigin="anonymous"></script>
+
+<script>
+  renderMathInElement(document.body,
+    {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    }
+  );
+
+  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+  for (var i = 0; i < inlineMathArray.length; i++) {
+    var inlineMath = inlineMathArray[i];
+    var tex = inlineMath.innerText || inlineMath.textContent;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex, { displayMode: false });
+    inlineMath.parentNode.replaceChild(replaced, inlineMath);
+  }
+
+  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+  for (var i = 0; i < displayMathArray.length; i++) {
+    var displayMath = displayMathArray[i];
+    var tex = displayMath.innerHTML;
+    var replaced = document.createElement("span");
+    replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+    displayMath.parentNode.replaceChild(replaced, displayMath);
+  }
+</script>
+
+
+<script>
+  var host = "libsora.so";
+  if (host == window.location.host) {
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-37862172-2','auto');ga('send','pageview')
+  } else {
+    console.log("skip google analytics");
+  }
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
+
