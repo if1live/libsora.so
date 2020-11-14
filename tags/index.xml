@@ -6,7 +6,25 @@
     <description>Recent content in Tags on /usr/lib/libsora.so</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://libsora.so/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://libsora.so/tags/blog/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>migration</title>
+      <link>https://libsora.so/tags/migration/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/tags/migration/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>diagram</title>
       <link>https://libsora.so/tags/diagram/</link>
@@ -517,15 +535,6 @@
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://libsora.so/tags/useless/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://libsora.so/tags/blog/</link>
-      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://libsora.so/tags/blog/</guid>
       <description></description>
     </item>
     

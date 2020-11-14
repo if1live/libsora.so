@@ -5,8 +5,17 @@
     <description>Recent content in /usr/lib/libsora.so on /usr/lib/libsora.so</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Etcs</title>
+      <link>https://libsora.so/etc/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://libsora.so/etc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Library-and-frameworks</title>
@@ -122,15 +131,6 @@
       <pubDate>Sun, 09 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://libsora.so/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Etcs</title>
-      <link>https://libsora.so/etc/</link>
-      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://libsora.so/etc/</guid>
       <description></description>
     </item>
     
