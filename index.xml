@@ -5,8 +5,17 @@
     <description>Recent content in /usr/lib/libsora.so on /usr/lib/libsora.so</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 14 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Jan 2021 02:00:00 +0900</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Post-mortems</title>
+      <link>https://libsora.so/post-mortem/</link>
+      <pubDate>Sat, 02 Jan 2021 02:00:00 +0900</pubDate>
+      
+      <guid>https://libsora.so/post-mortem/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Etcs</title>
@@ -59,15 +68,6 @@
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
       
       <guid>https://libsora.so/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Post-mortems</title>
-      <link>https://libsora.so/post-mortem/</link>
-      <pubDate>Sun, 29 Dec 2019 02:00:00 +0900</pubDate>
-      
-      <guid>https://libsora.so/post-mortem/</guid>
       <description></description>
     </item>
     

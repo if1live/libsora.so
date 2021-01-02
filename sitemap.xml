@@ -3,7 +3,43 @@
   
   <url>
     <loc>https://libsora.so/</loc>
-    <lastmod>2020-11-14T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-02T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/2020/</loc>
+    <lastmod>2021-01-02T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/posts/review-year-2020/</loc>
+    <lastmod>2021-01-02T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/post-mortem/</loc>
+    <lastmod>2021-01-02T02:00:00+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://libsora.so/tags/</loc>
+    <lastmod>2021-01-02T02:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39,15 +75,6 @@
   
   <url>
     <loc>https://libsora.so/tags/migration/</loc>
-    <lastmod>2020-11-14T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://libsora.so/tags/</loc>
     <lastmod>2020-11-14T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -345,15 +372,6 @@
   
   <url>
     <loc>https://libsora.so/posts/review-year-2019/</loc>
-    <lastmod>2019-12-29T02:00:00+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  
-  
-  <url>
-    <loc>https://libsora.so/post-mortem/</loc>
     <lastmod>2019-12-29T02:00:00+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
